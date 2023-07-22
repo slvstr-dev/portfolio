@@ -1,10 +1,13 @@
 import { PropsWithChildren } from 'react';
 
 import { Inter } from 'next/font/google';
-import { notFound } from 'next/navigation';
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
+
+import Footer from '@/components/layout/Footer/Footer';
+import Header from '@/components/layout/Header/Header';
+import { getMessages } from '@/src/utils/translationUtils';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,14 +16,6 @@ export interface ParamsProps {
 }
 
 export interface LocaleLayoutProps extends PropsWithChildren<ParamsProps> {}
-
-async function getMessages(locale: string) {
-  try {
-    return (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
-}
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
   const t = await getTranslator(locale, 'meta');
@@ -39,9 +34,13 @@ export default async function LocaleLayout({ children, params: { locale } }: Loc
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex min-h-screen flex-col`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header />
+
           {children}
+
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

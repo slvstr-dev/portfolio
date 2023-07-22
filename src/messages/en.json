@@ -1,18 +1,33 @@
 {
-  "global": {
-    "locales": {
-      "nl": "Dutch",
-      "en": "English"
-    }
-  },
   "meta": {
     "title": "slvstr.dev",
     "description": "Portfolio site created with Next.js, TypeScript & Tailwind."
   },
   "pages": {
     "home": {
-      "title": "Hello {name}!"
+      "title": "HomePage"
+    },
+    "experience": {
+      "title": "ExperiencePage"
+    },
+    "skills": {
+      "title": "SkillsPage"
     }
   },
-  "components": {}
+  "components": {
+    "header": {
+      "title": "<link>SLVSTR</link>"
+    },
+    "footer": {
+      "copyright": "© {date} - Built by <link>Sylvester Hofstra</link>, inspired by AWA"
+    },
+    "menu": {
+      "skills": "Skills",
+      "experience": "Experience"
+    },
+    "localeSwitcher": {
+      "nl": "Dutch",
+      "en": "English"
+    }
+  }
 }

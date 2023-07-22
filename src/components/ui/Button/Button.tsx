@@ -1,5 +1,4 @@
-import Link from 'next/link';
-
+import Link from 'next-intl/link';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 type ButtonVariants = VariantProps<typeof button>;
