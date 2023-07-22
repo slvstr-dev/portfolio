@@ -1,6 +1,8 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "description": "Portfolio site created with Next.js, TypeScript & Tailwind.",
+  "author": "Sylvester Hofstra <hello@slvstr.dev>",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -21,5 +23,6 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
-  }
+  },
+  "packageManager": "pnpm@8.6.9"
 }
