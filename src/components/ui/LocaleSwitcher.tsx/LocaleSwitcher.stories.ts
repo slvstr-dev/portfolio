@@ -7,6 +7,7 @@ const meta = {
   component: LocaleSwitcher,
   args: {
     locale: 'nl-NL',
+    children: 'Nederlands',
   },
   parameters: {
     layout: 'centered',

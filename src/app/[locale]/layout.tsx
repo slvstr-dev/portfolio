@@ -34,7 +34,7 @@ export async function generateMetadata({ params: { locale } }: ParamsProps) {
       default: t('title'),
       template: `%s | ${t('title')}`,
     },
-    description: 'Portfolio site created with Next.js, TypeScript & Tailwind.',
+    description: t('description'),
   };
 }
 
@@ -42,7 +42,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Loc
   const messages = await getMessages(locale);
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

@@ -18,7 +18,7 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <NextIntlClientProvider locale="nl-NL" messages={messages}>
+      <NextIntlClientProvider locale="en-GB" messages={messages}>
         <Story />
       </NextIntlClientProvider>
     ),
