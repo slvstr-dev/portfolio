@@ -6,7 +6,7 @@ type ButtonVariants = VariantProps<typeof button>;
 
 export interface ButtonProps extends ButtonVariants {
   children: React.ReactNode;
-  onClick?: () => void | Promise<void>;
+  onClick?: <T>(event?: T) => void | Promise<void>;
   href?: string;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
@@ -46,7 +46,7 @@ const button = tv({
       primary:
         'rounded-md bg-emerald-400 font-bold text-white transition-colors hover:bg-emerald-500 active:bg-emerald-500',
       secondary:
-        'rounded-md bg-emerald-400 font-bold text-white transition-colors hover:bg-emerald-500 active:bg-emerald-500',
+        'rounded-md bg-blue-400 font-bold text-white transition-colors hover:bg-blue-500 active:bg-blue-500',
       warning:
         'rounded-md bg-amber-400 font-bold text-white transition-colors hover:bg-amber-500 active:bg-amber-500',
       urgent:

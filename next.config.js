@@ -1,12 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const withNextIntl = require('next-intl/plugin')();
+
+module.exports = withNextIntl({
   images: {
-    domains: ['avatars.githubusercontent.com'],
+    domains: [],
   },
   experimental: {
     typedRoutes: true,
-    serverActions: true,
   },
-};
-
-module.exports = nextConfig;
+});

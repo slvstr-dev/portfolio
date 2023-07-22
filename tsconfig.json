@@ -2,9 +2,10 @@
   "extends": "@2digits/tsconfig/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "module": "esnext",
     "moduleResolution": "node",
-    "jsx": "preserve",
     "incremental": true,
+    "jsx": "preserve",
     "plugins": [
       {
         "name": "next"
@@ -13,17 +14,22 @@
     "paths": {
       "@/app/*": ["./src/app/*"],
       "@/components/*": ["./src/components/*"],
+      "@/messages/*": ["./src/messages/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/src/*": ["./src/*"],
       "@/utils/*": ["./src/utils/*"]
-    }
+    },
+    "declarationMap": false,
+    "declaration": false
   },
   "include": [
     "next-env.d.ts",
     "**/*.js",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    "./.storybook/*",
+    ".next/types/**/*.ts",
+    "next.config.js"
   ],
-  "exclude": ["node_modules", "storybook-static"]
+  "exclude": ["node_modules"]
 }
