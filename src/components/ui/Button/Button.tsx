@@ -6,7 +6,7 @@ type ButtonVariants = VariantProps<typeof button>;
 
 export interface ButtonProps extends ButtonVariants {
   children: React.ReactNode;
-  onClick?: (event?: any) => void | Promise<void>;
+  onClick?: <T>(event?: T) => void | Promise<void>;
   href?: string;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
