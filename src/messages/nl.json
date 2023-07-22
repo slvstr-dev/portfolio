@@ -1,10 +1,4 @@
 {
-  "global": {
-    "locales": {
-      "nl": "Nederlands",
-      "en": "Engels"
-    }
-  },
   "meta": {
     "title": "slvstr.dev",
     "description": "Portfolio site gemaakt met Next.js, TypeScript & Tailwind."
@@ -12,7 +6,28 @@
   "pages": {
     "home": {
       "title": "Hallo {name}!"
+    },
+    "experience": {
+      "title": "ExperiencePage"
+    },
+    "skills": {
+      "title": "SkillsPage"
     }
   },
-  "components": {}
+  "components": {
+    "header": {
+      "title": "<link>SLVSTR</link>"
+    },
+    "footer": {
+      "copyright": "© {date} - Gebouwd door <link>Sylvester Hofstra</link>, geïnspireerd door AWA"
+    },
+    "menu": {
+      "skills": "Vaardigheden",
+      "experience": "Ervaring"
+    },
+    "localeSwitcher": {
+      "nl": "Dutch",
+      "en": "English"
+    }
+  }
 }
