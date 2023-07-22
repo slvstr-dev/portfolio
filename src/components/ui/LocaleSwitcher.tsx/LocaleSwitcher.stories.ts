@@ -6,7 +6,7 @@ const meta = {
   title: 'ui/LocaleSwitcher',
   component: LocaleSwitcher,
   args: {
-    locale: 'nl-NL',
+    locale: 'nl',
     children: 'Nederlands',
   },
   parameters: {

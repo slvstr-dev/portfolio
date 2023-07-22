@@ -4,7 +4,7 @@ import '@/styles/global.css';
 
 import { NextIntlClientProvider } from 'next-intl';
 
-import messages from '@/messages/en-GB.json';
+import messages from '@/messages/en.json';
 
 const preview: Preview = {
   parameters: {
@@ -18,7 +18,7 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <NextIntlClientProvider locale="en-GB" messages={messages}>
+      <NextIntlClientProvider locale="en" messages={messages}>
         <Story />
       </NextIntlClientProvider>
     ),

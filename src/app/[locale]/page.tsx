@@ -9,9 +9,9 @@ export default function HomePage() {
     <main className="flex min-h-screen flex-col items-center justify-center gap-4">
       <p>{t('pages.home.title', { name: 'Next.js' })}</p>
 
-      <LocaleSwitcher locale="en-GB">{t('global.locales.en-GB')}</LocaleSwitcher>
+      <LocaleSwitcher locale="en">{t('global.locales.en')}</LocaleSwitcher>
 
-      <LocaleSwitcher locale="nl-NL">{t('global.locales.nl-NL')}</LocaleSwitcher>
+      <LocaleSwitcher locale="nl">{t('global.locales.nl')}</LocaleSwitcher>
     </main>
   );
 }

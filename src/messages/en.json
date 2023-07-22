@@ -1,8 +1,8 @@
 {
   "global": {
     "locales": {
-      "nl-NL": "Dutch",
-      "en-GB": "English"
+      "nl": "Dutch",
+      "en": "English"
     }
   },
   "meta": {
