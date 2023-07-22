@@ -2,6 +2,10 @@ import type { Preview } from '@storybook/react';
 
 import '@/styles/global.css';
 
+import { NextIntlClientProvider } from 'next-intl';
+
+import messages from '@/messages/en-GB.json';
+
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -12,6 +16,13 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <NextIntlClientProvider locale="nl-NL" messages={messages}>
+        <Story />
+      </NextIntlClientProvider>
+    ),
+  ],
 };
 
 export default preview;

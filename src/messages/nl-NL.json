@@ -1,0 +1,18 @@
+{
+  "global": {
+    "locales": {
+      "nl-NL": "Nederlands",
+      "en-GB": "Engels"
+    }
+  },
+  "meta": {
+    "title": "slvstr.dev",
+    "description": "Portfolio site gemaakt met Next.js, TypeScript & Tailwind."
+  },
+  "pages": {
+    "home": {
+      "title": "Hallo {name}!"
+    }
+  },
+  "components": {}
+}
