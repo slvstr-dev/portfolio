@@ -7,7 +7,6 @@ const meta = {
   component: Button,
   args: {
     children: 'Button',
-    onClick: () => {},
   },
   parameters: {
     layout: 'centered',
@@ -18,3 +17,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const Disabled: Story = {
+  args: {
+    isDisabled: true,
+  },
+};
+
+export const Loading: Story = {
+  args: {
+    isLoading: true,
+  },
+};
