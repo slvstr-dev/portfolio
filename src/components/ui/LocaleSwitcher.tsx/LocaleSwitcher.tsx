@@ -14,7 +14,7 @@ export default function LocaleSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
 
-  function onSelectChange(locale: string) {
+  function handleLocaleSwitch(locale: string) {
     startTransition(() => {
       router.replace(pathname, { locale });
     });
@@ -23,18 +23,14 @@ export default function LocaleSwitcher() {
   return (
     <div className="flex gap-4">
       <Button
-        disabled={isPending || 'nl' === currentLocale}
-        onClick={() => onSelectChange('nl')}
-        color="warning"
-        padding="md">
+        isDisabled={isPending || 'nl' === currentLocale}
+        onClick={() => handleLocaleSwitch('nl')}>
         {t('nl')}
       </Button>
 
       <Button
-        disabled={isPending || 'en' === currentLocale}
-        onClick={() => onSelectChange('en')}
-        color="warning"
-        padding="md">
+        isDisabled={isPending || 'en' === currentLocale}
+        onClick={() => handleLocaleSwitch('en')}>
         {t('en')}
       </Button>
     </div>
