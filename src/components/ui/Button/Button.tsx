@@ -8,7 +8,6 @@ export interface ButtonProps extends ButtonVariants {
   onClick?: <T>(event?: T) => void | Promise<void>;
   href?: string;
   type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
   className?: string;
 }
 
@@ -17,42 +16,68 @@ export default function Button({
   onClick,
   href,
   type = 'button',
-  disabled = false,
+  isDisabled,
+  isLoading,
   className,
   ...props
 }: ButtonProps) {
   if (href) {
     return (
-      <Link className={button({ ...props, class: className, disabled })} href={{ pathname: href }}>
+      <Link
+        className={button({ ...props, class: className, isDisabled, isLoading })}
+        href={{ pathname: href }}>
         {children}
       </Link>
     );
   }
   return (
     <button
-      className={button({ ...props, class: className, disabled })}
+      className={button({ ...props, class: className, isDisabled, isLoading })}
       onClick={onClick}
       type={type}
-      disabled={disabled}>
+      disabled={isDisabled}>
+      {isLoading && (
+        <svg
+          className="-ml-1 mr-3 h-5 w-5 animate-spin text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24">
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"></circle>
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+      )}
+
       {children}
     </button>
   );
 }
 
 const button = tv({
+  base: 'inline-flex items-center rounded-md font-bold text-white transition-colors',
   variants: {
     color: {
-      primary:
-        'rounded-md bg-emerald-400 font-bold text-white transition-colors hover:bg-emerald-500 active:bg-emerald-500',
-      secondary:
-        'rounded-md bg-blue-400 font-bold text-white transition-colors hover:bg-blue-500 active:bg-blue-500',
-      warning:
-        'rounded-md bg-amber-400 font-bold text-white transition-colors hover:bg-amber-500 active:bg-amber-500',
-      urgent:
-        'rounded-md bg-red-400 font-bold text-white transition-colors hover:bg-red-500 active:bg-red-500',
+      yellow: 'bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-300',
+      brown: 'bg-brown-400 hover:bg-brown-300 active:bg-brown-300',
+      red: 'bg-red-400 hover:bg-red-300 active:bg-red-300',
+      pink: 'bg-pink-400 hover:bg-pink-300 active:bg-pink-300',
+      purple: 'bg-purple-400 hover:bg-purple-300 active:bg-purple-300',
+      blue: 'bg-blue-400 hover:bg-blue-300 active:bg-blue-300',
+      green: 'bg-green-400 hover:bg-green-300 active:bg-green-300',
     },
-    disabled: {
-      true: 'pointer-events-none bg-gray-500 opacity-50',
+    isDisabled: {
+      true: 'pointer-events-none opacity-50',
+    },
+    isLoading: {
+      true: 'pointer-events-none',
     },
     textSize: {
       sm: 'text-sm',
@@ -67,6 +92,10 @@ const button = tv({
     },
   },
   defaultVariants: {
+    isDisabled: false,
+    isLoading: false,
     textSize: 'md',
+    padding: 'lg',
+    color: 'red',
   },
 });
