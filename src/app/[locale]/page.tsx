@@ -5,7 +5,7 @@ export default function HomePage() {
 
   return (
     <main className="bg-gray-100 flex grow flex-col items-center justify-center">
-      <h1 className="text-center">{t('pages.home.title', { name: 'Next.js' })}</h1>
+      <h1 className="text-center font-handwriting">{t('pages.home.title', { name: 'Next.js' })}</h1>
     </main>
   );
 }

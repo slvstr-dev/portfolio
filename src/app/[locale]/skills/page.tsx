@@ -5,7 +5,7 @@ export default function SkillsPage() {
 
   return (
     <main className="bg-gray-100 flex grow flex-col items-center justify-center">
-      <h1 className="text-center">{t('title')}</h1>
+      <h1 className="text-center font-handwriting">{t('title')}</h1>
     </main>
   );
 }

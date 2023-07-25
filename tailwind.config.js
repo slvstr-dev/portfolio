@@ -4,6 +4,11 @@ module.exports = {
   theme: {
     colors: {},
     extend: {
+      fontFamily: {
+        body: ['var(--font-didact-gothic)'],
+        handwriting: ['var(--font-eb-garamond)'],
+        display: ['var(--font-arvo)'],
+      },
       colors: {
         black: '#271D1F',
         white: '#FFF',
@@ -20,16 +25,21 @@ module.exports = {
           400: '#C1715D',
         },
         red: {
-          100: '#EFB2B7',
-          200: '#E68D93',
-          300: '#DE6470',
+          100: '#FE6D7F',
+          200: '#B71A22',
+          300: '#7a0513',
           400: '#D8404C',
         },
         pink: {
-          100: '#EFC8D3',
-          200: '#E6B0BE',
-          300: '#DD95A7',
-          400: '#D57992',
+          100: '#FCE6F5',
+          200: '#FFBECF',
+          300: '#FFC9E8',
+          400: '#E9A6BD',
+          500: '#DBA6BC',
+          600: '#D392AD',
+          700: '#D691A7',
+          800: '#D3849C',
+          900: '#C57690',
         },
         purple: {
           100: '#BEA9B9',
