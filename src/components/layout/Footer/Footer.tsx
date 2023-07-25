@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="p-2 text-center">
-      <p>
+      <p className="font-display">
         {t.rich('copyright', {
           link: (chunks) => (
             <Link
