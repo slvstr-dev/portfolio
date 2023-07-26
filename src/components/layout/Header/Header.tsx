@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="flex flex-col items-center gap-4 p-4 text-center">
-      <h1 className="text-red-600 text-3xl font-bold transition-opacity hover:opacity-50">
+      <h1 className="text-3xl font-bold text-red-300 transition-opacity hover:opacity-50">
         {t.rich('title', {
           link: (chunks) => <Link href={{ pathname: '/' }}>{chunks}</Link>,
         })}
