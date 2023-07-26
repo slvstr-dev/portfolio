@@ -65,13 +65,8 @@ const button = tv({
   base: 'inline-flex items-center rounded-md font-bold text-white transition-colors',
   variants: {
     color: {
-      yellow: 'bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-300',
-      brown: 'bg-brown-400 hover:bg-brown-300 active:bg-brown-300',
-      red: 'bg-red-400 hover:bg-red-300 active:bg-red-300',
-      pink: 'bg-pink-400 hover:bg-pink-300 active:bg-pink-300',
-      purple: 'bg-purple-400 hover:bg-purple-300 active:bg-purple-300',
-      blue: 'bg-blue-400 hover:bg-blue-300 active:bg-blue-300',
-      green: 'bg-green-400 hover:bg-green-300 active:bg-green-300',
+      red: 'bg-red-200 hover:bg-red-300 active:bg-red-300',
+      gray: 'bg-gray-200 hover:bg-gray-300 active:bg-gray-300',
     },
     isDisabled: {
       true: 'pointer-events-none opacity-50',
