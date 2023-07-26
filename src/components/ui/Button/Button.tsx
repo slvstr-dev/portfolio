@@ -1,7 +1,7 @@
 import Link from 'next-intl/link';
 import { tv, type VariantProps } from 'tailwind-variants';
 
-import Icon from '../Icon/Icon';
+import Icon from '@/components/ui/Icon/Icon';
 
 type ButtonVariants = VariantProps<typeof button>;
 
