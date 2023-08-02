@@ -49,8 +49,8 @@ const button = tv({
   base: 'inline-flex items-center rounded-md font-bold text-white transition-colors',
   variants: {
     color: {
-      red: 'bg-red-200 hover:bg-red-300 active:bg-red-300',
-      gray: 'bg-gray-200 hover:bg-gray-300 active:bg-gray-300',
+      gray: 'bg-gray hover:bg-black active:bg-black',
+      pink: 'bg-pink-200 hover:bg-pink-300 active:bg-pink-300',
     },
     isDisabled: {
       true: 'pointer-events-none opacity-50',
@@ -75,6 +75,6 @@ const button = tv({
     isLoading: false,
     textSize: 'md',
     padding: 'lg',
-    color: 'red',
+    color: 'gray',
   },
 });

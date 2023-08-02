@@ -24,10 +24,6 @@
     "menu": {
       "skills": "Skills",
       "experience": "Experience"
-    },
-    "localeSwitcher": {
-      "nl": "Dutch",
-      "en": "English"
     }
   }
 }
