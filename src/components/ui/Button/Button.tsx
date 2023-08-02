@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, PropsWithChildren } from 'react';
 
 import Link from 'next-intl/link';
 import { twMerge } from 'tailwind-merge';
@@ -13,6 +13,7 @@ export type ButtonProps = PropsWithChildren<ButtonVariants> & {
 } & (
     | {
         href: string;
+        target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
       }
     | {
         type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
@@ -33,7 +34,10 @@ export default function Button({
 
   if ('href' in props) {
     return (
-      <Link className={twMerge(styles.base(), className)} href={{ pathname: props.href }}>
+      <Link
+        className={twMerge(styles.base(), className)}
+        href={{ pathname: props.href }}
+        target={props.target}>
         {children}
       </Link>
     );

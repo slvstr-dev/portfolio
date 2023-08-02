@@ -19,6 +19,10 @@ module.exports = {
           300: '#D3607F',
         },
       },
+      container: {
+        center: true,
+        padding: '1rem',
+      },
     },
   },
   plugins: [],

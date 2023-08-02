@@ -18,12 +18,15 @@
     "header": {
       "title": "<link>SLVSTR</link>"
     },
-    "footer": {
-      "copyright": "© {date} - Built by <link>Sylvester Hofstra</link>, inspired by AWA"
-    },
     "menu": {
       "skills": "Skills",
       "experience": "Experience"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "copyright": {
+      "date": "© {date} - <link>Sylvester Hofstra</link>"
     }
   }
 }
