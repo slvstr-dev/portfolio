@@ -1,80 +1,82 @@
+import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+
 import Link from 'next-intl/link';
+import { twMerge } from 'tailwind-merge';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 import Icon from '@/components/ui/Icon/Icon';
 
 type ButtonVariants = VariantProps<typeof button>;
 
-export interface ButtonProps extends ButtonVariants {
-  children: React.ReactNode;
-  onClick?: <T>(event?: T) => void | Promise<void>;
-  href?: string;
-  type?: 'button' | 'submit' | 'reset';
+export type ButtonProps = PropsWithChildren<ButtonVariants> & {
   className?: string;
-}
+} & (
+    | {
+        href: string;
+      }
+    | {
+        type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
+        onClick: <T>(event?: T) => void | Promise<void>;
+      }
+  );
 
 export default function Button({
   children,
-  onClick,
-  href,
-  type = 'button',
   isDisabled,
   isLoading,
+  size,
+  color,
   className,
   ...props
 }: ButtonProps) {
-  if (href) {
+  const styles = button({ color, size, isDisabled, isLoading });
+
+  if ('href' in props) {
     return (
-      <Link
-        className={button({ ...props, class: className, isDisabled, isLoading })}
-        href={{ pathname: href }}>
+      <Link className={twMerge(styles.base(), className)} href={{ pathname: props.href }}>
         {children}
       </Link>
     );
   }
   return (
-    <button
-      className={button({ ...props, class: className, isDisabled, isLoading })}
-      onClick={onClick}
-      type={type}
-      disabled={isDisabled}>
-      {isLoading && <Icon icon="Loader" className="-ml-1 mr-3 h-5 w-5" />}
+    <button className={twMerge(styles.base(), className)} disabled={isDisabled} {...props}>
+      {isLoading && <Icon icon="Loader" className={styles.loader()} />}
 
-      {children}
+      <span className={styles.label()}>{children}</span>
     </button>
   );
 }
 
 const button = tv({
-  base: 'inline-flex items-center rounded-md font-bold text-white transition-colors',
+  base: 'relative inline-flex cursor-pointer items-center justify-center border-2 transition-opacity hover:opacity-75 active:opacity-75',
+  slots: {
+    label: 'font-bold uppercase',
+    loader: 'absolute inset-0',
+  },
   variants: {
     color: {
-      gray: 'bg-gray hover:bg-black active:bg-black',
-      pink: 'bg-pink-200 hover:bg-pink-300 active:bg-pink-300',
+      gray: 'border-gray text-black',
+      pink: 'border-pink-200 text-pink-300',
     },
     isDisabled: {
       true: 'pointer-events-none opacity-50',
     },
     isLoading: {
-      true: 'pointer-events-none',
+      true: {
+        base: 'pointer-events-none',
+        label: 'invisible',
+      },
     },
-    textSize: {
-      sm: 'text-sm',
-      md: 'text-base',
-      lg: 'text-lg',
-    },
-    padding: {
-      sm: 'px-1',
-      md: 'px-2 py-1',
-      lg: 'px-4 py-2',
-      xl: 'px-6 py-3',
+    size: {
+      sm: 'px-2 text-sm',
+      md: 'px-4 py-1 text-base',
+      lg: 'px-6 py-2 text-lg',
     },
   },
   defaultVariants: {
     isDisabled: false,
     isLoading: false,
-    textSize: 'md',
-    padding: 'lg',
+    size: 'md',
     color: 'gray',
   },
 });

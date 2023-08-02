@@ -2,12 +2,12 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Menu from './Menu';
 
-const meta = {
+export default {
   title: 'layout/Menu',
   component: Menu,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Menu>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Menu>;
 
-export const Default: Story = {};
+export const Default: Story = {} satisfies Story;
