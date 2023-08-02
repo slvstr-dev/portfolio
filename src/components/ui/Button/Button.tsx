@@ -38,7 +38,7 @@ export default function Button({
         className={twMerge(styles.base(), className)}
         href={{ pathname: props.href }}
         target={props.target}>
-        {children}
+        <span className={styles.label()}>{children}</span>
       </Link>
     );
   }

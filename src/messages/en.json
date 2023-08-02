@@ -7,6 +7,9 @@
     "home": {
       "title": "HomePage"
     },
+    "projects": {
+      "title": "ProjectsPage"
+    },
     "experience": {
       "title": "ExperiencePage"
     },
@@ -16,11 +19,20 @@
   },
   "components": {
     "header": {
-      "title": "<link>SLVSTR</link>"
+      "buttons": {
+        "contact": "Contact"
+      }
+    },
+    "hero": {
+      "title": "Hi, I'm Sylvester"
+    },
+    "logo": {
+      "title": "<link>S</link>"
     },
     "menu": {
-      "skills": "Skills",
-      "experience": "Experience"
+      "projects": "Projects",
+      "experience": "Experience",
+      "skills": "Skills"
     },
     "contact": {
       "title": "Contact"

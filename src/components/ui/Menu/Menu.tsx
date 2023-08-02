@@ -1,11 +1,9 @@
-'use client';
-
 import { PropsWithChildren } from 'react';
 
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next-intl/client';
-import Link from 'next-intl/link';
 import { twMerge } from 'tailwind-merge';
+
+import Anchor from '@/components/ui/Anchor/Anchor';
 
 export interface MenuProps extends PropsWithChildren {
   className?: string;
@@ -13,27 +11,20 @@ export interface MenuProps extends PropsWithChildren {
 
 export default function Menu({ className }: MenuProps) {
   const t = useTranslations('components.menu');
-  const pathname = usePathname();
 
   return (
     <nav className={twMerge('', className)}>
       <ul className="flex gap-4">
-        <li
-          className={`${
-            pathname.startsWith('/experience')
-              ? 'pointer-events-none opacity-50'
-              : 'transition-opacity hover:opacity-50'
-          }`}>
-          <Link href={{ pathname: '/experience' }}>{t('experience')}</Link>
+        <li>
+          <Anchor href="/projects">{t('projects')}</Anchor>
         </li>
 
-        <li
-          className={`${
-            pathname.startsWith('/skills')
-              ? 'pointer-events-none opacity-50'
-              : 'transition-opacity hover:opacity-50'
-          }`}>
-          <Link href={{ pathname: '/skills' }}>{t('skills')}</Link>
+        <li>
+          <Anchor href="/experience">{t('experience')}</Anchor>
+        </li>
+
+        <li>
+          <Anchor href="/skills">{t('skills')}</Anchor>
         </li>
       </ul>
     </nav>
