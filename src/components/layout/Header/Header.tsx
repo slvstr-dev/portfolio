@@ -1,23 +1,29 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next-intl/link';
+import { twMerge } from 'tailwind-merge';
 
-import Menu from '@/components/layout/Menu/Menu';
-import LocaleSwitcher from '@/components/ui/LocaleSwitcher.tsx/LocaleSwitcher';
+import Section from '@/components/layout/Container/Container';
+import Button from '@/components/ui/Button/Button';
+import Logo from '@/components/ui/Logo/Logo';
+import Menu from '@/components/ui/Menu/Menu';
 
-export default function Header() {
+export interface HeaderProps {
+  className?: string;
+}
+
+export default function Header({ className }: HeaderProps) {
   const t = useTranslations('components.header');
 
   return (
-    <header className="flex flex-col items-center gap-4 p-4 text-center">
-      <h1 className="text-3xl font-bold text-red-300 transition-opacity hover:opacity-50">
-        {t.rich('title', {
-          link: (chunks) => <Link href={{ pathname: '/' }}>{chunks}</Link>,
-        })}
-      </h1>
+    <header className={twMerge('bg-pink-100', className)}>
+      <Section as="div" className="text-pink-300" direction="row">
+        <Logo />
 
-      <Menu />
+        <Menu className="grow" />
 
-      <LocaleSwitcher />
+        <Button href="#contact" color="pink">
+          {t('buttons.contact')}
+        </Button>
+      </Section>
     </header>
   );
 }

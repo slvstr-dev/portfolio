@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Icon from './Icon';
 
-const meta = {
+export default {
   title: 'ui/Icon',
   component: Icon,
   args: {
@@ -11,9 +11,9 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  tags: ['autodocs'],
 } satisfies Meta<typeof Icon>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Icon>;
 
-export const Default: Story = {};
+export const Default: Story = {} satisfies Story;

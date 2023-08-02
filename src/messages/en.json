@@ -7,6 +7,9 @@
     "home": {
       "title": "HomePage"
     },
+    "projects": {
+      "title": "ProjectsPage"
+    },
     "experience": {
       "title": "ExperiencePage"
     },
@@ -16,18 +19,26 @@
   },
   "components": {
     "header": {
-      "title": "<link>SLVSTR</link>"
+      "buttons": {
+        "contact": "Contact"
+      }
     },
-    "footer": {
-      "copyright": "© {date} - Built by <link>Sylvester Hofstra</link>, inspired by AWA"
+    "hero": {
+      "title": "Hi, I'm Sylvester"
+    },
+    "logo": {
+      "title": "<link>S</link>"
     },
     "menu": {
-      "skills": "Skills",
-      "experience": "Experience"
+      "projects": "Projects",
+      "experience": "Experience",
+      "skills": "Skills"
     },
-    "localeSwitcher": {
-      "nl": "Dutch",
-      "en": "English"
+    "contact": {
+      "title": "Contact"
+    },
+    "copyright": {
+      "date": "© {date} - <link>Sylvester Hofstra</link>"
     }
   }
 }

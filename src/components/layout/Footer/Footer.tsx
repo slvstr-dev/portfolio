@@ -1,24 +1,12 @@
-import { useTranslations } from 'next-intl';
-import Link from 'next-intl/link';
+import Contact from '@/components/ui/Contact/Contact';
+import Copyright from '@/components/ui/Copyright/Copyright';
 
 export default function Footer() {
-  const t = useTranslations('components.footer');
-
   return (
-    <footer className="p-2 text-center">
-      <p className="font-display">
-        {t.rich('copyright', {
-          link: (chunks) => (
-            <Link
-              href="https://www.linkedin.com/in/sylvesterhofstra/"
-              target="_blank"
-              className="transition-opacity hover:opacity-50">
-              {chunks}
-            </Link>
-          ),
-          date: new Date().getFullYear(),
-        })}
-      </p>
+    <footer>
+      <Contact />
+
+      <Copyright />
     </footer>
   );
 }
