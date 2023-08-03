@@ -2,6 +2,7 @@
 module.exports = {
   content: ['./src/components/**/*.{ts,tsx}', './src/app/**/*.{ts,tsx}'],
   theme: {
+    colors: {},
     extend: {
       fontFamily: {
         body: ['var(--font-playfair)'],
