@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --color-dark: #010101;
-    --color-light: #ffffff;
+    --color-base: #010101;
+    --color-inverted: #ffffff;
     --color-muted: #adadad;
     --color-brand-100: #fdebeb;
     --color-brand-200: #f0b5c1;
@@ -14,6 +14,6 @@
   }
 
   body {
-    @apply text-theme-dark font-body;
+    @apply font-body text-theme-base;
   }
 }

@@ -37,7 +37,7 @@ const button = tv({
   variants: {
     color: {
       brand: 'border-theme-brand-200 text-theme-brand-300',
-      muted: 'border-theme-muted text-theme-dark',
+      muted: 'border-theme-muted',
     },
     isDisabled: {
       true: 'pointer-events-none opacity-25',

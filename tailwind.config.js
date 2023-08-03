@@ -9,8 +9,8 @@ module.exports = {
       },
       colors: {
         theme: {
-          dark: 'var(--color-dark)',
-          light: 'var(--color-light)',
+          base: 'var(--color-base)',
+          inverted: 'var(--color-inverted)',
           muted: 'var(--color-muted)',
           highlight: 'var(--color-highlight)',
           brand: {
