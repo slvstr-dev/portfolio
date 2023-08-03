@@ -11,7 +11,7 @@ export type LinkProps = PropsWithChildren & {
       }
     | {
         type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
-        onClick: <T>(event?: T) => void | Promise<void>;
+        onClick?: <T>(event?: T) => void | Promise<void>;
       }
   );
 
@@ -25,7 +25,7 @@ export default function Link({ children, className, ...props }: LinkProps) {
   }
 
   return (
-    <button className={className} {...props}>
+    <button className={className} type="button" {...props}>
       {children}
     </button>
   );

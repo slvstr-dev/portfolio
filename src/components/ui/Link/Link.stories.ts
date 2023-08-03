@@ -3,10 +3,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import LinkComponent from './Link';
 
 export default {
-  title: 'ui/LinkComponent',
+  title: 'ui/Link',
   component: LinkComponent,
   args: {
-    children: 'LinkComponent',
+    children: 'Link',
     href: 'https://slvstr.dev',
   },
   parameters: {

@@ -21,6 +21,9 @@
     "header": {
       "buttons": {
         "contact": "Contact"
+      },
+      "contact_form": {
+        "title": "Contact"
       }
     },
     "hero": {
