@@ -1,7 +1,8 @@
 import { ElementType, PropsWithChildren } from 'react';
 
-import { twMerge } from 'tailwind-merge';
 import { tv, VariantProps } from 'tailwind-variants';
+
+import { cn } from '@/src/utils/tailwindUtils';
 
 type ContainerVariants = VariantProps<typeof container>;
 
@@ -22,7 +23,7 @@ export default function Container({
   const styles = container({ isCentered, direction });
 
   return (
-    <Component className={twMerge(styles.base(), className)}>
+    <Component className={cn(styles.base(), className)}>
       <div className={styles.children()}>{children}</div>
     </Component>
   );

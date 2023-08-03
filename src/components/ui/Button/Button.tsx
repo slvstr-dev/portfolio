@@ -1,25 +1,12 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, PropsWithChildren } from 'react';
-
-import Link from 'next-intl/link';
-import { twMerge } from 'tailwind-merge';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 import Icon from '@/components/ui/Icon/Icon';
+import Link, { LinkProps } from '@/components/ui/Link/Link';
+import { cn } from '@/src/utils/tailwindUtils';
 
 type ButtonVariants = VariantProps<typeof button>;
 
-export type ButtonProps = PropsWithChildren<ButtonVariants> & {
-  className?: string;
-} & (
-    | {
-        href: string;
-        target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
-      }
-    | {
-        type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
-        onClick: <T>(event?: T) => void | Promise<void>;
-      }
-  );
+export type ButtonProps = ButtonVariants & LinkProps;
 
 export default function Button({
   children,
@@ -32,22 +19,12 @@ export default function Button({
 }: ButtonProps) {
   const styles = button({ color, size, isDisabled, isLoading });
 
-  if ('href' in props) {
-    return (
-      <Link
-        className={twMerge(styles.base(), className)}
-        href={{ pathname: props.href }}
-        target={props.target}>
-        <span className={styles.label()}>{children}</span>
-      </Link>
-    );
-  }
   return (
-    <button className={twMerge(styles.base(), className)} disabled={isDisabled} {...props}>
+    <Link className={cn(styles.base(), className)} {...props}>
       {isLoading && <Icon icon="Loader" className={styles.loader()} />}
 
       <span className={styles.label()}>{children}</span>
-    </button>
+    </Link>
   );
 }
 
@@ -59,8 +36,8 @@ const button = tv({
   },
   variants: {
     color: {
-      gray: 'border-gray text-black',
-      pink: 'border-pink-200 text-pink-300',
+      brand: 'border-theme-brand-200 text-theme-brand-300',
+      muted: 'border-theme-muted text-theme-dark',
     },
     isDisabled: {
       true: 'pointer-events-none opacity-25',
@@ -81,6 +58,6 @@ const button = tv({
     isDisabled: false,
     isLoading: false,
     size: 'md',
-    color: 'gray',
+    color: 'muted',
   },
 });

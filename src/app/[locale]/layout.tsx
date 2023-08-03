@@ -49,7 +49,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
 
-          <main className="flex grow flex-col bg-white">{children}</main>
+          <main className="flex grow flex-col bg-theme-light">{children}</main>
 
           <Footer />
         </NextIntlClientProvider>
