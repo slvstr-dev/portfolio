@@ -1,3 +1,5 @@
+'use client';
+
 import ContactDialog from '@/components/dialogs/ContactDialog';
 import Section from '@/components/layout/Container/Container';
 import Logo from '@/components/ui/Logo/Logo';
