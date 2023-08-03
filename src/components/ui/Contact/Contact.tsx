@@ -14,7 +14,7 @@ export default function Contact({ className }: ContactProps) {
 
   return (
     <Section className={twMerge('bg-pink-100', className)} isCentered>
-      <h2 className="font-handwriting text-2xl italic">{t('title')}</h2>
+      <h2 className="text-2xl italic">{t('title')}</h2>
     </Section>
   );
 }

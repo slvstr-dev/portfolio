@@ -15,7 +15,7 @@ export default function Copyright({ className }: CopyrightProps) {
 
   return (
     <Section className={twMerge('bg-white', className)}>
-      <h2 className="font-handwriting text-xl font-bold uppercase">
+      <h2 className="text-xl font-bold uppercase">
         {t.rich('date', {
           link: (chunks) => (
             <Anchor

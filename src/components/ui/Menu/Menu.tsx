@@ -16,15 +16,21 @@ export default function Menu({ className }: MenuProps) {
     <nav className={twMerge('', className)}>
       <ul className="flex gap-4">
         <li>
-          <Anchor href="/projects">{t('projects')}</Anchor>
+          <Anchor className="font-monospace" href="/projects">
+            {t('projects')}
+          </Anchor>
         </li>
 
         <li>
-          <Anchor href="/experience">{t('experience')}</Anchor>
+          <Anchor className="font-monospace" href="/experience">
+            {t('experience')}
+          </Anchor>
         </li>
 
         <li>
-          <Anchor href="/skills">{t('skills')}</Anchor>
+          <Anchor className="font-monospace" href="/skills">
+            {t('skills')}
+          </Anchor>
         </li>
       </ul>
     </nav>

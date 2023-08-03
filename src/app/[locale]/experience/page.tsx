@@ -21,7 +21,7 @@ export default function ExperiencePage() {
       <Hero className="bg-pink-100" />
 
       <Section>
-        <h2 className="font-handwriting text-2xl">{t('title')}</h2>
+        <h2 className="text-2xl">{t('title')}</h2>
       </Section>
     </>
   );
