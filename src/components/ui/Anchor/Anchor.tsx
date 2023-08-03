@@ -24,7 +24,10 @@ export default function Anchor({ children, className, hasUnderline, ...props }: 
 
   if ('href' in props) {
     return (
-      <Link className={twMerge(styles)} href={{ pathname: props.href }} target={props.target}>
+      <Link
+        className={twMerge(styles, className)}
+        href={{ pathname: props.href }}
+        target={props.target}>
         {children}
       </Link>
     );

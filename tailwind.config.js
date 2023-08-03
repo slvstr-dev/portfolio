@@ -5,14 +5,14 @@ module.exports = {
     colors: {},
     extend: {
       fontFamily: {
-        body: ['var(--font-didact-gothic)'],
-        handwriting: ['var(--font-eb-garamond)'],
-        display: ['var(--font-arvo)'],
+        body: ['var(--font-playfair)'],
+        monospace: ['var(--font-inconsolata)'],
       },
       colors: {
         black: '#010101',
         gray: '#ADADAD',
         white: '#FFFFFF',
+        yellow: '#F3CC4D',
         pink: {
           100: '#FDEBEB',
           200: '#F0B5C1',

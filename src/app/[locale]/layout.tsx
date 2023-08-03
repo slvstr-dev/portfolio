@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { Arvo, Didact_Gothic, EB_Garamond } from 'next/font/google';
+import { Inconsolata, Playfair } from 'next/font/google';
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
@@ -11,21 +11,15 @@ import { getMessages } from '@/src/utils/translationUtils';
 
 import '@/styles/global.css';
 
-const arvo = Arvo({
+const playfair = Playfair({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-arvo',
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
 });
 
-const didactGothic = Didact_Gothic({
+const inconsolata = Inconsolata({
   subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-didact-gothic',
-});
-
-const ebGaramond = EB_Garamond({
-  subsets: ['latin'],
-  variable: '--font-eb-garamond',
+  variable: '--font-inconsolata',
 });
 
 export interface ParamsProps {
@@ -51,8 +45,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
 
   return (
     <html lang={locale}>
-      <body
-        className={`${arvo.variable} ${didactGothic.variable} ${ebGaramond.variable} flex min-h-screen flex-col`}>
+      <body className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
 

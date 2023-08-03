@@ -14,7 +14,7 @@ export default function Hero({ className }: HeroProps) {
 
   return (
     <Section className={twMerge('pb-20 pt-14', className)} isCentered>
-      <h1 className="font-handwriting text-5xl italic">{t('title')}</h1>
+      <h1 className="text-5xl italic">{t('title')}</h1>
     </Section>
   );
 }

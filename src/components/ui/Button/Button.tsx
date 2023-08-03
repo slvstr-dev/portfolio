@@ -52,7 +52,7 @@ export default function Button({
 }
 
 const button = tv({
-  base: 'relative inline-flex cursor-pointer items-center justify-center border-2 transition-opacity hover:opacity-75 active:opacity-75',
+  base: 'relative inline-flex cursor-pointer items-center justify-center border-2 font-monospace transition-opacity hover:opacity-50 active:opacity-75',
   slots: {
     label: 'font-bold uppercase',
     loader: 'absolute inset-0',
@@ -63,7 +63,7 @@ const button = tv({
       pink: 'border-pink-200 text-pink-300',
     },
     isDisabled: {
-      true: 'pointer-events-none opacity-50',
+      true: 'pointer-events-none opacity-25',
     },
     isLoading: {
       true: {
