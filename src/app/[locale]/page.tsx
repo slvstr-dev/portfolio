@@ -19,7 +19,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero className="bg-pink-100" />
+      <Hero className="bg-theme-brand-100" />
 
       <Section>
         <h2 className="text-2xl">{t('title')}</h2>

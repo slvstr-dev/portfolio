@@ -2,21 +2,22 @@
 module.exports = {
   content: ['./src/components/**/*.{ts,tsx}', './src/app/**/*.{ts,tsx}'],
   theme: {
-    colors: {},
     extend: {
       fontFamily: {
         body: ['var(--font-playfair)'],
         monospace: ['var(--font-inconsolata)'],
       },
       colors: {
-        black: '#010101',
-        gray: '#ADADAD',
-        white: '#FFFFFF',
-        yellow: '#F3CC4D',
-        pink: {
-          100: '#FDEBEB',
-          200: '#F0B5C1',
-          300: '#D3607F',
+        theme: {
+          dark: 'var(--color-dark)',
+          light: 'var(--color-light)',
+          muted: 'var(--color-muted)',
+          highlight: 'var(--color-highlight)',
+          brand: {
+            100: 'var(--color-brand-100)',
+            200: 'var(--color-brand-200)',
+            300: 'var(--color-brand-300)',
+          },
         },
       },
       container: {

@@ -3,7 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-dark: #010101;
+    --color-light: #ffffff;
+    --color-muted: #adadad;
+    --color-brand-100: #fdebeb;
+    --color-brand-200: #f0b5c1;
+    --color-brand-300: #d3607f;
+    --color-highlight: #f3cc4d;
+  }
+
   body {
-    @apply font-body text-black;
+    @apply text-theme-dark font-body;
   }
 }
