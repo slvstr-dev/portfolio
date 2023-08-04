@@ -9,6 +9,8 @@ module.exports = {
         monospace: ['var(--font-inconsolata)'],
       },
       colors: {
+        white: '#ffffff',
+        black: '#000000',
         theme: {
           base: 'var(--color-base)',
           inverted: 'var(--color-inverted)',

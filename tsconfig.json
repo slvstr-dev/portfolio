@@ -15,7 +15,6 @@
       "@/app/*": ["./src/app/*"],
       "@/components/*": ["./src/components/*"],
       "@/messages/*": ["./src/messages/*"],
-      "@/hooks/*": ["./src/hooks/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/src/*": ["./src/*"],
       "@/utils/*": ["./src/utils/*"]
