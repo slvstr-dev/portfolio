@@ -5,9 +5,9 @@ import { Inconsolata, Playfair } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
-import Footer from '@/components/layout/Footer/Footer';
-import Header from '@/components/layout/Header/Header';
-import { getMessages } from '@/src/utils/translationUtils';
+import { Footer } from '@/components/layout/Footer/Footer';
+import { Header } from '@/components/layout/Header/Header';
+import { getTranslations } from '@/src/utils/translationUtils';
 
 import '@/styles/global.css';
 
@@ -41,12 +41,12 @@ export async function generateMetadata({ params: { locale } }: ParamsProps) {
 }
 
 export default async function RootLayout({ children, params: { locale } }: RootLayoutProps) {
-  const messages = await getMessages(locale);
+  const translations = await getTranslations(locale);
 
   return (
     <html lang={locale}>
       <body className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={translations}>
           <Header />
 
           <main className="flex grow flex-col bg-theme-inverted">{children}</main>

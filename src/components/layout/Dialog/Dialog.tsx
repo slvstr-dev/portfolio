@@ -1,12 +1,14 @@
-import { DialogPrimitive } from '@/components/radix/DialogPrimitive';
+'use client';
 
-import DialogContent from './internal/DialogContent/DialogContent';
+import * as DialogPrimitive from '@radix-ui/react-dialog';
+
+import { DialogContent } from './internal/DialogContent/DialogContent';
 
 export interface DialogProps extends DialogPrimitive.DialogProps {}
 
-export default function Dialog(props: DialogProps) {
+export const Dialog = (props: DialogProps) => {
   return <DialogPrimitive.Root {...props} />;
-}
+};
 
 Dialog.Trigger = DialogPrimitive.Trigger;
 Dialog.Close = DialogPrimitive.Close;

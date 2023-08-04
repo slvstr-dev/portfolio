@@ -11,26 +11,28 @@ export interface ContainerProps extends PropsWithChildren<ContainerVariants> {
   className?: string;
 }
 
-export default function Container({
+export const Container = ({
   as,
   className,
   children,
   isCentered,
   direction,
-}: ContainerProps) {
+  maxWidth,
+  verticalPadding,
+}: ContainerProps) => {
   const Component = as ?? 'section';
 
-  const styles = container({ isCentered, direction });
+  const styles = container({ isCentered, direction, maxWidth, verticalPadding });
 
   return (
     <Component className={cn(styles.base(), className)}>
       <div className={styles.children()}>{children}</div>
     </Component>
   );
-}
+};
 
 const container = tv({
-  base: 'py-10',
+  base: '',
   slots: {
     children: 'container flex flex-col gap-10',
   },
@@ -48,8 +50,33 @@ const container = tv({
         children: 'items-center justify-center',
       },
     },
+    verticalPadding: {
+      none: 'py-0',
+      sm: 'py-5',
+      md: 'py-10',
+      lg: 'py-20',
+    },
+    maxWidth: {
+      sm: {
+        children: 'max-w-screen-sm',
+      },
+      md: {
+        children: 'max-w-screen-md',
+      },
+      lg: {
+        children: 'max-w-screen-lg',
+      },
+      xl: {
+        children: 'max-w-screen-xl',
+      },
+      '2xl': {
+        children: 'max-w-screen-2xl',
+      },
+    },
   },
   defaultVariants: {
     direction: 'column',
+    maxWidth: '2xl',
+    verticalPadding: 'md',
   },
 });

@@ -6,7 +6,7 @@ import { Inconsolata, Playfair } from 'next/font/google';
 
 import { NextIntlClientProvider } from 'next-intl';
 
-import messages from '@/messages/en.json';
+import translations from '@/translations/en.json';
 
 const playfair = Playfair({
   subsets: ['latin'],
@@ -31,7 +31,7 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <NextIntlClientProvider locale="en" messages={messages}>
+      <NextIntlClientProvider locale="en" messages={translations}>
         <div className={`${playfair.variable} ${inconsolata.variable}`}>
           <Story />
         </div>

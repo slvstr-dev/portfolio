@@ -16,9 +16,18 @@
   body {
     @apply font-body text-theme-base;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-light;
+  }
 }
 
-@keyframes dialog-overlay-show {
+@keyframes show {
   from {
     opacity: 0;
   }
@@ -27,33 +36,11 @@
   }
 }
 
-@keyframes dialog-overlay-hide {
+@keyframes hide {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
-  }
-}
-
-@keyframes dialog-content-show {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@keyframes dialog-content-hide {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.95);
   }
 }

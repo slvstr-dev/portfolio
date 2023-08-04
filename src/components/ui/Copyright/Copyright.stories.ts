@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Copyright from './Copyright';
+import { Copyright } from './Copyright';
 
 export default {
   title: 'ui/Copyright',

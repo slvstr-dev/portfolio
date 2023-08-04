@@ -2,15 +2,15 @@ import { PropsWithChildren } from 'react';
 
 import { useTranslations } from 'next-intl';
 
-import Anchor from '@/components/ui/Anchor/Anchor';
+import { Anchor } from '@/components/ui/Anchor/Anchor';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface MenuProps extends PropsWithChildren {
   className?: string;
 }
 
-export default function Menu({ className }: MenuProps) {
-  const t = useTranslations('components.menu');
+export const Menu = ({ className }: MenuProps) => {
+  const t = useTranslations('components.ui.menu');
 
   return (
     <nav className={cn('', className)}>
@@ -35,4 +35,4 @@ export default function Menu({ className }: MenuProps) {
       </ul>
     </nav>
   );
-}
+};

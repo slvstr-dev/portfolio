@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import LinkComponent from './Link';
+import { Link as LinkComponent } from './Link';
 
 export default {
   title: 'ui/Link',

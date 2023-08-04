@@ -15,10 +15,10 @@ export type LinkProps = PropsWithChildren & {
       }
   );
 
-export default function Link({ children, className, ...props }: LinkProps) {
+export const Link = ({ children, className, ...props }: LinkProps) => {
   if ('href' in props) {
     return (
-      <NextIntlLink className={className} href={{ pathname: props.href }} target={props.target}>
+      <NextIntlLink className={className} {...props} href={{ pathname: props.href }}>
         {children}
       </NextIntlLink>
     );
@@ -29,4 +29,4 @@ export default function Link({ children, className, ...props }: LinkProps) {
       {children}
     </button>
   );
-}
+};

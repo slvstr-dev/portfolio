@@ -1,7 +1,7 @@
-import Contact from '@/components/ui/Contact/Contact';
-import Copyright from '@/components/ui/Copyright/Copyright';
+import { Contact } from '@/components/ui/Contact/Contact';
+import { Copyright } from '@/components/ui/Copyright/Copyright';
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <footer>
       <Contact />
@@ -9,4 +9,4 @@ export default function Footer() {
       <Copyright />
     </footer>
   );
-}
+};
