@@ -2,15 +2,18 @@
 module.exports = {
   content: ['./src/components/**/*.{ts,tsx}', './src/app/**/*.{ts,tsx}'],
   theme: {
+    colors: {},
     extend: {
       fontFamily: {
         body: ['var(--font-playfair)'],
         monospace: ['var(--font-inconsolata)'],
       },
       colors: {
+        white: '#ffffff',
+        black: '#000000',
         theme: {
-          dark: 'var(--color-dark)',
-          light: 'var(--color-light)',
+          base: 'var(--color-base)',
+          inverted: 'var(--color-inverted)',
           muted: 'var(--color-muted)',
           highlight: 'var(--color-highlight)',
           brand: {

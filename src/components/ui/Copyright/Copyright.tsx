@@ -14,7 +14,7 @@ export default function Copyright({ className }: CopyrightProps) {
   const t = useTranslations('components.copyright');
 
   return (
-    <Section className={cn('bg-theme-light', className)}>
+    <Section className={cn('', className)}>
       <h2 className="text-xl font-bold uppercase">
         {t.rich('date', {
           link: (chunks) => (

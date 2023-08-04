@@ -29,7 +29,8 @@
     "**/*.tsx",
     "./.storybook/*",
     ".next/types/**/*.ts",
-    "next.config.js"
+    "next.config.js",
+    "src/components/layout/Dialog/internal/DialogContent"
   ],
   "exclude": ["node_modules", "storybook-static"]
 }
