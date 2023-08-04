@@ -14,7 +14,7 @@
     "paths": {
       "@/app/*": ["./src/app/*"],
       "@/components/*": ["./src/components/*"],
-      "@/messages/*": ["./src/messages/*"],
+      "@/translations/*": ["./src/translations/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/src/*": ["./src/*"],
       "@/utils/*": ["./src/utils/*"]
@@ -29,8 +29,7 @@
     "**/*.tsx",
     "./.storybook/*",
     ".next/types/**/*.ts",
-    "next.config.js",
-    "src/components/layout/Dialog/internal/DialogContent"
+    "next.config.js"
   ],
   "exclude": ["node_modules", "storybook-static"]
 }

@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "slvstr.dev",
+    "description": "Portfolio site created with Next.js, TypeScript & Tailwind."
+  },
+  "pages": {
+    "home": {
+      "title": "About <tag>me</tag>"
+    },
+    "projects": {
+      "title": "ProjectsPage"
+    },
+    "experience": {
+      "title": "ExperiencePage"
+    },
+    "skills": {
+      "title": "SkillsPage"
+    }
+  },
+  "components": {
+    "layout": {
+      "header": {
+        "buttons": {
+          "contact": "Contact"
+        },
+        "contact_form": {
+          "title": "Contact"
+        }
+      }
+    },
+    "ui": {
+      "hero": {
+        "title": "Hi, I'm Sylvester"
+      },
+      "logo": {
+        "title": "<link>S</link>"
+      },
+      "menu": {
+        "projects": "Projects",
+        "experience": "Experience",
+        "skills": "Skills"
+      },
+      "contact": {
+        "title": "Let's <tag>get in touch</tag> and <tag>drink coffee</tag>",
+        "subtitle": "Contact form"
+      },
+      "copyright": {
+        "date": "© {date} - <link>Sylvester Hofstra</link>"
+      }
+    },
+    "forms": {
+      "contact_form": {
+        "email": "Email",
+        "message": "Message",
+        "submit": "Send message"
+      }
+    }
+  }
+}

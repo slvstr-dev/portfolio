@@ -1,13 +1,13 @@
 import { tv, type VariantProps } from 'tailwind-variants';
 
-import Link, { LinkProps } from '@/components/ui/Link/Link';
+import { Link, LinkProps } from '@/components/ui/Link/Link';
 import { cn } from '@/src/utils/tailwindUtils';
 
 type AnchorVariants = VariantProps<typeof anchor>;
 
 export type AnchorProps = AnchorVariants & LinkProps;
 
-export default function Anchor({ children, className, hasUnderline, ...props }: AnchorProps) {
+export const Anchor = ({ children, className, hasUnderline, ...props }: AnchorProps) => {
   const styles = anchor({ hasUnderline });
 
   return (
@@ -15,7 +15,7 @@ export default function Anchor({ children, className, hasUnderline, ...props }: 
       {children}
     </Link>
   );
-}
+};
 
 const anchor = tv({
   base: 'transition-opacity hover:opacity-50 active:underline',

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Hero from './Hero';
+import { Hero } from './Hero';
 
 export default {
   title: 'ui/Hero',

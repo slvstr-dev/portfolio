@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Icon from './Icon';
+import { Icon } from './Icon';
 
 export default {
   title: 'ui/Icon',
   component: Icon,
   args: {
-    icon: 'X',
+    icon: 'Cross',
   },
   parameters: {
     layout: 'centered',

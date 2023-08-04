@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Menu from './Menu';
+import { Menu } from './Menu';
 
 export default {
   title: 'layout/Menu',

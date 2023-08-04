@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Anchor from './Anchor';
+import { Anchor } from './Anchor';
 
 export default {
   title: 'ui/Anchor',

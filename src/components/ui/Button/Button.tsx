@@ -1,14 +1,14 @@
 import { tv, type VariantProps } from 'tailwind-variants';
 
-import Icon from '@/components/ui/Icon/Icon';
-import Link, { LinkProps } from '@/components/ui/Link/Link';
+import { Icon } from '@/components/ui/Icon/Icon';
+import { Link, LinkProps } from '@/components/ui/Link/Link';
 import { cn } from '@/src/utils/tailwindUtils';
 
 type ButtonVariants = VariantProps<typeof button>;
 
 export type ButtonProps = ButtonVariants & LinkProps;
 
-export default function Button({
+export const Button = ({
   children,
   isDisabled,
   isLoading,
@@ -16,23 +16,23 @@ export default function Button({
   color,
   className,
   ...props
-}: ButtonProps) {
+}: ButtonProps) => {
   const styles = button({ color, size, isDisabled, isLoading });
 
   return (
     <Link className={cn(styles.base(), className)} {...props}>
-      {isLoading && <Icon icon="Loader" className={styles.loader()} />}
+      {isLoading && <Icon icon="Update" className={styles.loader()} />}
 
       <span className={styles.label()}>{children}</span>
     </Link>
   );
-}
+};
 
 const button = tv({
-  base: 'relative inline-flex cursor-pointer items-center justify-center border-2 font-monospace transition-opacity hover:opacity-50 active:opacity-75',
+  base: 'relative inline-flex cursor-pointer items-center justify-center border uppercase transition-opacity hover:opacity-50 active:opacity-75',
   slots: {
-    label: 'font-bold uppercase',
-    loader: 'absolute inset-0',
+    label: '',
+    loader: 'absolute inset-0 animate-spin',
   },
   variants: {
     color: {

@@ -2,8 +2,9 @@
 
 import { FormEvent, PropsWithChildren } from 'react';
 
-import Dialog from '@/components/layout/Dialog/Dialog';
-import Button from '@/components/ui/Button/Button';
+import { useTranslations } from 'next-intl';
+
+import { Button } from '@/components/ui/Button/Button';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface ContactFormProps extends PropsWithChildren {
@@ -11,7 +12,9 @@ export interface ContactFormProps extends PropsWithChildren {
   onSubmit?: () => void;
 }
 
-export default function ContactForm({ children, className, onSubmit, ...props }: ContactFormProps) {
+export const ContactForm = ({ children, className, onSubmit, ...props }: ContactFormProps) => {
+  const t = useTranslations('components.forms.contact_form');
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -25,12 +28,10 @@ export default function ContactForm({ children, className, onSubmit, ...props }:
       {children}
 
       <div className="flex gap-2">
-        <Dialog.Close>Cancel</Dialog.Close>
-
-        <Button color="brand" type="submit">
-          Submit
+        <Button className="bg-white" size="lg" type="submit">
+          {t('submit')}
         </Button>
       </div>
     </form>
   );
-}
+};
