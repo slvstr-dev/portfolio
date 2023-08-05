@@ -1,33 +1,28 @@
+import { forwardRef } from 'react';
+
 import { tv, type VariantProps } from 'tailwind-variants';
 
 import { Icon } from '@/components/ui/Icon/Icon';
 import { Link, LinkProps } from '@/components/ui/Link/Link';
-import { cn } from '@/src/utils/tailwindUtils';
 
 type ButtonVariants = VariantProps<typeof button>;
 
 export type ButtonProps = ButtonVariants & LinkProps;
 
-export const Button = ({
-  children,
-  isDisabled,
-  isLoading,
-  size,
-  color,
-  className,
-
-  ...props
-}: ButtonProps) => {
+export const Button = forwardRef<typeof Link, ButtonProps>(function Button(
+  { children, isDisabled, isLoading, size, color, className, ...props },
+  ref,
+) {
   const styles = button({ color, size, isDisabled, isLoading });
 
   return (
-    <Link className={cn(styles.base(), className)} {...props}>
+    <Link className={styles.base({ className })} {...props} ref={ref}>
       {isLoading && <Icon icon="Update" className={styles.loader()} />}
 
       <span className={styles.label()}>{children}</span>
     </Link>
   );
-};
+});
 
 const button = tv({
   base: 'relative inline-flex cursor-pointer items-center justify-center border uppercase transition-opacity hover:opacity-50 active:opacity-75',

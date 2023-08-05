@@ -22,6 +22,7 @@ export const Header = ({ className, title, backgroundImage }: HeaderProps) => {
           src={backgroundImage}
           alt=""
           fill
+          priority
         />
       )}
 

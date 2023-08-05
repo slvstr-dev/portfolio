@@ -13,22 +13,38 @@ export const UserInfo = async ({ locale }: UserInfoProps) => {
   const socialAccountsData: any = await getGitHubData('user/social_accounts');
 
   return (
-    <div className="flex w-full flex-col items-center gap-10 text-center text-2xl leading-normal md:flex-row md:gap-20 md:text-left">
+    <div className="flex w-full flex-col items-center gap-10 text-center leading-normal md:flex-row md:gap-20 md:text-left">
       <Logo className="text-9xl font-light text-theme-brand-300" />
 
       {(userData?.name || userData?.company || userData?.location) && (
-        <div className="self-start">
+        <div className="self-start text-xl">
           {userData?.name && <h2 className="font-bold uppercase">{userData.name}</h2>}
 
-          {userData?.company && <p className="font-light">{userData.company}</p>}
+          {userData?.company && (
+            <Anchor
+              href={t('company.href')}
+              target="_blank"
+              className="block font-light capitalize">
+              {t('company.title', { company: userData?.company })}
+            </Anchor>
+          )}
 
           {userData?.location && <p className="font-light">{userData.location}</p>}
         </div>
       )}
 
       {(userData?.html_url || socialAccountsData?.length > 0) && (
-        <div className="self-start">
+        <div className="self-start text-xl">
           <h3 className="font-bold uppercase">{t('social_accounts.title')}</h3>
+
+          {userData?.html_url && (
+            <Anchor
+              href={userData.html_url}
+              target="_blank"
+              className="block font-light capitalize">
+              {t('social_accounts.github.title')}
+            </Anchor>
+          )}
 
           {socialAccountsData?.map((account: { provider: string; url: string }, idx: string) => {
             return (

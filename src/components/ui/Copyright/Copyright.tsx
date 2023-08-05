@@ -13,7 +13,7 @@ export const Copyright = ({ className }: CopyrightProps) => {
   const t = useTranslations('components.ui.copyright');
 
   return (
-    <p className={cn('text-xl font-bold uppercase', className)}>
+    <p className={cn('font-bold uppercase', className)}>
       {t.rich('date', {
         link: (chunks) => (
           <Anchor
