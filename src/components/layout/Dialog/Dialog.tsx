@@ -2,7 +2,7 @@
 
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 
-import { DialogContent } from './internal/DialogContent/DialogContent';
+import { Content } from './internal/Content/Content';
 
 export interface DialogProps extends DialogPrimitive.DialogProps {}
 
@@ -12,4 +12,4 @@ export const Dialog = (props: DialogProps) => {
 
 Dialog.Trigger = DialogPrimitive.Trigger;
 Dialog.Close = DialogPrimitive.Close;
-Dialog.Content = DialogContent;
+Dialog.Content = Content;

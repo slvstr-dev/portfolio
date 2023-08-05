@@ -25,7 +25,7 @@ export default function HomePage() {
 
       <Container>
         <h2 className="text-center text-5xl leading-relaxed tracking-widest">
-          {t.rich('title', {
+          {t.rich('about_me.title', {
             tag: (chunks) => <span className="italic">{chunks}</span>,
           })}
         </h2>
