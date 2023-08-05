@@ -29,7 +29,7 @@ export interface ParamsProps {
 export interface RootLayoutProps extends PropsWithChildren<ParamsProps> {}
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
-  const t = await getTranslator(locale, 'meta');
+  const t = await getTranslator(locale, 'global.meta');
 
   return {
     title: {

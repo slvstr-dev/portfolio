@@ -1,15 +1,14 @@
 import { useTranslations } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
+import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
 import { Hero } from '@/components/ui/Hero/Hero';
 import { Quote } from '@/components/ui/Quote/Quote';
 import { Seperator } from '@/components/ui/Seperator/Seperator';
 
-import { ParamsProps } from './layout';
-
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
-  const t = await getTranslator(locale, 'pages.home');
+  const t = await getTranslator(locale, 'pages.home.meta');
 
   return {
     title: t('title'),

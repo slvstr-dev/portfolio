@@ -6,7 +6,7 @@ import { Container } from '@/components/layout/Container/Container';
 import { Hero } from '@/components/ui/Hero/Hero';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
-  const t = await getTranslator(locale, 'pages.experience');
+  const t = await getTranslator(locale, 'pages.experience.meta');
 
   return {
     title: t('title'),
