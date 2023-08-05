@@ -47,11 +47,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
     <html lang={locale}>
       <body className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
         <NextIntlClientProvider locale={locale} messages={translations}>
-          <Header />
-
-          <main className="flex grow flex-col bg-theme-inverted">{children}</main>
-
-          <Footer />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

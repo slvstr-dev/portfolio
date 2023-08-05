@@ -3,6 +3,7 @@ import { getTranslator } from 'next-intl/server';
 
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
+import { Page } from '@/components/layout/Page/Page';
 import { Hero } from '@/components/ui/Hero/Hero';
 import { Quote } from '@/components/ui/Quote/Quote';
 import { Seperator } from '@/components/ui/Seperator/Seperator';
@@ -19,7 +20,7 @@ export default function HomePage() {
   const t = useTranslations('pages.home');
 
   return (
-    <>
+    <Page>
       <Hero className="bg-theme-brand-100" />
 
       <Container>
@@ -40,6 +41,6 @@ export default function HomePage() {
           projects!
         </Quote>
       </Container>
-    </>
+    </Page>
   );
 }

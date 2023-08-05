@@ -57,6 +57,9 @@ const container = tv({
       lg: 'py-20',
     },
     maxWidth: {
+      xs: {
+        children: 'max-w-screen-xs',
+      },
       sm: {
         children: 'max-w-screen-sm',
       },

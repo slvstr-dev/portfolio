@@ -6,6 +6,17 @@
     }
   },
   "pages": {
+    "not_found": {
+      "meta": {
+        "title": "Page not found"
+      },
+      "title": "404",
+      "description": "The page you are trying to visit does not exist (anymore)."
+    },
+    "error": {
+      "title": "500",
+      "description": "The page you are trying to visit cannot be displayed due to technical issues."
+    },
     "home": {
       "meta": {
         "title": "Home"
@@ -43,6 +54,11 @@
       }
     },
     "ui": {
+      "error": {
+        "buttons": {
+          "home": "Go to homepage"
+        }
+      },
       "hero": {
         "title": "Hi, I'm Sylvester"
       },

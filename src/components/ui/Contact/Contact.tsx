@@ -17,12 +17,14 @@ export const Contact = ({ className }: ContactProps) => {
     <Container
       className={cn('bg-theme-brand-100', className)}
       verticalPadding="lg"
-      maxWidth="sm"
+      maxWidth="xs"
       isCentered>
       <div className="flex flex-col gap-4">
-        <h2 className="l text-center text-5xl lowercase italic">
+        <h2 className="l text-center text-4xl lowercase italic">
           {t.rich('title', {
-            tag: (chunks) => <span className="font-normal uppercase italic">{chunks}</span>,
+            tag: (chunks) => (
+              <span className="text-5xl font-normal uppercase italic">{chunks}</span>
+            ),
           })}
         </h2>
 
