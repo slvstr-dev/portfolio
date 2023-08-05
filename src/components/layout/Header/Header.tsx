@@ -11,7 +11,12 @@ export interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
   return (
     <header className={cn('bg-theme-brand-100', className)}>
-      <Container as="div" verticalPadding="sm" className="text-theme-brand-300" direction="row">
+      <Container
+        as="div"
+        verticalPadding="sm"
+        gap="sm"
+        className="text-theme-brand-300"
+        direction="row">
         <Logo />
 
         <Menu className="grow" />

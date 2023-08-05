@@ -27,6 +27,9 @@ module.exports = {
         center: true,
         padding: '1rem',
       },
+      screens: {
+        xs: '480px',
+      },
     },
   },
   plugins: [],

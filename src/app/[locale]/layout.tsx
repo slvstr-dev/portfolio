@@ -5,8 +5,6 @@ import { Inconsolata, Playfair } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
-import { Footer } from '@/components/layout/Footer/Footer';
-import { Header } from '@/components/layout/Header/Header';
 import { getTranslations } from '@/src/utils/translationUtils';
 
 import '@/styles/global.css';
@@ -29,7 +27,7 @@ export interface ParamsProps {
 export interface RootLayoutProps extends PropsWithChildren<ParamsProps> {}
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
-  const t = await getTranslator(locale, 'meta');
+  const t = await getTranslator(locale, 'global.meta');
 
   return {
     title: {
@@ -47,11 +45,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
     <html lang={locale}>
       <body className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
         <NextIntlClientProvider locale={locale} messages={translations}>
-          <Header />
-
-          <main className="flex grow flex-col bg-theme-inverted">{children}</main>
-
-          <Footer />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

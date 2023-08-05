@@ -3,10 +3,11 @@ import { getTranslator } from 'next-intl/server';
 
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
-import { Hero } from '@/components/ui/Hero/Hero';
+import { Hero } from '@/components/layout/Hero/Hero';
+import { Page } from '@/components/layout/Page/Page';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
-  const t = await getTranslator(locale, 'pages.experience');
+  const t = await getTranslator(locale, 'pages.experience.meta');
 
   return {
     title: t('title'),
@@ -17,12 +18,12 @@ export default function ExperiencePage() {
   const t = useTranslations('pages.experience');
 
   return (
-    <>
-      <Hero className="bg-theme-brand-100" />
+    <Page>
+      <Hero className="bg-theme-brand-100">{t('title')}</Hero>
 
       <Container>
         <h2 className="text-2xl">{t('title')}</h2>
       </Container>
-    </>
+    </Page>
   );
 }
