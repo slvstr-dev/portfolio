@@ -20,7 +20,7 @@ export const Error = ({ className, title, description, ...props }: ErrorProps) =
 
       {description && <p className="text-2xl">{description}</p>}
 
-      <Button href="/" className="bg-white">
+      <Button href="/" color="muted">
         {t('buttons.home')}
       </Button>
     </Container>

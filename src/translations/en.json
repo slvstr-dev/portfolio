@@ -21,7 +21,10 @@
       "meta": {
         "title": "Home"
       },
-      "title": "About <tag>me</tag>"
+      "title": "Frontend developer",
+      "about_me": {
+        "title": "About <tag>me</tag>"
+      }
     },
     "projects": {
       "meta": {
@@ -53,6 +56,13 @@
         }
       }
     },
+    "navigation": {
+      "main_navigation": {
+        "projects": "Projects",
+        "experience": "Experience",
+        "skills": "Skills"
+      }
+    },
     "network": {
       "user_info": {
         "social_accounts": {
@@ -69,13 +79,10 @@
           "home": "Go to homepage"
         }
       },
-      "hero": {
-        "title": "Hi, I'm Sylvester"
-      },
       "logo": {
         "title": "<link>S</link>"
       },
-      "menu": {
+      "navigation_menu": {
         "projects": "Projects",
         "experience": "Experience",
         "skills": "Skills"

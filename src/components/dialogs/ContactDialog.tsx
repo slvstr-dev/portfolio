@@ -15,7 +15,7 @@ export const ContactDialog = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
-        <Button color="brand" className="font-monospace font-bold">
+        <Button color="brandRing" className="font-monospace font-bold" size="lg">
           {t('buttons.contact')}
         </Button>
       </Dialog.Trigger>

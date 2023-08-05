@@ -2,7 +2,7 @@ import { getTranslator } from 'next-intl/server';
 
 import { RootLayoutProps } from '@/app/[locale]/layout';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
-import { Icon } from '@/components/ui/Icon/Icon';
+import { Logo } from '@/components/ui/Logo/Logo';
 import { getGitHubData } from '@/src/utils/fetchUtils';
 
 export interface UserInfoProps extends Pick<RootLayoutProps['params'], 'locale'> {}
@@ -14,7 +14,7 @@ export const UserInfo = async ({ locale }: UserInfoProps) => {
 
   return (
     <div className="flex w-full flex-col items-center gap-10 text-center text-2xl leading-normal md:flex-row md:gap-20 md:text-left">
-      <Icon icon="Code" className="h-20 w-20 text-theme-brand-300" />
+      <Logo className="text-9xl font-light text-theme-brand-300" />
 
       {(userData?.name || userData?.company || userData?.location) && (
         <div>

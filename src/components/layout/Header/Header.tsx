@@ -1,7 +1,7 @@
 import { ContactDialog } from '@/components/dialogs/ContactDialog';
 import { Container } from '@/components/layout/Container/Container';
+import { MainNavigation } from '@/components/navigation/MainNavigation/MainNavigation';
 import { Logo } from '@/components/ui/Logo/Logo';
-import { Menu } from '@/components/ui/Menu/Menu';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface HeaderProps {
@@ -19,7 +19,7 @@ export const Header = ({ className }: HeaderProps) => {
         direction="row">
         <Logo />
 
-        <Menu className="grow" />
+        <MainNavigation />
 
         <ContactDialog />
       </Container>
