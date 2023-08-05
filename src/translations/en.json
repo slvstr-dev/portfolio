@@ -53,6 +53,16 @@
         }
       }
     },
+    "network": {
+      "user_info": {
+        "social_accounts": {
+          "title": "Social accounts",
+          "github": {
+            "title": "GitHub"
+          }
+        }
+      }
+    },
     "ui": {
       "error": {
         "buttons": {

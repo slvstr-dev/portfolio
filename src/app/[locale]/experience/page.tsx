@@ -3,8 +3,8 @@ import { getTranslator } from 'next-intl/server';
 
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
+import { Hero } from '@/components/layout/Hero/Hero';
 import { Page } from '@/components/layout/Page/Page';
-import { Hero } from '@/components/ui/Hero/Hero';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
   const t = await getTranslator(locale, 'pages.experience.meta');
@@ -19,7 +19,7 @@ export default function ExperiencePage() {
 
   return (
     <Page>
-      <Hero className="bg-theme-brand-100" />
+      <Hero className="bg-theme-brand-100">{t('title')}</Hero>
 
       <Container>
         <h2 className="text-2xl">{t('title')}</h2>

@@ -28,7 +28,8 @@
     "next": "13.4.12",
     "next-intl": "3.0.0-beta.9",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@2digits/prettier-config": "^0.9.3",

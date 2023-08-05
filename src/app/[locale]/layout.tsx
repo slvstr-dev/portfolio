@@ -5,8 +5,6 @@ import { Inconsolata, Playfair } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
-import { Footer } from '@/components/layout/Footer/Footer';
-import { Header } from '@/components/layout/Header/Header';
 import { getTranslations } from '@/src/utils/translationUtils';
 
 import '@/styles/global.css';

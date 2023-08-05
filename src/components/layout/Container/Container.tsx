@@ -19,10 +19,11 @@ export const Container = ({
   direction,
   maxWidth,
   verticalPadding,
+  gap,
 }: ContainerProps) => {
   const Component = as ?? 'section';
 
-  const styles = container({ isCentered, direction, maxWidth, verticalPadding });
+  const styles = container({ isCentered, direction, maxWidth, verticalPadding, gap });
 
   return (
     <Component className={cn(styles.base(), className)}>
@@ -39,22 +40,25 @@ const container = tv({
   variants: {
     direction: {
       row: {
-        children: 'flex-row items-center',
+        children: 'flex-row items-center ',
       },
       column: {
         children: 'flex-col justify-center',
       },
     },
-    isCentered: {
-      true: {
-        children: 'items-center justify-center',
+    gap: {
+      none: {
+        children: 'gap-0',
       },
-    },
-    verticalPadding: {
-      none: 'py-0',
-      sm: 'py-5',
-      md: 'py-10',
-      lg: 'py-20',
+      sm: {
+        children: 'gap-5 md:gap-10',
+      },
+      md: {
+        children: 'gap-10 md:gap-20',
+      },
+      lg: {
+        children: 'gap-20 md:gap-40',
+      },
     },
     maxWidth: {
       xs: {
@@ -76,10 +80,22 @@ const container = tv({
         children: 'max-w-screen-2xl',
       },
     },
+    verticalPadding: {
+      none: 'py-0',
+      sm: 'py-5',
+      md: 'py-10',
+      lg: 'py-20',
+    },
+    isCentered: {
+      true: {
+        children: 'items-center justify-center',
+      },
+    },
   },
   defaultVariants: {
     direction: 'column',
     maxWidth: '2xl',
     verticalPadding: 'md',
+    gap: 'md',
   },
 });
