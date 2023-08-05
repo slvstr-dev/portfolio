@@ -3,7 +3,6 @@ import { getTranslator } from 'next-intl/server';
 
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
-import { Hero } from '@/components/layout/Hero/Hero';
 import { Page } from '@/components/layout/Page/Page';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
@@ -18,9 +17,7 @@ export default function ProjectsPage() {
   const t = useTranslations('pages.projects');
 
   return (
-    <Page>
-      <Hero className="bg-theme-brand-100">{t('title')}</Hero>
-
+    <Page title={t('title')}>
       <Container>
         <h2 className="text-2xl">{t('title')}</h2>
       </Container>

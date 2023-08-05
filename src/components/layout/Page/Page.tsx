@@ -6,12 +6,14 @@ import { cn } from '@/src/utils/tailwindUtils';
 
 export interface PageProps extends PropsWithChildren {
   className?: string;
+  title?: string;
+  backgroundImage?: string;
 }
 
-export const Page = ({ children, className }: PageProps) => {
+export const Page = ({ children, className, title, backgroundImage }: PageProps) => {
   return (
     <>
-      <Header />
+      <Header title={title} backgroundImage={backgroundImage} />
 
       <main className={cn('flex grow flex-col bg-theme-inverted', className)}>{children}</main>
 

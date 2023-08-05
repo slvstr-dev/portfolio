@@ -3,7 +3,6 @@ import { getTranslator } from 'next-intl/server';
 
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
-import { Hero } from '@/components/layout/Hero/Hero';
 import { Page } from '@/components/layout/Page/Page';
 import { Bio } from '@/components/network/Bio/Bio';
 import { Seperator } from '@/components/ui/Seperator/Seperator';
@@ -20,9 +19,7 @@ export default function HomePage() {
   const t = useTranslations('pages.home');
 
   return (
-    <Page>
-      <Hero className="bg-theme-brand-100">{t('title')}</Hero>
-
+    <Page title={t('title')} backgroundImage="https://placehold.co/600x400/png">
       <Container>
         <h2 className="text-center text-5xl leading-relaxed tracking-widest">
           {t.rich('about_me.title', {
