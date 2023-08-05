@@ -1,6 +1,6 @@
-export async function getGitHubData(endpoint: string) {
-  'server only';
+import 'server-only';
 
+export async function getGitHubData(endpoint: string) {
   try {
     const res = await fetch(`https://api.github.com/${endpoint}`, {
       headers: {
