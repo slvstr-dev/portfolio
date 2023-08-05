@@ -19,7 +19,7 @@ export default function HomePage() {
   const t = useTranslations('pages.home');
 
   return (
-    <Page title={t('title')}>
+    <Page title={t('title')} backgroundImage="https://placehold.co/600x400/png">
       <Container>
         <h2 className="text-center text-5xl leading-relaxed tracking-widest">
           {t.rich('about_me.title', {

@@ -30,19 +30,19 @@
       "meta": {
         "title": "Projects"
       },
-      "title": "ProjectsPage"
+      "title": "Projects"
     },
     "experience": {
       "meta": {
         "title": "Experience"
       },
-      "title": "ExperiencePage"
+      "title": "Experience"
     },
     "skills": {
       "meta": {
         "title": "Skills"
       },
-      "title": "SkillsPage"
+      "title": "Skills"
     }
   },
   "components": {

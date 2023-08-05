@@ -15,14 +15,21 @@ export interface HeaderProps {
 
 export const Header = ({ className, title, backgroundImage }: HeaderProps) => {
   return (
-    <header className={cn('bg-theme-brand-100', className)}>
-      {!!backgroundImage && <Image src={backgroundImage} alt="" fill />}
+    <header className={cn('relative bg-theme-brand-100', className)}>
+      {!!backgroundImage && (
+        <Image
+          className="absolute inset-0 object-cover object-center"
+          src={backgroundImage}
+          alt=""
+          fill
+        />
+      )}
 
       <Container
         as="div"
         verticalPadding="sm"
         gap="sm"
-        className="text-theme-brand-300"
+        className="relative text-theme-brand-300"
         direction="row">
         <Logo />
 
@@ -32,7 +39,7 @@ export const Header = ({ className, title, backgroundImage }: HeaderProps) => {
       </Container>
 
       {title && (
-        <Hero className={cn('bg-theme-brand-100', { 'text-white': !!backgroundImage })}>
+        <Hero className="relative" isInverted={!!backgroundImage}>
           {title}
         </Hero>
       )}
