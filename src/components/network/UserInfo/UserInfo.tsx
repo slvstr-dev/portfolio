@@ -17,7 +17,7 @@ export const UserInfo = async ({ locale }: UserInfoProps) => {
       <Logo className="text-9xl font-light text-theme-brand-300" />
 
       {(userData?.name || userData?.company || userData?.location) && (
-        <div>
+        <div className="self-start">
           {userData?.name && <h2 className="font-bold uppercase">{userData.name}</h2>}
 
           {userData?.company && <p className="font-light">{userData.company}</p>}
@@ -27,7 +27,7 @@ export const UserInfo = async ({ locale }: UserInfoProps) => {
       )}
 
       {(userData?.html_url || socialAccountsData?.length > 0) && (
-        <div>
+        <div className="self-start">
           <h3 className="font-bold uppercase">{t('social_accounts.title')}</h3>
 
           {socialAccountsData?.map((account: { provider: string; url: string }, idx: string) => {
