@@ -30,12 +30,6 @@ export const UserInfo = async ({ locale }: UserInfoProps) => {
         <div>
           <h3 className="font-bold uppercase">{t('social_accounts.title')}</h3>
 
-          {userData?.html_url && (
-            <Anchor href={userData.html_url} target="_blank" className="block font-light">
-              {t('social_accounts.github.title')}
-            </Anchor>
-          )}
-
           {socialAccountsData?.map((account: { provider: string; url: string }, idx: string) => {
             return (
               <Anchor
