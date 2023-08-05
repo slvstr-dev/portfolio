@@ -65,6 +65,10 @@
     },
     "network": {
       "user_info": {
+        "company": {
+          "title": "Working {company}",
+          "href": "https://2digits.agency/"
+        },
         "social_accounts": {
           "title": "Social accounts",
           "github": {
@@ -92,7 +96,7 @@
         "subtitle": "Contact form"
       },
       "copyright": {
-        "date": "© {date} - <link>Sylvester Hofstra</link>"
+        "date": "© {date} - <link>slvstr</link>"
       }
     },
     "forms": {
