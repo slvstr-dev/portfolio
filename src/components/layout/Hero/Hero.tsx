@@ -1,17 +1,15 @@
-import { PropsWithChildren } from 'react';
-
 import { Container } from '@/components/layout/Container/Container';
 import { cn } from '@/src/utils/tailwindUtils';
 
-export interface HeroProps extends PropsWithChildren {
-  title?: string;
+export interface HeroProps {
+  children?: string;
   className?: string;
 }
 
-export const Hero = ({ className, title }: HeroProps) => {
+export const Hero = ({ className, children }: HeroProps) => {
   return (
     <Container className={cn('pb-20 pt-14', className)} isCentered>
-      {title && <h1 className="text-5xl italic">{title}</h1>}
+      {children && <h1 className="text-5xl italic">{children}</h1>}
     </Container>
   );
 };
