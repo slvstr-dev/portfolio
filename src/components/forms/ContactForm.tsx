@@ -28,7 +28,7 @@ export const ContactForm = ({ children, className, onSubmit, ...props }: Contact
       {children}
 
       <div className="flex gap-2">
-        <Button className="bg-white" size="lg" type="submit">
+        <Button color="muted" size="lg" type="submit">
           {t('submit')}
         </Button>
       </div>
