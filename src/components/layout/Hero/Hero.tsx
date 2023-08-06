@@ -1,7 +1,6 @@
 import { tv, VariantProps } from 'tailwind-variants';
 
 import { Container } from '@/components/layout/Container/Container';
-import { cn } from '@/src/utils/tailwindUtils';
 
 type HeroVariants = VariantProps<typeof hero>;
 
@@ -13,7 +12,7 @@ export interface HeroProps extends HeroVariants {
 export const Hero = ({ className, children, isWhite }: HeroProps) => {
   const styles = hero({ isWhite });
   return (
-    <Container className={cn(styles.base(), className)} isCentered>
+    <Container className={styles.base({ className })} isCentered>
       {children && <h1 className={styles.title()}>{children}</h1>}
     </Container>
   );

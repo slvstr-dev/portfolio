@@ -43,6 +43,12 @@
         "title": "Skills"
       },
       "title": "Skills"
+    },
+    "contact": {
+      "meta": {
+        "title": "Contact"
+      },
+      "title": "Contact"
     }
   },
   "components": {

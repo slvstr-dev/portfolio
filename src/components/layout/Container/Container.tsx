@@ -2,8 +2,6 @@ import { ElementType, PropsWithChildren } from 'react';
 
 import { tv, VariantProps } from 'tailwind-variants';
 
-import { cn } from '@/src/utils/tailwindUtils';
-
 type ContainerVariants = VariantProps<typeof container>;
 
 export interface ContainerProps extends PropsWithChildren<ContainerVariants> {
@@ -26,7 +24,7 @@ export const Container = ({
   const styles = container({ isCentered, direction, maxWidth, verticalPadding, gap });
 
   return (
-    <Component className={cn(styles.base(), className)}>
+    <Component className={styles.base({ className })}>
       <div className={styles.children()}>{children}</div>
     </Component>
   );

@@ -17,14 +17,7 @@ export default {
 
 type Story = StoryObj<typeof ButtonComponent>;
 
-export const Link: Story = {
-  args: {
-    href: 'https://slvstr.dev',
-    onClick: undefined,
-  },
-} satisfies Story;
-
-export const Button: Story = {} satisfies Story;
+export const Default: Story = {} satisfies Story;
 
 export const Disabled: Story = {
   args: {

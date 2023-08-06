@@ -1,36 +1,34 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, forwardRef, PropsWithChildren } from 'react';
+import { AnchorHTMLAttributes } from 'react';
 
 import NextIntlLink from 'next-intl/link';
+import { VariantProps } from 'tailwind-variants';
 
-export type LinkProps = PropsWithChildren & {
-  className?: string;
-} & (
-    | {
-        href: string;
-        target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
-      }
-    | {
-        type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
-        onClick?: <T>(event?: T) => void | Promise<void>;
-      }
-  );
+import { button } from '@/components/ui/Button/Button';
+import { Icon } from '@/components/ui/Icon/Icon';
 
-export const Link = forwardRef(function Link({ children, className, ...props }: LinkProps, ref) {
-  if ('href' in props) {
-    return (
-      <NextIntlLink
-        className={className}
-        {...props}
-        href={{ pathname: props.href }}
-        ref={ref as never}>
-        {children}
-      </NextIntlLink>
-    );
-  }
+type ButtonVariants = VariantProps<typeof button>;
+
+export interface LinkProps
+  extends ButtonVariants,
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {}
+
+export const Link = ({
+  children,
+  className,
+  href,
+  color,
+  size,
+  isDisabled,
+  isLoading,
+  ...props
+}: LinkProps) => {
+  const styles = button({ color, size, isDisabled, isLoading });
 
   return (
-    <button className={className} type="button" {...props} ref={ref as never}>
-      {children}
-    </button>
+    <NextIntlLink className={styles.base({ className })} href={{ pathname: href }} {...props}>
+      {isLoading && <Icon icon="Update" className={styles.loader()} />}
+
+      <span className={styles.label()}>{children}</span>
+    </NextIntlLink>
   );
-});
+};

@@ -1,11 +1,12 @@
 import Image from 'next/image';
 
-import { ContactDialog } from '@/components/dialogs/ContactDialog';
 import { Container } from '@/components/layout/Container/Container';
 import { Hero } from '@/components/layout/Hero/Hero';
 import { MainNavigation } from '@/components/navigation/MainNavigation/MainNavigation';
 import { Logo } from '@/components/ui/Logo/Logo';
 import { cn } from '@/src/utils/tailwindUtils';
+
+import { ContactButton } from './internal/ContactButton';
 
 export interface HeaderProps {
   className?: string;
@@ -36,7 +37,7 @@ export const Header = ({ className, title, backgroundImage }: HeaderProps) => {
 
         <MainNavigation />
 
-        <ContactDialog />
+        <ContactButton />
       </Container>
 
       {title && (

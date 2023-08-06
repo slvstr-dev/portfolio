@@ -17,11 +17,4 @@ export default {
 
 type Story = StoryObj<typeof LinkComponent>;
 
-export const Link: Story = {} satisfies Story;
-
-export const Button: Story = {
-  args: {
-    href: undefined,
-    onClick: console.log,
-  },
-} satisfies Story;
+export const Default: Story = {} satisfies Story;
