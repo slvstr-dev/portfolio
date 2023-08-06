@@ -1,30 +1,36 @@
-import { forwardRef } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 
 import { tv, type VariantProps } from 'tailwind-variants';
 
 import { Icon } from '@/components/ui/Icon/Icon';
-import { Link, LinkProps } from '@/components/ui/Link/Link';
 
 type ButtonVariants = VariantProps<typeof button>;
 
-export type ButtonProps = ButtonVariants & LinkProps;
+export interface ButtonProps
+  extends ButtonVariants,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {}
 
-export const Button = forwardRef<typeof Link, ButtonProps>(function Button(
-  { children, isDisabled, isLoading, size, color, className, ...props },
-  ref,
-) {
+export const Button = ({
+  children,
+  isDisabled,
+  isLoading,
+  size,
+  color,
+  className,
+  ...props
+}: ButtonProps) => {
   const styles = button({ color, size, isDisabled, isLoading });
 
   return (
-    <Link className={styles.base({ className })} {...props} ref={ref}>
+    <button className={styles.base({ className })} {...props}>
       {isLoading && <Icon icon="Update" className={styles.loader()} />}
 
       <span className={styles.label()}>{children}</span>
-    </Link>
+    </button>
   );
-});
+};
 
-const button = tv({
+export const button = tv({
   base: 'relative inline-flex cursor-pointer items-center justify-center border uppercase transition-opacity hover:opacity-50 active:opacity-75',
   slots: {
     label: '',

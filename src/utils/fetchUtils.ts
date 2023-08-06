@@ -1,19 +1,33 @@
+import { Octokit, RequestError } from 'octokit';
+
 import 'server-only';
 
-export async function getGitHubData(endpoint: string) {
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+function handleError(error: unknown) {
+  if (error instanceof RequestError) {
+    return console.error(`GET /user - ${error.status}: ${error.message}`);
+  }
+
+  return console.error(`GET /user: ${error}`);
+}
+
+export async function getUser() {
   try {
-    const res = await fetch(`https://api.github.com/${endpoint}`, {
-      headers: {
-        Authorization: `token ${process.env.GITHUB_TOKEN}`,
-      },
-    });
+    const { data } = await octokit.request('GET /user');
 
-    if (!res.ok) {
-      throw new Error(res.statusText);
-    }
+    return data;
+  } catch (error) {
+    return handleError(error);
+  }
+}
 
-    return res.json();
-  } catch (e) {
-    console.error(endpoint, e);
+export async function getSocialAccounts() {
+  try {
+    const { data } = await octokit.request('GET /user/social_accounts');
+
+    return data;
+  } catch (error) {
+    return handleError(error);
   }
 }

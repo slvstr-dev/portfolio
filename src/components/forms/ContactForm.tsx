@@ -18,13 +18,17 @@ export const ContactForm = ({ children, className, onSubmit, ...props }: Contact
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log('submit');
+    if (onSubmit) {
+      console.log('Submit from ContactForm');
 
-    onSubmit?.();
+      return onSubmit();
+    }
+
+    console.log('Submit from ContactPage');
   };
 
   return (
-    <form onSubmit={handleSubmit} className={cn('', className)} {...props}>
+    <form onSubmit={handleSubmit} className={cn('flex flex-col gap-4', className)} {...props}>
       {children}
 
       <div className="flex gap-2">

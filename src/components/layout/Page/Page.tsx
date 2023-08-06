@@ -1,23 +1,35 @@
 import { PropsWithChildren } from 'react';
 
-import { Footer } from '@/components/layout/Footer/Footer';
-import { Header } from '@/components/layout/Header/Header';
+import { Container } from '@/components/layout/Container/Container';
+import { Hero } from '@/components/layout/Hero/Hero';
+import { Contact } from '@/components/ui/Contact/Contact';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface PageProps extends PropsWithChildren {
   className?: string;
   title?: string;
   backgroundImage?: string;
+  hasContactSection?: boolean;
 }
 
-export const Page = ({ children, className, title, backgroundImage }: PageProps) => {
+export const Page = ({
+  children,
+  className,
+  title,
+  backgroundImage,
+  hasContactSection = true,
+}: PageProps) => {
   return (
     <>
-      <Header title={title} backgroundImage={backgroundImage} />
+      {(!!title || !!backgroundImage) && <Hero backgroundImage={backgroundImage}>{title}</Hero>}
 
       <main className={cn('flex grow flex-col bg-theme-inverted', className)}>{children}</main>
 
-      <Footer />
+      {hasContactSection && (
+        <Container className="bg-theme-brand-100" verticalPadding="lg" maxWidth="xs" isCentered>
+          <Contact />
+        </Container>
+      )}
     </>
   );
 };

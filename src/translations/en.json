@@ -17,6 +17,12 @@
       "title": "500",
       "description": "The page you are trying to visit cannot be displayed due to technical issues."
     },
+    "modal": {
+      "contact": {
+        "title": "Let's <tag>get in touch</tag> and <tag>drink coffee</tag>",
+        "description": "Contact form"
+      }
+    },
     "home": {
       "meta": {
         "title": "Home"
@@ -43,6 +49,12 @@
         "title": "Skills"
       },
       "title": "Skills"
+    },
+    "contact": {
+      "meta": {
+        "title": "Contact"
+      },
+      "title": "Contact"
     }
   },
   "components": {
@@ -50,9 +62,6 @@
       "header": {
         "buttons": {
           "contact": "Contact"
-        },
-        "contact_form": {
-          "title": "Contact"
         }
       }
     },
@@ -66,7 +75,6 @@
     "network": {
       "user_info": {
         "company": {
-          "title": "Working {company}",
           "href": "https://2digits.agency/"
         },
         "social_accounts": {
@@ -84,7 +92,7 @@
         }
       },
       "logo": {
-        "title": "<link>S</link>"
+        "title": "<tag>S</tag>"
       },
       "navigation_menu": {
         "projects": "Projects",
@@ -96,7 +104,8 @@
         "subtitle": "Contact form"
       },
       "copyright": {
-        "date": "© {date} - <link>slvstr</link>"
+        "href": "https://www.linkedin.com/in/sylvesterhofstra/",
+        "date": "© {date} - <tag>slvstr</tag>"
       }
     },
     "forms": {

@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { Container, ContainerProps } from '@/components/layout/Container/Container';
-import { Button } from '@/components/ui/Button/Button';
+import { Link } from '@/components/ui/Link/Link';
 
 export interface ErrorProps extends PropsWithChildren<ContainerProps> {
   className?: string;
@@ -20,9 +20,9 @@ export const Error = ({ className, title, description, ...props }: ErrorProps) =
 
       {description && <p className="text-2xl">{description}</p>}
 
-      <Button href="/" color="muted">
+      <Link href="/" color="muted">
         {t('buttons.home')}
-      </Button>
+      </Link>
     </Container>
   );
 };

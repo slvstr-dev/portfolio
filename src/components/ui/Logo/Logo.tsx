@@ -15,7 +15,7 @@ export const Logo = ({ className }: LogoProps) => {
   return (
     <span className={cn('text-3xl transition-opacity hover:opacity-50', className)}>
       {t.rich('title', {
-        link: (chunks) => <Anchor href="/">{chunks}</Anchor>,
+        tag: (chunks) => <Anchor href="/">{chunks}</Anchor>,
       })}
     </span>
   );

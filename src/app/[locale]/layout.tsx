@@ -42,8 +42,9 @@ export default async function RootLayout({ children, params: { locale } }: RootL
   const translations = await getTranslations(locale);
 
   return (
-    <html lang={locale}>
-      <body className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
+    <html lang={locale} className="scroll-smooth">
+      <body
+        className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col font-body text-theme-base`}>
         <NextIntlClientProvider locale={locale} messages={translations}>
           {children}
         </NextIntlClientProvider>

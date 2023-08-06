@@ -1,24 +1,20 @@
-import { forwardRef } from 'react';
+import { AnchorHTMLAttributes, forwardRef } from 'react';
 
+import NextIntlLink from 'next-intl/link';
 import { tv, type VariantProps } from 'tailwind-variants';
-
-import { Link, LinkProps } from '@/components/ui/Link/Link';
-import { cn } from '@/src/utils/tailwindUtils';
 
 type AnchorVariants = VariantProps<typeof anchor>;
 
-export type AnchorProps = AnchorVariants & LinkProps;
+export interface AnchorProps extends AnchorVariants, AnchorHTMLAttributes<HTMLAnchorElement> {}
 
-export const Anchor = forwardRef<typeof Link, AnchorProps>(function Anchor(
-  { children, className, hasUnderline, ...props },
+export const Anchor = forwardRef<typeof NextIntlLink, AnchorProps>(function Anchor(
+  { className, hasUnderline, href, ...props },
   ref,
 ) {
-  const styles = anchor({ hasUnderline });
+  const styles = anchor({ hasUnderline, className });
 
   return (
-    <Link className={cn(styles, className)} {...props} ref={ref}>
-      {children}
-    </Link>
+    <NextIntlLink className={styles} href={{ pathname: href }} {...props} ref={ref as never} />
   );
 });
 
