@@ -9,16 +9,15 @@ export const ContactButton = () => {
   const t = useTranslations('components.layout.header');
   const isActiveRoute = useIsActiveRoute('/contact');
 
-  if (isActiveRoute) return <></>;
-
   return (
     <Link
+      isDisabled={isActiveRoute}
       href="/contact"
       color="brandRing"
       className="font-monospace font-bold tracking-wider"
       size="lg"
       aria-controls="radix-:R1mcq:">
-      {t('contact_form.title')}
+      {t('buttons.contact')}
     </Link>
   );
 };

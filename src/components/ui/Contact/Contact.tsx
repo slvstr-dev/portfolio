@@ -14,9 +14,9 @@ export const Contact = ({ className }: ContactProps) => {
 
   return (
     <div className={cn('flex flex-col items-center gap-4', className)}>
-      <h2 className="l text-center text-4xl lowercase italic">
+      <h2 className="text-center text-4xl lowercase italic">
         {t.rich('title', {
-          tag: (chunks) => <span className="text-5xl font-normal uppercase italic">{chunks}</span>,
+          tag: (chunks) => <span className="text-5xl font-normal uppercase">{chunks}</span>,
         })}
       </h2>
 

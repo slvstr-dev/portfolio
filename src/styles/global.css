@@ -13,10 +13,6 @@
     --color-highlight: #f3cc4d;
   }
 
-  body {
-    @apply font-body text-theme-base;
-  }
-
   h1,
   h2,
   h3,

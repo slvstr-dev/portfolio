@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 
 import { Inconsolata, Playfair } from 'next/font/google';
 
@@ -24,9 +24,7 @@ export interface ParamsProps {
   params: { locale: string };
 }
 
-export interface RootLayoutProps extends PropsWithChildren<ParamsProps> {
-  modal?: ReactNode;
-}
+export interface RootLayoutProps extends PropsWithChildren<ParamsProps> {}
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
   const t = await getTranslator(locale, 'global.meta');
@@ -40,16 +38,15 @@ export async function generateMetadata({ params: { locale } }: ParamsProps) {
   };
 }
 
-export default async function RootLayout({ children, params: { locale }, modal }: RootLayoutProps) {
+export default async function RootLayout({ children, params: { locale } }: RootLayoutProps) {
   const translations = await getTranslations(locale);
 
   return (
-    <html lang={locale}>
-      <body className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
+    <html lang={locale} className="scroll-smooth">
+      <body
+        className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col font-body text-theme-base`}>
         <NextIntlClientProvider locale={locale} messages={translations}>
           {children}
-
-          {modal}
         </NextIntlClientProvider>
       </body>
     </html>

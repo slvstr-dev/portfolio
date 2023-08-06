@@ -18,7 +18,7 @@ export default function ContactPage() {
   const t = useTranslations('pages.contact');
 
   return (
-    <Page title={t('title')}>
+    <Page title={t('title')} hasContactSection={false}>
       <Container>
         <h2 className="text-2xl">{t('title')}</h2>
 
