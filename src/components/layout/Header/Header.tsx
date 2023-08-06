@@ -40,7 +40,7 @@ export const Header = ({ className, title, backgroundImage }: HeaderProps) => {
       </Container>
 
       {title && (
-        <Hero className="relative" isInverted={!!backgroundImage}>
+        <Hero className="relative" isWhite={!!backgroundImage}>
           {title}
         </Hero>
       )}

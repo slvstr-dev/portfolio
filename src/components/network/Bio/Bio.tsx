@@ -1,8 +1,10 @@
 import { Quote } from '@/components/ui/Quote/Quote';
-import { getGitHubData } from '@/src/utils/fetchUtils';
+import { getUser } from '@/src/utils/fetchUtils';
 
 export const Bio = async () => {
-  const userData: any = await getGitHubData('user');
+  const user = await getUser();
 
-  return <Quote icon="Commit">{userData?.bio}</Quote>;
+  if (!user?.bio) return <></>;
+
+  return <Quote icon="Commit">{user.bio}</Quote>;
 };

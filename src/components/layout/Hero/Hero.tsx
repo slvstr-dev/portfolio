@@ -10,8 +10,8 @@ export interface HeroProps extends HeroVariants {
   className?: string;
 }
 
-export const Hero = ({ className, children, isInverted }: HeroProps) => {
-  const styles = hero({ isInverted });
+export const Hero = ({ className, children, isWhite }: HeroProps) => {
+  const styles = hero({ isWhite });
   return (
     <Container className={cn(styles.base(), className)} isCentered>
       {children && <h1 className={styles.title()}>{children}</h1>}
@@ -25,9 +25,9 @@ const hero = tv({
     title: 'text-center text-8xl italic',
   },
   variants: {
-    isInverted: {
+    isWhite: {
       true: {
-        title: 'font-light not-italic text-white',
+        title: 'font-light uppercase not-italic text-white',
       },
     },
   },

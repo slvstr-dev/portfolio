@@ -66,7 +66,6 @@
     "network": {
       "user_info": {
         "company": {
-          "title": "Working {company}",
           "href": "https://2digits.agency/"
         },
         "social_accounts": {
@@ -84,7 +83,7 @@
         }
       },
       "logo": {
-        "title": "<link>S</link>"
+        "title": "<tag>S</tag>"
       },
       "navigation_menu": {
         "projects": "Projects",
@@ -96,7 +95,8 @@
         "subtitle": "Contact form"
       },
       "copyright": {
-        "date": "© {date} - <link>slvstr</link>"
+        "href": "https://www.linkedin.com/in/sylvesterhofstra/",
+        "date": "© {date} - <tag>slvstr</tag>"
       }
     },
     "forms": {

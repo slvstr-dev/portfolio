@@ -15,11 +15,8 @@ export const Copyright = ({ className }: CopyrightProps) => {
   return (
     <p className={cn('font-bold uppercase', className)}>
       {t.rich('date', {
-        link: (chunks) => (
-          <Anchor
-            href="https://www.linkedin.com/in/sylvesterhofstra/"
-            target="_blank"
-            className="transition-opacity hover:opacity-50">
+        tag: (chunks) => (
+          <Anchor href={t('href')} target="_blank" className="transition-opacity hover:opacity-50">
             {chunks}
           </Anchor>
         ),
