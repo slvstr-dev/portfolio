@@ -2,9 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 
-import { NavigationMenu } from '@/components/ui/NavigationMenu/NavigationMenu';
+import NavigationMenu from '@/components/ui/NavigationMenu/NavigationMenu';
 
-export const MainNavigation = () => {
+export default function MainNavigation() {
   const t = useTranslations('components.navigation.main_navigation');
 
   return (
@@ -24,4 +24,4 @@ export const MainNavigation = () => {
       </NavigationMenu.List>
     </NavigationMenu>
   );
-};
+}

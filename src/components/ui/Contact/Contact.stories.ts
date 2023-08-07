@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Contact } from './Contact';
+import Contact from './Contact';
 
 export default {
   title: 'ui/Contact',

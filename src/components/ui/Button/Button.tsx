@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from 'react';
 
 import { tv, type VariantProps } from 'tailwind-variants';
 
-import { Icon } from '@/components/ui/Icon/Icon';
+import Icon from '@/components/ui/Icon/Icon';
 
 type ButtonVariants = VariantProps<typeof button>;
 
@@ -10,7 +10,7 @@ export interface ButtonProps
   extends ButtonVariants,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {}
 
-export const Button = ({
+export default function Button({
   children,
   isDisabled,
   isLoading,
@@ -18,7 +18,7 @@ export const Button = ({
   color,
   className,
   ...props
-}: ButtonProps) => {
+}: ButtonProps) {
   const styles = button({ color, size, isDisabled, isLoading });
 
   return (
@@ -28,7 +28,7 @@ export const Button = ({
       <span className={styles.label()}>{children}</span>
     </button>
   );
-};
+}
 
 export const button = tv({
   base: 'relative inline-flex cursor-pointer items-center justify-center border uppercase transition-opacity hover:opacity-50 active:opacity-75',

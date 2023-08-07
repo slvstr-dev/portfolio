@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Page } from './Page';
+import Page from './Page';
 
 export default {
   title: 'layout/Page',

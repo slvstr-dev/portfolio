@@ -9,7 +9,7 @@ export interface ContainerProps extends PropsWithChildren<ContainerVariants> {
   className?: string;
 }
 
-export const Container = ({
+export default function Container({
   as,
   className,
   children,
@@ -18,7 +18,7 @@ export const Container = ({
   maxWidth,
   verticalPadding,
   gap,
-}: ContainerProps) => {
+}: ContainerProps) {
   const Component = as ?? 'section';
 
   const styles = container({ isCentered, direction, maxWidth, verticalPadding, gap });
@@ -28,7 +28,7 @@ export const Container = ({
       <div className={styles.children()}>{children}</div>
     </Component>
   );
-};
+}
 
 const container = tv({
   base: '',

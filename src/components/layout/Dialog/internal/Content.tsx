@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 
-import { Icon } from '@/components/ui/Icon/Icon';
+import Icon from '@/components/ui/Icon/Icon';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface ContentProps extends Omit<DialogPrimitive.DialogContentProps, 'title'> {
@@ -12,7 +12,13 @@ export interface ContentProps extends Omit<DialogPrimitive.DialogContentProps, '
   description?: ReactNode;
 }
 
-export const Content = ({ children, className, title, description, ...props }: ContentProps) => {
+export default function Content({
+  children,
+  className,
+  title,
+  description,
+  ...props
+}: ContentProps) {
   return (
     <DialogPrimitive.Portal>
       <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/50 data-[state=closed]:animate-[hide_200ms] data-[state=open]:animate-[show_200ms]" />
@@ -46,4 +52,4 @@ export const Content = ({ children, className, title, description, ...props }: C
       </DialogPrimitive.Content>
     </DialogPrimitive.Portal>
   );
-};
+}

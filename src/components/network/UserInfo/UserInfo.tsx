@@ -1,13 +1,13 @@
 import { getTranslator } from 'next-intl/server';
 
 import { RootLayoutProps } from '@/app/[locale]/layout';
-import { Anchor } from '@/components/ui/Anchor/Anchor';
-import { Logo } from '@/components/ui/Logo/Logo';
+import Anchor from '@/components/ui/Anchor/Anchor';
+import Logo from '@/components/ui/Logo/Logo';
 import { getSocialAccounts, getUser } from '@/src/utils/fetchUtils';
 
 export interface UserInfoProps extends Pick<RootLayoutProps['params'], 'locale'> {}
 
-export const UserInfo = async ({ locale }: UserInfoProps) => {
+export default async function UserInfo({ locale }: UserInfoProps) {
   const t = await getTranslator(locale, 'components.network.user_info');
   const user = await getUser();
   const socialAccounts = await getSocialAccounts();
@@ -58,4 +58,4 @@ export const UserInfo = async ({ locale }: UserInfoProps) => {
       )}
     </div>
   );
-};
+}

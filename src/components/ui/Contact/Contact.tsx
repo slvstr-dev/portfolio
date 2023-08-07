@@ -2,14 +2,14 @@ import { PropsWithChildren } from 'react';
 
 import { useTranslations } from 'next-intl';
 
-import { ContactForm } from '@/components/forms/ContactForm';
+import ContactForm from '@/components/forms/ContactForm';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface ContactProps extends PropsWithChildren {
   className?: string;
 }
 
-export const Contact = ({ className }: ContactProps) => {
+export default function Contact({ className }: ContactProps) {
   const t = useTranslations('components.ui.contact');
 
   return (
@@ -25,4 +25,4 @@ export const Contact = ({ className }: ContactProps) => {
       <ContactForm className="mt-6" />
     </div>
   );
-};
+}

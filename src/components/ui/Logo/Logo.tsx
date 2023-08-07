@@ -2,14 +2,14 @@ import { PropsWithChildren } from 'react';
 
 import { useTranslations } from 'next-intl';
 
-import { Anchor } from '@/components/ui/Anchor/Anchor';
+import Anchor from '@/components/ui/Anchor/Anchor';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface LogoProps extends PropsWithChildren {
   className?: string;
 }
 
-export const Logo = ({ className }: LogoProps) => {
+export default function Logo({ className }: LogoProps) {
   const t = useTranslations('components.ui.logo');
 
   return (
@@ -19,4 +19,4 @@ export const Logo = ({ className }: LogoProps) => {
       })}
     </span>
   );
-};
+}

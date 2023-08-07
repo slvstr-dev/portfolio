@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 
-import { Container } from '@/components/layout/Container/Container';
-import { Hero } from '@/components/layout/Hero/Hero';
-import { Contact } from '@/components/ui/Contact/Contact';
+import Container from '@/components/layout/Container/Container';
+import Hero from '@/components/layout/Hero/Hero';
+import Contact from '@/components/ui/Contact/Contact';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface PageProps extends PropsWithChildren {
@@ -12,13 +12,13 @@ export interface PageProps extends PropsWithChildren {
   hasContactSection?: boolean;
 }
 
-export const Page = ({
+export default function Page({
   children,
   className,
   title,
   backgroundImage,
   hasContactSection = true,
-}: PageProps) => {
+}: PageProps) {
   return (
     <>
       {(!!title || !!backgroundImage) && <Hero backgroundImage={backgroundImage}>{title}</Hero>}
@@ -32,4 +32,4 @@ export const Page = ({
       )}
     </>
   );
-};
+}

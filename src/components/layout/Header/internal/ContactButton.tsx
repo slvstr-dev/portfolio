@@ -2,10 +2,10 @@
 
 import { useTranslations } from 'next-intl';
 
-import { Link } from '@/components/ui/Link/Link';
+import Link from '@/components/ui/Link/Link';
 import { useIsActiveRoute } from '@/hooks/useIsActiveRoute';
 
-export const ContactButton = () => {
+export default function ContactButton() {
   const t = useTranslations('components.layout.header');
   const isActiveRoute = useIsActiveRoute('/contact');
 
@@ -20,4 +20,4 @@ export const ContactButton = () => {
       {t('buttons.contact')}
     </Link>
   );
-};
+}

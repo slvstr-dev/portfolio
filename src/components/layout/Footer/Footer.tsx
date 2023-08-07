@@ -1,10 +1,10 @@
 import { useLocale } from 'next-intl';
 
-import { Container } from '@/components/layout/Container/Container';
-import { UserInfo } from '@/components/network/UserInfo/UserInfo';
-import { Copyright } from '@/components/ui/Copyright/Copyright';
+import Container from '@/components/layout/Container/Container';
+import UserInfo from '@/components/network/UserInfo/UserInfo';
+import Copyright from '@/components/ui/Copyright/Copyright';
 
-export const Footer = () => {
+export default function Footer() {
   const locale = useLocale();
 
   return (
@@ -16,4 +16,4 @@ export const Footer = () => {
       </Container>
     </footer>
   );
-};
+}
