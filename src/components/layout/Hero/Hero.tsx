@@ -11,11 +11,10 @@ export interface HeroProps extends HeroVariants {
   children?: string;
   className?: string;
   backgroundImage?: string;
-  hasContactButton?: boolean;
 }
 
-export default function Hero({ className, children, isWhite, backgroundImage }: HeroProps) {
-  const styles = hero({ isWhite });
+export default function Hero({ className, children, backgroundImage }: HeroProps) {
+  const styles = hero({ hasBackgroundImage: !!backgroundImage });
 
   return (
     <section className={cn('relative bg-theme-brand-100', className)}>
@@ -37,13 +36,14 @@ export default function Hero({ className, children, isWhite, backgroundImage }: 
 }
 
 const hero = tv({
-  base: 'pb-20 pt-36',
+  base: 'relative pb-20 pt-36',
   slots: {
     title: 'text-center text-8xl italic',
   },
   variants: {
-    isWhite: {
+    hasBackgroundImage: {
       true: {
+        base: 'bg-black/20',
         title: 'font-light uppercase not-italic text-white',
       },
     },

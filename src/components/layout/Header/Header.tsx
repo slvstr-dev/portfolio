@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { useSelectedLayoutSegment } from 'next/navigation';
 
@@ -12,30 +12,39 @@ import Logo from '@/components/ui/Logo/Logo';
 import NavigationMenu from '@/components/ui/NavigationMenu/NavigationMenu';
 import { cn } from '@/src/utils/tailwindUtils';
 
-export default function Header() {
+export interface HeaderProps {
+  className?: string;
+}
+
+export default function Header({ className }: HeaderProps) {
   const t = useTranslations('components.layout.header');
-  const [hasBackground, setBackground] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const segment = useSelectedLayoutSegment();
 
-  const listenScrollEvent = () => {
-    setBackground(window.scrollY > 80);
-  };
+  const listenScrollEvent = useCallback(() => {
+    setIsScrolled(window.scrollY > 80);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', listenScrollEvent);
+
     return () => {
       window.removeEventListener('scroll', listenScrollEvent);
     };
-  }, []);
+  }, [listenScrollEvent]);
 
   return (
     <Container
       as="header"
       verticalPadding="sm"
       gap="sm"
-      className={cn('fixed inset-x-0 top-0 z-10 text-theme-brand-300 transition-colors', {
-        'bg-theme-brand-100': hasBackground,
-      })}
+      className={cn(
+        'fixed inset-x-0 top-0 z-10 text-theme-brand-300 transition-colors',
+        className,
+        {
+          'bg-theme-brand-100 text-theme-brand-300': isScrolled,
+        },
+      )}
       direction="row">
       <Logo />
 
