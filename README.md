@@ -11,4 +11,4 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Fix forwardRef console error on Anchor
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Add statically typed routes through next-intl
-- [ ] Check remaining TODO's in project
+- [x] Check remaining TODO's in project
