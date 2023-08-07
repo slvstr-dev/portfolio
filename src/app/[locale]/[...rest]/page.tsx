@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import { Error } from '@/components/ui/Error/Error';
+import Error from '@/components/ui/Error/Error';
 
 export default function CatchAllPage() {
   const t = useTranslations('pages.not_found');
