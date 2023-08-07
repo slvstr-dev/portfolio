@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Error } from './Error';
+import Error from './Error';
 
 export default {
   title: 'ui/Error',

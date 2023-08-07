@@ -2,10 +2,10 @@ import { useTranslations } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
 import { ParamsProps } from '@/app/[locale]/layout';
-import { Container } from '@/components/layout/Container/Container';
-import { Page } from '@/components/layout/Page/Page';
-import { Bio } from '@/components/network/Bio/Bio';
-import { Seperator } from '@/components/ui/Seperator/Seperator';
+import Container from '@/components/layout/Container/Container';
+import Page from '@/components/layout/Page/Page';
+import Bio from '@/components/network/Bio/Bio';
+import Seperator from '@/components/ui/Seperator/Seperator';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
   const t = await getTranslator(locale, 'pages.home.meta');

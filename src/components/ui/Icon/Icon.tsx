@@ -9,8 +9,8 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   className?: string;
 };
 
-export const Icon = ({ className, icon, ...props }: IconProps) => {
+export default function Icon({ className, icon, ...props }: IconProps) {
   const Component = Icons[icon];
 
   return <Component className={cn('h-4 w-4', className)} {...props} />;
-};
+}

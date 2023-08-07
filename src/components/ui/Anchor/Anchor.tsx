@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, forwardRef } from 'react';
+import { AnchorHTMLAttributes, forwardRef, Ref } from 'react';
 
 import NextIntlLink from 'next-intl/link';
 import { tv, type VariantProps } from 'tailwind-variants';
@@ -7,15 +7,13 @@ type AnchorVariants = VariantProps<typeof anchor>;
 
 export interface AnchorProps extends AnchorVariants, AnchorHTMLAttributes<HTMLAnchorElement> {}
 
-export const Anchor = forwardRef<typeof NextIntlLink, AnchorProps>(function Anchor(
-  { className, hasUnderline, href, ...props },
-  ref,
+export default forwardRef(function Anchor(
+  { className, hasUnderline, href, ...props }: AnchorProps,
+  ref: Ref<HTMLAnchorElement>,
 ) {
   const styles = anchor({ hasUnderline, className });
 
-  return (
-    <NextIntlLink className={styles} href={{ pathname: href }} {...props} ref={ref as never} />
-  );
+  return <NextIntlLink className={styles} href={{ pathname: href }} {...props} ref={ref} />;
 });
 
 const anchor = tv({

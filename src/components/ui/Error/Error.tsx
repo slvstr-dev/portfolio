@@ -2,8 +2,8 @@ import { PropsWithChildren } from 'react';
 
 import { useTranslations } from 'next-intl';
 
-import { Container, ContainerProps } from '@/components/layout/Container/Container';
-import { Link } from '@/components/ui/Link/Link';
+import Container, { ContainerProps } from '@/components/layout/Container/Container';
+import Link from '@/components/ui/Link/Link';
 
 export interface ErrorProps extends PropsWithChildren<ContainerProps> {
   className?: string;
@@ -11,7 +11,7 @@ export interface ErrorProps extends PropsWithChildren<ContainerProps> {
   description?: string;
 }
 
-export const Error = ({ className, title, description, ...props }: ErrorProps) => {
+export default function Error({ className, title, description, ...props }: ErrorProps) {
   const t = useTranslations('components.ui.error');
 
   return (
@@ -25,4 +25,4 @@ export const Error = ({ className, title, description, ...props }: ErrorProps) =
       </Link>
     </Container>
   );
-};
+}

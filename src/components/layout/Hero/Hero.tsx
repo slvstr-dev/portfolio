@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { tv, VariantProps } from 'tailwind-variants';
 
-import { Container } from '@/components/layout/Container/Container';
+import Container from '@/components/layout/Container/Container';
 import { cn } from '@/src/utils/tailwindUtils';
 
 type HeroVariants = VariantProps<typeof hero>;
@@ -14,7 +14,7 @@ export interface HeroProps extends HeroVariants {
   hasContactButton?: boolean;
 }
 
-export const Hero = ({ className, children, isWhite, backgroundImage }: HeroProps) => {
+export default function Hero({ className, children, isWhite, backgroundImage }: HeroProps) {
   const styles = hero({ isWhite });
 
   return (
@@ -34,7 +34,7 @@ export const Hero = ({ className, children, isWhite, backgroundImage }: HeroProp
       </Container>
     </section>
   );
-};
+}
 
 const hero = tv({
   base: 'pb-20 pt-36',

@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from 'react';
 
-import { Container } from '@/components/layout/Container/Container';
-import { MainNavigation } from '@/components/navigation/MainNavigation/MainNavigation';
-import { Logo } from '@/components/ui/Logo/Logo';
+import Container from '@/components/layout/Container/Container';
+import MainNavigation from '@/components/navigation/MainNavigation/MainNavigation';
+import Logo from '@/components/ui/Logo/Logo';
 import { cn } from '@/src/utils/tailwindUtils';
 
-import { ContactButton } from './internal/ContactButton';
+import ContactButton from './internal/ContactButton';
 
-export const Header = () => {
+export default function Header() {
   const [hasBackground, setBackground] = useState(false);
 
   const listenScrollEvent = () => {
@@ -39,4 +39,4 @@ export const Header = () => {
       <ContactButton />
     </Container>
   );
-};
+}
