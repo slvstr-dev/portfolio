@@ -15,8 +15,7 @@ export default function ContactButton() {
       href="/contact"
       color="brandRing"
       className="font-monospace font-bold tracking-wider"
-      size="lg"
-      aria-controls="radix-:R1mcq:">
+      size="lg">
       {t('buttons.contact')}
     </Link>
   );
