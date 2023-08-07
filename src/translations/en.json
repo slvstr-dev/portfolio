@@ -61,15 +61,11 @@
     "layout": {
       "header": {
         "buttons": {
+          "projects": "Projects",
+          "experience": "Experience",
+          "skills": "Skills",
           "contact": "Contact"
         }
-      }
-    },
-    "navigation": {
-      "main_navigation": {
-        "projects": "Projects",
-        "experience": "Experience",
-        "skills": "Skills"
       }
     },
     "network": {

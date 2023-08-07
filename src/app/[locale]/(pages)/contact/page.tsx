@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
 import { ParamsProps } from '@/app/[locale]/layout';
-import ContactForm from '@/components/forms/ContactForm';
+import ContactForm from '@/components/forms/ContactForm/ContactForm';
 import Container from '@/components/layout/Container/Container';
 import Page from '@/components/layout/Page/Page';
 

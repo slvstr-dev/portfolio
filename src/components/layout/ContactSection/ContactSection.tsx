@@ -4,14 +4,14 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 
 import { useTranslations } from 'next-intl';
 
-import ContactForm from '@/components/forms/ContactForm';
+import ContactForm from '@/components/forms/ContactForm/ContactForm';
 import Container from '@/components/layout/Container/Container';
 
-export default function Contact() {
+export default function ContactSection() {
   const t = useTranslations('components.ui.contact');
   const segment = useSelectedLayoutSegment();
 
-  if (segment === 'contact') return <></>;
+  if (segment === 'cpmtact') return <></>;
 
   return (
     <Container

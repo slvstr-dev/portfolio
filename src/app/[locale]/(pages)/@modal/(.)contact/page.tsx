@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 
 import { useTranslations } from 'next-intl';
 
-import ContactForm from '@/components/forms/ContactForm';
+import ContactForm from '@/components/forms/ContactForm/ContactForm';
 import Dialog from '@/components/layout/Dialog/Dialog';
 
 export default function ContactModal() {

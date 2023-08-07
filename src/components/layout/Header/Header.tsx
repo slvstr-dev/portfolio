@@ -7,9 +7,9 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 import Container from '@/components/layout/Container/Container';
-import MainNavigation from '@/components/navigation/MainNavigation/MainNavigation';
 import Link from '@/components/ui/Link/Link';
 import Logo from '@/components/ui/Logo/Logo';
+import NavigationMenu from '@/components/ui/NavigationMenu/NavigationMenu';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export default function Header() {
@@ -39,7 +39,21 @@ export default function Header() {
       direction="row">
       <Logo />
 
-      <MainNavigation />
+      <NavigationMenu className="grow">
+        <NavigationMenu.List>
+          <NavigationMenu.Item>
+            <NavigationMenu.Link href="/projects">{t('buttons.projects')}</NavigationMenu.Link>
+          </NavigationMenu.Item>
+
+          <NavigationMenu.Item>
+            <NavigationMenu.Link href="/experience">{t('buttons.experience')}</NavigationMenu.Link>
+          </NavigationMenu.Item>
+
+          <NavigationMenu.Item>
+            <NavigationMenu.Link href="/skills">{t('buttons.skills')}</NavigationMenu.Link>
+          </NavigationMenu.Item>
+        </NavigationMenu.List>
+      </NavigationMenu>
 
       {segment !== 'contact' && (
         <Link

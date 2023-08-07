@@ -1,6 +1,6 @@
 import { useLocale } from 'next-intl';
 
-import Contact from '@/components/layout/Contact/Contact';
+import Contact from '@/components/layout/ContactSection/ContactSection';
 import Container from '@/components/layout/Container/Container';
 import UserInfo from '@/components/network/UserInfo/UserInfo';
 import Copyright from '@/components/ui/Copyright/Copyright';
