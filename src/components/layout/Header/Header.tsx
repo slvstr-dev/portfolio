@@ -2,15 +2,20 @@
 
 import { useEffect, useState } from 'react';
 
+import { useSelectedLayoutSegment } from 'next/navigation';
+
+import { useTranslations } from 'next-intl';
+
 import Container from '@/components/layout/Container/Container';
 import MainNavigation from '@/components/navigation/MainNavigation/MainNavigation';
+import Link from '@/components/ui/Link/Link';
 import Logo from '@/components/ui/Logo/Logo';
 import { cn } from '@/src/utils/tailwindUtils';
 
-import ContactButton from './internal/ContactButton';
-
 export default function Header() {
+  const t = useTranslations('components.layout.header');
   const [hasBackground, setBackground] = useState(false);
+  const segment = useSelectedLayoutSegment();
 
   const listenScrollEvent = () => {
     setBackground(window.scrollY > 80);
@@ -36,7 +41,15 @@ export default function Header() {
 
       <MainNavigation />
 
-      <ContactButton />
+      {segment !== 'contact' && (
+        <Link
+          href="/contact"
+          color="brandRing"
+          className="font-monospace font-bold tracking-wider"
+          size="lg">
+          {t('buttons.contact')}
+        </Link>
+      )}
     </Container>
   );
 }

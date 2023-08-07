@@ -48,6 +48,9 @@ const container = tv({
       none: {
         children: 'gap-0',
       },
+      xs: {
+        children: 'gap-2.5 md:gap-5',
+      },
       sm: {
         children: 'gap-5 md:gap-10',
       },

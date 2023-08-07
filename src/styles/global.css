@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --color-base: #010101;
-    --color-inverted: #ffffff;
-    --color-muted: #adadad;
-    --color-brand-100: #fdebeb;
-    --color-brand-200: #f0b5c1;
-    --color-brand-300: #d3607f;
-    --color-highlight: #f3cc4d;
+    --color-base: 1, 1, 1;
+    --color-inverted: 255, 255, 255;
+    --color-muted: 173, 173, 173;
+    --color-brand-100: 253, 235, 235;
+    --color-brand-200: 240, 181, 193;
+    --color-brand-300: 211, 96, 127;
+    --color-highlight: 243, 204, 77;
   }
 
   h1,
