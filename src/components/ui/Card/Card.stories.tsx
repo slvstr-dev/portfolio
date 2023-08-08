@@ -13,36 +13,29 @@ type Story = StoryObj<typeof Card>;
 export const Content: Story = {
   args: {
     children: (
-      <Card.Content>
-        <h3 className="text-xl font-bold uppercase">Card</h3>
+      <>
+        <h3 className="text-4xl uppercase italic">Card</h3>
 
-        <p className="text-center text-3xl lowercase italic">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        </p>
-      </Card.Content>
+        <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
+      </>
     ),
   },
 } satisfies Story;
 
 export const Image: Story = {
   args: {
-    children: <Card.Image src="https://placehold.co/600x400/png" />,
+    imageSrc: 'https://placehold.co/600x400/png',
   },
 } satisfies Story;
 
 export const Both: Story = {
   args: {
+    imageSrc: 'https://placehold.co/600x400/png',
     children: (
       <>
-        <Card.Image src="https://placehold.co/600x400/png" />
+        <h3 className="text-4xl uppercase italic">Card</h3>
 
-        <Card.Content>
-          <h3 className="text-xl font-bold uppercase">Card</h3>
-
-          <p className="text-center text-3xl lowercase italic">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
-        </Card.Content>
+        <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
       </>
     ),
   },
@@ -51,19 +44,13 @@ export const Both: Story = {
 export const Orientation: Story = {
   args: {
     ...Both.args,
-    orientation: 'columnReverse',
-    children: (
-      <>
-        <Card.Image src="https://placehold.co/600x400/png" />
+    orientation: 'column',
+  },
+} satisfies Story;
 
-        <Card.Content>
-          <h3 className="text-xl font-bold uppercase">Card</h3>
-
-          <p className="text-center text-3xl lowercase italic">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
-        </Card.Content>
-      </>
-    ),
+export const Reverse: Story = {
+  args: {
+    ...Both.args,
+    isReverse: true,
   },
 } satisfies Story;
