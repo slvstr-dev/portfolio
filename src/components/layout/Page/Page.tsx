@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
-import Header from '@/components/layout/Header/Header';
-import Hero from '@/components/layout/Hero/Hero';
+import { Header } from '@/components/layout/Header/Header';
+import { Hero } from '@/components/layout/Hero/Hero';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface PageProps extends PropsWithChildren {
@@ -10,7 +10,7 @@ export interface PageProps extends PropsWithChildren {
   backgroundImage?: string;
 }
 
-export default function Page({ children, className, title, backgroundImage }: PageProps) {
+export function Page({ children, className, title, backgroundImage }: PageProps) {
   return (
     <>
       <Header className={cn({ 'text-white': !!backgroundImage })} />

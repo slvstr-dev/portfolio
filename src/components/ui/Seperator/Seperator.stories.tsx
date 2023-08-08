@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Seperator from './Seperator';
+import { Seperator } from './Seperator';
 
 export default {
   title: 'ui/Seperator',

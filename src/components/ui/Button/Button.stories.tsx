@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import ButtonComponent from './Button';
+import { Button } from './Button';
 
 export default {
   title: 'ui/Button',
-  component: ButtonComponent,
+  component: Button,
   args: {
     children: 'Button',
     onClick: console.log,
@@ -13,9 +13,9 @@ export default {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof ButtonComponent>;
+} satisfies Meta<typeof Button>;
 
-type Story = StoryObj<typeof ButtonComponent>;
+type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {} satisfies Story;
 

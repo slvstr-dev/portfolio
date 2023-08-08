@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import NavigationMenu from './NavigationMenu';
+import { NavigationMenu } from './NavigationMenu';
 
 export default {
   title: 'layout/NavigationMenu',

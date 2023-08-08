@@ -1,6 +1,6 @@
 import { PropsWithChildren, ReactNode } from 'react';
 
-import Footer from '@/components/layout/Footer/Footer';
+import { Footer } from '@/components/layout/Footer/Footer';
 
 export interface PagesLayout extends PropsWithChildren {
   modal: ReactNode;

@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Dialog from './Dialog';
+import { Icon } from './Icon';
 
 export default {
-  title: 'ui/Dialog',
-  component: Dialog,
+  title: 'ui/Icon',
+  component: Icon,
   args: {
-    children: 'Dialog',
+    icon: 'Cross',
   },
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Dialog>;
+} satisfies Meta<typeof Icon>;
 
-type Story = StoryObj<typeof Dialog>;
+type Story = StoryObj<typeof Icon>;
 
 export const Default: Story = {} satisfies Story;

@@ -6,17 +6,17 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 
 import { useTranslations } from 'next-intl';
 
-import Container from '@/components/layout/Container/Container';
-import Link from '@/components/ui/Link/Link';
-import Logo from '@/components/ui/Logo/Logo';
-import NavigationMenu from '@/components/ui/NavigationMenu/NavigationMenu';
+import { Container } from '@/components/layout/Container/Container';
+import { Link } from '@/components/ui/Link/Link';
+import { Logo } from '@/components/ui/Logo/Logo';
+import { NavigationMenu } from '@/components/ui/NavigationMenu/NavigationMenu';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface HeaderProps {
   className?: string;
 }
 
-export default function Header({ className }: HeaderProps) {
+export function Header({ className }: HeaderProps) {
   const t = useTranslations('components.layout.header');
   const [isScrolled, setIsScrolled] = useState(false);
   const segment = useSelectedLayoutSegment();

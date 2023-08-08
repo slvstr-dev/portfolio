@@ -6,6 +6,6 @@ import { cn } from '@/src/utils/tailwindUtils';
 
 export interface SeperatorProps extends SeparatorPrimitive.SeparatorProps {}
 
-export default function Seperator({ className, ...props }: SeperatorProps) {
+export function Seperator({ className, ...props }: SeperatorProps) {
   return <SeparatorPrimitive.Root className={cn('h-0.5 bg-theme-muted', className)} {...props} />;
 }

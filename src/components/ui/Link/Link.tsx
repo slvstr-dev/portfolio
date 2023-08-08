@@ -4,7 +4,7 @@ import NextIntlLink from 'next-intl/link';
 import { VariantProps } from 'tailwind-variants';
 
 import { button } from '@/components/ui/Button/Button';
-import Icon from '@/components/ui/Icon/Icon';
+import { Icon } from '@/components/ui/Icon/Icon';
 
 type ButtonVariants = VariantProps<typeof button>;
 
@@ -12,7 +12,7 @@ export interface LinkProps
   extends ButtonVariants,
     Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {}
 
-export default function Link({
+export function Link({
   children,
   className,
   href,

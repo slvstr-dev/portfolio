@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Quote from './Quote';
+import { Quote } from './Quote';
 
 export default {
   title: 'ui/Quote',

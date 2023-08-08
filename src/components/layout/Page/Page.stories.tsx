@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Error from './Error';
+import { Page } from './Page';
 
 export default {
-  title: 'ui/Error',
-  component: Error,
+  title: 'layout/Page',
+  component: Page,
   tags: ['autodocs'],
-} satisfies Meta<typeof Error>;
+} satisfies Meta<typeof Page>;
 
-type Story = StoryObj<typeof Error>;
+type Story = StoryObj<typeof Page>;
 
 export const Default: Story = {} satisfies Story;
