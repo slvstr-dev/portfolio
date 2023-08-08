@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Card from './Card';
-import ContentComponent from './internal/Content';
-import ImageComponent from './internal/Image';
+import { Card } from './Card';
 
 export default {
   title: 'ui/Card',
@@ -15,20 +13,20 @@ type Story = StoryObj<typeof Card>;
 export const Content: Story = {
   args: {
     children: (
-      <ContentComponent>
+      <Card.Content>
         <h3 className="text-xl font-bold uppercase">Card</h3>
 
         <p className="text-center text-3xl lowercase italic">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
         </p>
-      </ContentComponent>
+      </Card.Content>
     ),
   },
 } satisfies Story;
 
 export const Image: Story = {
   args: {
-    children: <ImageComponent src="https://placehold.co/600x400/png" />,
+    children: <Card.Image src="https://placehold.co/600x400/png" />,
   },
 } satisfies Story;
 
@@ -36,15 +34,15 @@ export const Both: Story = {
   args: {
     children: (
       <>
-        <ImageComponent src="https://placehold.co/600x400/png" />
+        <Card.Image src="https://placehold.co/600x400/png" />
 
-        <ContentComponent>
+        <Card.Content>
           <h3 className="text-xl font-bold uppercase">Card</h3>
 
           <p className="text-center text-3xl lowercase italic">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-        </ContentComponent>
+        </Card.Content>
       </>
     ),
   },
@@ -56,15 +54,15 @@ export const Orientation: Story = {
     orientation: 'columnReverse',
     children: (
       <>
-        <ImageComponent src="https://placehold.co/600x400/png" />
+        <Card.Image src="https://placehold.co/600x400/png" />
 
-        <ContentComponent>
+        <Card.Content>
           <h3 className="text-xl font-bold uppercase">Card</h3>
 
           <p className="text-center text-3xl lowercase italic">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-        </ContentComponent>
+        </Card.Content>
       </>
     ),
   },

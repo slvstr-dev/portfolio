@@ -2,13 +2,13 @@
 
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 
-import Item from './internal/Item';
-import Link from './internal/Link';
-import List from './internal/List';
+import { Item } from './internal/Item';
+import { Link } from './internal/Link';
+import { List } from './internal/List';
 
 export interface NavigationMenuProps extends NavigationMenuPrimitive.NavigationMenuProps {}
 
-export default function NavigationMenu({ ...props }: NavigationMenuProps) {
+export function NavigationMenu({ ...props }: NavigationMenuProps) {
   return <NavigationMenuPrimitive.Root {...props} />;
 }
 

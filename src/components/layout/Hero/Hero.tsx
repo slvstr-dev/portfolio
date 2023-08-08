@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { tv, VariantProps } from 'tailwind-variants';
 
-import Container from '@/components/layout/Container/Container';
+import { Container } from '@/components/layout/Container/Container';
 import { cn } from '@/src/utils/tailwindUtils';
 
 type HeroVariants = VariantProps<typeof hero>;
@@ -13,7 +13,7 @@ export interface HeroProps extends HeroVariants {
   backgroundImage?: string;
 }
 
-export default function Hero({ className, children, backgroundImage }: HeroProps) {
+export function Hero({ className, children, backgroundImage }: HeroProps) {
   const styles = hero({ hasBackgroundImage: !!backgroundImage });
 
   return (

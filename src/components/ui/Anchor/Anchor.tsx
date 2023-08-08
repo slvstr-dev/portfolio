@@ -7,7 +7,7 @@ type AnchorVariants = VariantProps<typeof anchor>;
 
 export interface AnchorProps extends AnchorVariants, AnchorHTMLAttributes<HTMLAnchorElement> {}
 
-export default forwardRef(function Anchor(
+export const Anchor = forwardRef(function Anchor(
   { className, hasUnderline, href, ...props }: AnchorProps,
   ref: Ref<HTMLAnchorElement>,
 ) {

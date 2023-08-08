@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 
 import { useTranslations } from 'next-intl';
 
-import ContactForm from '@/components/forms/ContactForm/ContactForm';
-import Dialog from '@/components/layout/Dialog/Dialog';
+import { ContactForm } from '@/components/forms/ContactForm/ContactForm';
+import { Dialog } from '@/components/layout/Dialog/Dialog';
 
 export default function ContactModal() {
   const t = useTranslations('pages.modal.contact');

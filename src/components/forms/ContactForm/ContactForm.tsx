@@ -4,7 +4,7 @@ import { FormEvent, PropsWithChildren } from 'react';
 
 import { useTranslations } from 'next-intl';
 
-import Button from '@/components/ui/Button/Button';
+import { Button } from '@/components/ui/Button/Button';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface ContactFormProps extends PropsWithChildren {
@@ -12,7 +12,7 @@ export interface ContactFormProps extends PropsWithChildren {
   onSubmit?: () => void;
 }
 
-export default function ContactForm({ children, className, onSubmit, ...props }: ContactFormProps) {
+export function ContactForm({ children, className, onSubmit, ...props }: ContactFormProps) {
   const t = useTranslations('components.forms.contact_form');
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {

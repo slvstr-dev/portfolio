@@ -2,14 +2,14 @@ import { HTMLAttributes } from 'react';
 
 import { tv, VariantProps } from 'tailwind-variants';
 
-// import Content from './internal/Content';
-// import Image from './internal/Image';
+import { Content } from './internal/Content';
+import { Image } from './internal/Image';
 
 type CardVariants = VariantProps<typeof card>;
 
 export interface CardProps extends HTMLAttributes<HTMLElement>, CardVariants {}
 
-export default function Card({ className, orientation, ...props }: CardProps) {
+export function Card({ className, orientation, ...props }: CardProps) {
   return <article className={card({ className, orientation })} {...props} />;
 }
 
@@ -28,5 +28,5 @@ const card = tv({
   },
 });
 
-// Card.Content = Content;
-// Card.Image = Image;
+Card.Content = Content;
+Card.Image = Image;

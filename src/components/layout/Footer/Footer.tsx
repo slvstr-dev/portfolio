@@ -1,16 +1,16 @@
 import { useLocale } from 'next-intl';
 
-import Contact from '@/components/layout/ContactSection/ContactSection';
-import Container from '@/components/layout/Container/Container';
-import UserInfo from '@/components/network/UserInfo/UserInfo';
-import Copyright from '@/components/ui/Copyright/Copyright';
+import { ContactSection } from '@/components/layout/ContactSection/ContactSection';
+import { Container } from '@/components/layout/Container/Container';
+import { UserInfo } from '@/components/network/UserInfo/UserInfo';
+import { Copyright } from '@/components/ui/Copyright/Copyright';
 
-export default function Footer() {
+export function Footer() {
   const locale = useLocale();
 
   return (
     <footer>
-      <Contact />
+      <ContactSection />
 
       <Container gap="md" maxWidth="lg" verticalPadding="lg" isCentered>
         <UserInfo locale={locale} />

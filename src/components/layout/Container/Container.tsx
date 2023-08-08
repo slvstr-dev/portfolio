@@ -9,7 +9,7 @@ export interface ContainerProps extends PropsWithChildren<ContainerVariants> {
   className?: string;
 }
 
-export default function Container({
+export function Container({
   as,
   className,
   children,

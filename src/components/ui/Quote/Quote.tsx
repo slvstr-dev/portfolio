@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import Icon, { IconProps } from '@/components/ui/Icon/Icon';
+import { Icon, IconProps } from '@/components/ui/Icon/Icon';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface QuoteProps extends PropsWithChildren {
@@ -9,7 +9,7 @@ export interface QuoteProps extends PropsWithChildren {
   icon?: IconProps['icon'];
 }
 
-export default function Quote({ className, as, children, icon }: QuoteProps) {
+export function Quote({ className, as, children, icon }: QuoteProps) {
   const Component = as ?? 'h2';
 
   return (

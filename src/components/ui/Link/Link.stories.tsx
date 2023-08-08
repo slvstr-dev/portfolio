@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import LinkComponent from './Link';
+import { Link } from './Link';
 
 export default {
   title: 'ui/Link',
-  component: LinkComponent,
+  component: Link,
   args: {
     children: 'Link',
     href: 'https://slvstr.dev',
@@ -13,8 +13,8 @@ export default {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof LinkComponent>;
+} satisfies Meta<typeof Link>;
 
-type Story = StoryObj<typeof LinkComponent>;
+type Story = StoryObj<typeof Link>;
 
 export const Default: Story = {} satisfies Story;

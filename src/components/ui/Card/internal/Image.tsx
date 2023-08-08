@@ -6,7 +6,7 @@ export interface ImageProps extends Omit<ImageComponentProps, 'alt'> {
   alt?: string;
 }
 
-export default function Image({ className, alt = '', ...props }: ImageProps) {
+export function Image({ className, alt = '', ...props }: ImageProps) {
   return (
     <div className="relative h-40">
       <ImageComponent
