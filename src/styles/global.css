@@ -21,6 +21,10 @@
   h6 {
     @apply font-light;
   }
+
+  body {
+    @apply font-body leading-loose text-theme-base;
+  }
 }
 
 @keyframes show {

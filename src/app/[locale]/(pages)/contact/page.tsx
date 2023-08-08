@@ -5,6 +5,7 @@ import { ParamsProps } from '@/app/[locale]/layout';
 import { ContactForm } from '@/components/forms/ContactForm/ContactForm';
 import { Container } from '@/components/layout/Container/Container';
 import { Page } from '@/components/layout/Page/Page';
+import { Title } from '@/components/ui/Title/Title';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
   const t = await getTranslator(locale, 'pages.contact.meta');
@@ -19,8 +20,8 @@ export default function ContactPage() {
 
   return (
     <Page title={t('title')}>
-      <Container>
-        <h2 className="text-2xl">{t('title')}</h2>
+      <Container maxWidth="lg" gap="xs" verticalPadding="lg">
+        <Title>{t('title')}</Title>
 
         <ContactForm />
       </Container>

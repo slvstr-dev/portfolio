@@ -43,8 +43,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
 
   return (
     <html lang={locale} className="scroll-smooth">
-      <body
-        className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col font-body text-theme-base`}>
+      <body className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
         <NextIntlClientProvider locale={locale} messages={translations}>
           {children}
         </NextIntlClientProvider>
