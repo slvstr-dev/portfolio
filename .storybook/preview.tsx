@@ -32,7 +32,8 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <NextIntlClientProvider locale="en" messages={translations}>
-        <div className={`${playfair.variable} ${inconsolata.variable}`}>
+        <div
+          className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col font-body text-theme-base`}>
           <Story />
         </div>
       </NextIntlClientProvider>
