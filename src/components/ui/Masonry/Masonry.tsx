@@ -5,46 +5,24 @@ import { cn } from '@/src/utils/tailwindUtils';
 
 export interface MasonryProps {
   className?: string;
+  images: {
+    src: string;
+    alt?: string;
+  }[];
 }
 
-export function Masonry({ className }: MasonryProps) {
+export function Masonry({ className, images }: MasonryProps) {
   return (
-    <div className={cn('grid grid-flow-col gap-8', className)}>
-      <AspectRatio>
-        <Image
-          className="object-cover object-center"
-          src="https://placehold.co/600x400/png"
-          alt=""
-          fill
-        />
-      </AspectRatio>
+    <div className={cn('-m-8 gap-8 md:columns-2', className)}>
+      {images.map((image, idx) => {
+        const isEven = idx % 2 === 0;
 
-      <AspectRatio>
-        <Image
-          className="object-cover object-center"
-          src="https://placehold.co/600x400/png"
-          alt=""
-          fill
-        />
-      </AspectRatio>
-
-      <AspectRatio>
-        <Image
-          className="object-cover object-center"
-          src="https://placehold.co/600x400/png"
-          alt=""
-          fill
-        />
-      </AspectRatio>
-
-      <AspectRatio>
-        <Image
-          className="object-cover object-center"
-          src="https://placehold.co/600x400/png"
-          alt=""
-          fill
-        />
-      </AspectRatio>
+        return (
+          <AspectRatio key={idx} className="mb-8" ratio={isEven ? 16 / 9 : 1 / 1}>
+            <Image src={image.src} alt={image.alt || ''} fill />
+          </AspectRatio>
+        );
+      })}
     </div>
   );
 }

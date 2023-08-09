@@ -5,7 +5,6 @@ import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
 import { Page } from '@/components/layout/Page/Page';
 import { Bio } from '@/components/network/Bio/Bio';
-import { Masonry } from '@/components/ui/Masonry/Masonry';
 import { Seperator } from '@/components/ui/Seperator/Seperator';
 import { Title } from '@/components/ui/Title/Title';
 
@@ -40,10 +39,6 @@ export default function HomePage() {
 
       <Container verticalPadding="none">
         <Seperator />
-      </Container>
-
-      <Container>
-        <Masonry />
       </Container>
 
       <Container verticalPadding="none">

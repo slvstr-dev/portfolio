@@ -5,6 +5,22 @@ import { Masonry } from './Masonry';
 export default {
   title: 'ui/Masonry',
   component: Masonry,
+  args: {
+    images: [
+      {
+        src: 'https://placehold.co/600x400/png',
+      },
+      {
+        src: 'https://placehold.co/600x400/png',
+      },
+      {
+        src: 'https://placehold.co/600x400/png',
+      },
+      {
+        src: 'https://placehold.co/600x400/png',
+      },
+    ],
+  },
   tags: ['autodocs'],
 } satisfies Meta<typeof Masonry>;
 
