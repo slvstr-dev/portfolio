@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Masonry } from './Masonry';
+import { MasonryBlock } from './MasonryBlock';
 
 export default {
-  title: 'ui/Masonry',
-  component: Masonry,
+  title: 'ui/MasonryBlock',
+  component: MasonryBlock,
   args: {
     images: [
       {
@@ -22,8 +22,8 @@ export default {
     ],
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Masonry>;
+} satisfies Meta<typeof MasonryBlock>;
 
-type Story = StoryObj<typeof Masonry>;
+type Story = StoryObj<typeof MasonryBlock>;
 
 export const Default: Story = {} satisfies Story;

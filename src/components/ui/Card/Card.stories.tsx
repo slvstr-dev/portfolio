@@ -24,13 +24,13 @@ export const Content: Story = {
 
 export const Image: Story = {
   args: {
-    imageSrc: 'https://placehold.co/600x400/png',
+    src: 'https://placehold.co/600x400/png',
   },
 } satisfies Story;
 
 export const Both: Story = {
   args: {
-    imageSrc: 'https://placehold.co/600x400/png',
+    src: 'https://placehold.co/600x400/png',
     children: (
       <>
         <h3 className="text-4xl uppercase italic">Card</h3>
