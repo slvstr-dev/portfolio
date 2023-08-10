@@ -19,17 +19,21 @@ export function MasonryBlock({ className, images }: MasonryBlockProps) {
         return (
           <div
             key={idx}
-            className={cn('relative col-span-4 aspect-video md:aspect-auto', {
+            className={cn('col-span-4 flex aspect-video flex-col md:aspect-auto', {
               'md:col-span-3 md:row-span-2': idx === 0 || idx === 1,
               'md:col-span-1 md:row-span-3': idx === 2,
               'md:col-span-1 md:row-span-1': idx === 3,
             })}>
-            <Image
-              src={image.src}
-              alt={image.alt || ''}
-              className="object-cover object-center"
-              fill
-            />
+            <div className="relative h-full w-full">
+              <Image
+                src={image.src}
+                alt={image.alt || ''}
+                className="object-cover object-center"
+                fill
+              />
+            </div>
+
+            {!!image.caption && <p className="italic">{image.caption}</p>}
           </div>
         );
       })}

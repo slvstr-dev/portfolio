@@ -10,6 +10,7 @@ import translations from '@/translations/en.json';
 
 const playfair = Playfair({
   subsets: ['latin'],
+  style: ['normal', 'italic'],
   variable: '--font-playfair',
 });
 

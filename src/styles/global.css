@@ -13,6 +13,10 @@
     --color-highlight: 243, 204, 77;
   }
 
+  html {
+    @apply font-body leading-loose text-theme-base;
+  }
+
   h1,
   h2,
   h3,
@@ -20,10 +24,6 @@
   h5,
   h6 {
     @apply font-light;
-  }
-
-  body {
-    @apply font-body leading-loose text-theme-base;
   }
 }
 

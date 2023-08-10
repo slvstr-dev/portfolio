@@ -9,6 +9,7 @@ export default {
     images: [
       {
         src: 'https://placehold.co/600x400/png',
+        caption: 'This is a caption',
       },
       {
         src: 'https://placehold.co/600x400/png',
