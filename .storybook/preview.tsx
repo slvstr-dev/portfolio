@@ -10,6 +10,7 @@ import translations from '@/translations/en.json';
 
 const playfair = Playfair({
   subsets: ['latin'],
+  style: ['normal', 'italic'],
   variable: '--font-playfair',
 });
 
@@ -32,8 +33,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <NextIntlClientProvider locale="en" messages={translations}>
-        <div
-          className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col font-body text-theme-base`}>
+        <div className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
           <Story />
         </div>
       </NextIntlClientProvider>

@@ -12,3 +12,5 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Add statically typed routes through next-intl
 - [x] Check remaining TODO's in project
+- [ ] Fix broken stories
+- [ ] Check use of 'use client'

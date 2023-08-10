@@ -95,7 +95,7 @@ const container = tv({
   },
   defaultVariants: {
     direction: 'column',
-    maxWidth: '2xl',
+    maxWidth: 'xl',
     verticalPadding: 'md',
     gap: 'md',
   },

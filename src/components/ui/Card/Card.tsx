@@ -1,34 +1,25 @@
 import { HTMLAttributes } from 'react';
 
-import Image, { ImageProps } from 'next/image';
+import Image from 'next/image';
 
 import { tv, VariantProps } from 'tailwind-variants';
 
 import { AspectRatio } from '@/components/ui/AspectRatio/AspectRatio';
+import { ImageProps } from '@/src/types/interfaces';
 import { cn } from '@/src/utils/tailwindUtils';
 
 type CardVariants = VariantProps<typeof card>;
 
-export interface CardProps extends HTMLAttributes<HTMLElement>, CardVariants {
-  imageSrc: ImageProps['src'];
-  imageAlt?: ImageProps['alt'];
-}
+export interface CardProps extends HTMLAttributes<HTMLElement>, CardVariants, ImageProps {}
 
-export function Card({
-  className,
-  orientation,
-  isReverse,
-  imageSrc,
-  imageAlt,
-  children,
-}: CardProps) {
+export function Card({ className, orientation, isReverse, src, alt, children }: CardProps) {
   const styles = card({ className, orientation, isReverse });
 
   return (
     <article className={styles.base()}>
-      {imageSrc && (
+      {src && (
         <AspectRatio ratio={16 / 9}>
-          <Image className={styles.image()} src={imageSrc} alt={imageAlt || ''} fill />
+          <Image className={styles.image()} src={src} alt={alt || ''} fill />
 
           {orientation === 'column' && (
             <div

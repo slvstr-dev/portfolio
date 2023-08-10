@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import { Error } from '@/components/ui/Error/Error';
 
-export default function CatchAllPage() {
+export default function NotFoundPage() {
   const t = useTranslations('pages.not_found');
 
   return (
