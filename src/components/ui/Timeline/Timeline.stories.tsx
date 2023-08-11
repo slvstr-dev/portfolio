@@ -8,6 +8,7 @@ export default {
   title: 'ui/Timeline',
   component: Timeline,
   args: {
+    className: 'max-w-sm',
     year: 1990,
   },
   tags: ['autodocs'],

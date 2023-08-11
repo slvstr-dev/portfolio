@@ -12,9 +12,11 @@ export interface TimelineProps extends PropsWithChildren {
 export function Timeline({ className, children, year }: TimelineProps) {
   return (
     <div className={cn('', className)}>
-      {!!year && <h4 className="text-9xl font-black text-theme-brand-100">{year}</h4>}
+      {!!year && (
+        <h4 className="mb-10 truncate text-9xl font-black text-theme-brand-100">{year}</h4>
+      )}
 
-      {children}
+      <div className="grid">{children}</div>
     </div>
   );
 }

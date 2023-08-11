@@ -15,7 +15,7 @@
     "types": "tsc --noEmit",
     "types:watch": "tsc --noEmit --watch",
     "check": "pnpm types && pnpm lint && pnpm format",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006 --no-open",
     "storybook:build": "storybook build"
   },
   "dependencies": {

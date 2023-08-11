@@ -19,7 +19,7 @@
   h4,
   h5,
   h6 {
-    @apply font-body font-light;
+    @apply hyphens-auto font-body font-light;
   }
 
   body {
