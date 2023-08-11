@@ -17,7 +17,7 @@ export function MasonryBlock({ className, images }: MasonryBlockProps) {
       )}>
       {images.map((image, idx) => {
         return (
-          <div
+          <figure
             key={idx}
             className={cn('col-span-4 flex aspect-video flex-col md:aspect-auto', {
               'md:col-span-3 md:row-span-2': idx === 0 || idx === 1,
@@ -33,8 +33,8 @@ export function MasonryBlock({ className, images }: MasonryBlockProps) {
               />
             </div>
 
-            {!!image.caption && <p className="italic">{image.caption}</p>}
-          </div>
+            {!!image.caption && <figcaption className="italic">{image.caption}</figcaption>}
+          </figure>
         );
       })}
     </div>

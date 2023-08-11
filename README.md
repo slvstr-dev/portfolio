@@ -9,8 +9,19 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Refactor Link to only accept href -> open Modal on intercepting route
 - [x] Improve layout of pages to handle as much content as possible
 - [x] Fix forwardRef console error on Anchor
+- [x] Check remaining TODO's in project
+- [x] Add Avatar
+- [ ] Add slider with Framer Motion
+- [ ] Replace current relevant animations with Framer Motion
+- [ ] Replace icons
+- [ ] Add DecorationWrapper
+- [ ] Add form inputs
+- [ ] Improve responsiveness
+- [ ] Replace static content with dynamic content
+- [ ] Fix broken stories
+- [ ] Decide on creation of Image to remove duplicate styling
+- [ ] Check semantic HTML
+- [ ] Check letter spacing
+- [ ] Check use of 'use client'
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Add statically typed routes through next-intl
-- [x] Check remaining TODO's in project
-- [ ] Fix broken stories
-- [ ] Check use of 'use client'
