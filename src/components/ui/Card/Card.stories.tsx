@@ -28,9 +28,16 @@ export const Image: Story = {
   },
 } satisfies Story;
 
+export const Caption: Story = {
+  args: {
+    ...Image.args,
+    caption: 'This is a caption',
+  },
+};
+
 export const Both: Story = {
   args: {
-    src: 'https://placehold.co/600x400/png',
+    ...Image.args,
     children: (
       <>
         <h3 className="text-4xl uppercase italic">Card</h3>
