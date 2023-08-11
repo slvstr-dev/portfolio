@@ -19,6 +19,9 @@ export const Anchor = forwardRef(function Anchor(
 const anchor = tv({
   base: 'transition-opacity hover:opacity-50 active:underline',
   variants: {
+    isItalic: {
+      true: 'italic',
+    },
     hasUnderline: {
       true: 'underline hover:no-underline hover:opacity-100',
     },
