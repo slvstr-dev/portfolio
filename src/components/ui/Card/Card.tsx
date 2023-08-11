@@ -38,7 +38,7 @@ export function Card({ className, orientation, isReverse, src, alt, children }: 
 }
 
 const card = tv({
-  base: 'grid items-center gap-10',
+  base: 'grid items-center gap-8',
   slots: {
     content: '',
     image: 'object-cover object-center',

@@ -8,8 +8,8 @@ export default {
   title: 'ui/Timeline',
   component: Timeline,
   args: {
-    className: 'max-w-sm',
     year: 1990,
+    message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam',
   },
   tags: ['autodocs'],
   render: (args) => (
@@ -18,7 +18,7 @@ export default {
         <Card src="https://placehold.co/600x400/png">
           <h3 className="text-4xl uppercase italic">Card</h3>
 
-          <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
+          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
         </Card>
       </Timeline.Item>
 
@@ -26,7 +26,7 @@ export default {
         <Card src="https://placehold.co/600x400/png">
           <h3 className="text-4xl uppercase italic">Card</h3>
 
-          <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
+          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
         </Card>
       </Timeline.Item>
 
@@ -34,7 +34,7 @@ export default {
         <Card src="https://placehold.co/600x400/png">
           <h3 className="text-4xl uppercase italic">Card</h3>
 
-          <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
+          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
         </Card>
       </Timeline.Item>
 
@@ -42,7 +42,7 @@ export default {
         <Card src="https://placehold.co/600x400/png">
           <h3 className="text-4xl uppercase italic">Card</h3>
 
-          <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
+          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
         </Card>
       </Timeline.Item>
 
@@ -50,7 +50,7 @@ export default {
         <Card src="https://placehold.co/600x400/png">
           <h3 className="text-4xl uppercase italic">Card</h3>
 
-          <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
+          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
         </Card>
       </Timeline.Item>
     </Timeline>
