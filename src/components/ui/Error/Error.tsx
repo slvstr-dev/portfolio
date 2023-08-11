@@ -16,7 +16,7 @@ export function Error({ className, title, description, ...props }: ErrorProps) {
 
   return (
     <Container {...props} maxWidth="xs" isCentered>
-      <h1 className="text-9xl italic text-theme-brand-200">{title}</h1>
+      <h1 className="text-9xl font-black text-theme-brand-200">{title}</h1>
 
       {description && <p className="text-2xl">{description}</p>}
 

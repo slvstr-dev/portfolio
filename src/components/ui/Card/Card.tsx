@@ -16,7 +16,7 @@ export function Card({ className, orientation, isReverse, src, alt, children }: 
   const styles = card({ className, orientation, isReverse });
 
   return (
-    <article className={styles.base()}>
+    <div className={styles.base()}>
       {src && (
         <AspectRatio ratio={16 / 9}>
           <Image className={styles.image()} src={src} alt={alt || ''} fill />
@@ -33,12 +33,12 @@ export function Card({ className, orientation, isReverse, src, alt, children }: 
       )}
 
       <div className={styles.content()}>{children}</div>
-    </article>
+    </div>
   );
 }
 
 const card = tv({
-  base: 'grid items-center gap-10',
+  base: 'grid items-center gap-8',
   slots: {
     content: '',
     image: 'object-cover object-center',
