@@ -22,7 +22,7 @@
     @apply hyphens-auto font-body font-light;
   }
 
-  body {
+  html {
     @apply font-body leading-loose text-theme-base;
   }
 }
