@@ -11,9 +11,9 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Fix forwardRef console error on Anchor
 - [x] Check remaining TODO's in project
 - [x] Add Avatar
-- [ ] Add slider with Framer Motion
-- [ ] Replace current relevant animations with Framer Motion
-- [ ] Replace icons
+- [x] Add slider with Framer Motion
+- [x] Replace current relevant animations with Framer Motion
+- [x] Replace icons
 - [ ] Add DecorationWrapper
 - [ ] Add form inputs
 - [ ] Improve responsiveness
@@ -25,3 +25,4 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [ ] Check use of 'use client'
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Add statically typed routes through next-intl
+- [ ] Add sizes to images with fill
