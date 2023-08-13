@@ -18,7 +18,7 @@ export function Quote({ className, as, children, icon }: QuoteProps) {
         'flex flex-col items-center text-center text-4xl font-light leading-relaxed tracking-widest',
         className,
       )}>
-      {icon && <Icon icon={icon} className="block h-20 w-20 text-theme-brand-100" />}
+      {icon && <Icon icon={icon} className="block w-20 text-theme-brand-100" />}
       &quot;{children}&quot;
     </Component>
   );
