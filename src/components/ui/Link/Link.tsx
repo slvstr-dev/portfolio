@@ -26,7 +26,7 @@ export function Link({
 
   return (
     <NextIntlLink className={styles.base({ className })} href={{ pathname: href }} {...props}>
-      {isLoading && <Icon icon="Update" className={styles.loader()} />}
+      {isLoading && <Icon icon="CircleNotch" className={styles.loader()} />}
 
       <span className={styles.label()}>{children}</span>
     </NextIntlLink>

@@ -12,18 +12,18 @@ export const ArrowRight = (props: SVGProps<SVGSVGElement>) => {
         y2="128"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="8"
       />
 
       <polyline
         points="144 56 216 128 144 200"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="8"
       />
     </svg>
   );

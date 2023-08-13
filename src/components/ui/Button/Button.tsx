@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ForwardedRef, forwardRef } from 'react';
 
 import { tv, type VariantProps } from 'tailwind-variants';
 
@@ -10,25 +10,20 @@ export interface ButtonProps
   extends ButtonVariants,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {}
 
-export function Button({
-  children,
-  isDisabled,
-  isLoading,
-  size,
-  color,
-  className,
-  ...props
-}: ButtonProps) {
+export const Button = forwardRef(function Button(
+  { children, isDisabled, isLoading, size, color, className, ...props }: ButtonProps,
+  ref: ForwardedRef<HTMLButtonElement>,
+) {
   const styles = button({ color, size, isDisabled, isLoading });
 
   return (
-    <button className={styles.base({ className })} {...props}>
-      {isLoading && <Icon icon="Update" className={styles.loader()} />}
+    <button className={styles.base({ className })} ref={ref} {...props}>
+      {isLoading && <Icon icon="CircleNotch" className={styles.loader()} />}
 
       <span className={styles.label()}>{children}</span>
     </button>
   );
-}
+});
 
 export const button = tv({
   base: 'relative inline-flex cursor-pointer items-center justify-center uppercase transition-opacity hover:opacity-50 active:opacity-75',
