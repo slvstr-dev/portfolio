@@ -69,7 +69,7 @@ export default function HomePage() {
           year={1990}
           message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam">
           {Array.from({ length: 5 }, (_, i) => (
-            <Timeline.Item key={i} year={1990 + i}>
+            <Timeline.Item key={i} year={i !== 0 ? 1990 + i : undefined}>
               <Card src="https://placehold.co/600x400/png">
                 <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
 
