@@ -48,10 +48,10 @@ export const Both: Story = {
   },
 } satisfies Story;
 
-export const Orientation: Story = {
+export const Direction: Story = {
   args: {
     ...Both.args,
-    orientation: 'column',
+    direction: 'horizontal',
   },
 } satisfies Story;
 
