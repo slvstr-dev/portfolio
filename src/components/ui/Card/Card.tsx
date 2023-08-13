@@ -21,10 +21,10 @@ export function Card({
   caption,
   children,
 }: CardProps) {
-  const styles = card({ className, orientation, isReverse });
+  const styles = card({ orientation, isReverse });
 
   return (
-    <div className={styles.base()}>
+    <div className={styles.base({ className })}>
       <figure>
         {src && (
           <AspectRatio ratio={16 / 9}>
