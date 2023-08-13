@@ -16,6 +16,7 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Replace icons
 - [ ] Add DecorationWrapper
 - [ ] Add form inputs
+- [ ] Refactor UserInfo
 - [ ] Improve responsiveness
 - [ ] Replace static content with dynamic content
 - [ ] Fix broken stories
@@ -26,3 +27,4 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Add statically typed routes through next-intl
 - [ ] Add sizes to images with fill
+- [ ] Add relevant meta data
