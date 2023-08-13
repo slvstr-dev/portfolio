@@ -7,6 +7,7 @@ import { Page } from '@/components/layout/Page/Page';
 import { Bio } from '@/components/network/Bio/Bio';
 import { Card } from '@/components/ui/Card/Card';
 import { Seperator } from '@/components/ui/Seperator/Seperator';
+import { Slider } from '@/components/ui/Slider/Slider';
 import { Timeline } from '@/components/ui/Timeline/Timeline';
 import { Title } from '@/components/ui/Title/Title';
 
@@ -37,6 +38,26 @@ export default function HomePage() {
           facilis ipsam hic qui, magni nam illo? Dolorem suscipit unde hic. Itaque dolorum soluta
           nihil, tenetur placeat fuga eveniet illum vel sunt aliquam?
         </p>
+      </Container>
+
+      <Container verticalPadding="none">
+        <Seperator />
+      </Container>
+
+      <Container maxWidth="lg" gap="xs" verticalPadding="lg">
+        <Slider>
+          {Array.from({ length: 5 }, (_, i) => (
+            <Card key={i} src="https://placehold.co/600x400/png" direction="horizontal">
+              <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
+
+              {Array.from({ length: i + 1 }, (_, j) => (
+                <p key={j} className="mt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                </p>
+              ))}
+            </Card>
+          ))}
+        </Slider>
       </Container>
 
       <Container verticalPadding="none">
