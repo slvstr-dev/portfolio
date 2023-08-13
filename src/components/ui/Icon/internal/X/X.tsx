@@ -1,14 +1,15 @@
 import React, { SVGProps } from 'react';
 
-export const Commit = (props: SVGProps<SVGSVGElement>) => {
+export const X = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
       <rect width="256" height="256" fill="none" />
 
-      <circle
-        cx="128"
-        cy="128"
-        r="48"
+      <line
+        x1="200"
+        y1="56"
+        x2="56"
+        y2="200"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -17,22 +18,10 @@ export const Commit = (props: SVGProps<SVGSVGElement>) => {
       />
 
       <line
-        x1="8"
-        y1="128"
-        x2="80"
-        y2="128"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="8"
-      />
-
-      <line
-        x1="176"
-        y1="128"
-        x2="248"
-        y2="128"
+        x1="200"
+        y1="200"
+        x2="56"
+        y2="56"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"

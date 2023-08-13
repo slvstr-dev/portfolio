@@ -17,7 +17,9 @@ export function Page({ children, className, title, backgroundImage }: PageProps)
 
       {(!!title || !!backgroundImage) && <Hero backgroundImage={backgroundImage}>{title}</Hero>}
 
-      <main className={cn('flex grow flex-col bg-theme-inverted', className)}>{children}</main>
+      <main className={cn('flex grow flex-col overflow-x-hidden bg-theme-inverted', className)}>
+        {children}
+      </main>
     </>
   );
 }

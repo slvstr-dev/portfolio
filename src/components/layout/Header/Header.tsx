@@ -2,12 +2,10 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { useSelectedLayoutSegment } from 'next/navigation';
-
 import { useTranslations } from 'next-intl';
 
+import { ContactModal } from '@/components/dialogs/ContactModal/ContactModal';
 import { Container } from '@/components/layout/Container/Container';
-import { Link } from '@/components/ui/Link/Link';
 import { Logo } from '@/components/ui/Logo/Logo';
 import { NavigationMenu } from '@/components/ui/NavigationMenu/NavigationMenu';
 import { cn } from '@/src/utils/tailwindUtils';
@@ -19,7 +17,6 @@ export interface HeaderProps {
 export function Header({ className }: HeaderProps) {
   const t = useTranslations('components.layout.header');
   const [isScrolled, setIsScrolled] = useState(false);
-  const segment = useSelectedLayoutSegment();
 
   const listenScrollEvent = useCallback(() => {
     setIsScrolled(window.scrollY > 80);
@@ -64,15 +61,7 @@ export function Header({ className }: HeaderProps) {
         </NavigationMenu.List>
       </NavigationMenu>
 
-      {segment !== 'contact' && (
-        <Link
-          href="/contact"
-          color="brandRing"
-          className="font-monospace font-bold tracking-wider"
-          size="lg">
-          {t('buttons.contact')}
-        </Link>
-      )}
+      <ContactModal />
     </Container>
   );
 }

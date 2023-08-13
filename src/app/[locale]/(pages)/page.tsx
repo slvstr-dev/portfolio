@@ -7,6 +7,7 @@ import { Page } from '@/components/layout/Page/Page';
 import { Bio } from '@/components/network/Bio/Bio';
 import { Card } from '@/components/ui/Card/Card';
 import { Seperator } from '@/components/ui/Seperator/Seperator';
+import { Slider } from '@/components/ui/Slider/Slider';
 import { Timeline } from '@/components/ui/Timeline/Timeline';
 import { Title } from '@/components/ui/Title/Title';
 
@@ -43,59 +44,41 @@ export default function HomePage() {
         <Seperator />
       </Container>
 
+      <Container maxWidth="lg" gap="xs" verticalPadding="lg">
+        <Slider>
+          {Array.from({ length: 5 }, (_, i) => (
+            <Card key={i} src="https://placehold.co/600x400/png" direction="horizontal">
+              <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
+
+              {Array.from({ length: i + 1 }, (_, j) => (
+                <p key={j} className="mt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                </p>
+              ))}
+            </Card>
+          ))}
+        </Slider>
+      </Container>
+
+      <Container verticalPadding="none">
+        <Seperator />
+      </Container>
+
       <Container maxWidth="lg">
         <Timeline
           year={1990}
           message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam">
-          <Timeline.Item year={1990}>
-            <Card src="https://placehold.co/600x400/png">
-              <h3 className="text-4xl uppercase italic">Card</h3>
+          {Array.from({ length: 5 }, (_, i) => (
+            <Timeline.Item key={i} year={i !== 0 ? 1990 + i : undefined}>
+              <Card src="https://placehold.co/600x400/png">
+                <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
 
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              </p>
-            </Card>
-          </Timeline.Item>
-
-          <Timeline.Item year={1990}>
-            <Card src="https://placehold.co/600x400/png">
-              <h3 className="text-4xl uppercase italic">Card</h3>
-
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              </p>
-            </Card>
-          </Timeline.Item>
-
-          <Timeline.Item year={1990}>
-            <Card src="https://placehold.co/600x400/png">
-              <h3 className="text-4xl uppercase italic">Card</h3>
-
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              </p>
-            </Card>
-          </Timeline.Item>
-
-          <Timeline.Item year={1990}>
-            <Card src="https://placehold.co/600x400/png">
-              <h3 className="text-4xl uppercase italic">Card</h3>
-
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              </p>
-            </Card>
-          </Timeline.Item>
-
-          <Timeline.Item year={1990}>
-            <Card src="https://placehold.co/600x400/png">
-              <h3 className="text-4xl uppercase italic">Card</h3>
-
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              </p>
-            </Card>
-          </Timeline.Item>
+                <p className="mt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                </p>
+              </Card>
+            </Timeline.Item>
+          ))}
         </Timeline>
       </Container>
 

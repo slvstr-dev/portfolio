@@ -12,29 +12,21 @@ type CardVariants = VariantProps<typeof card>;
 
 export interface CardProps extends HTMLAttributes<HTMLElement>, CardVariants, ImageProps {}
 
-export function Card({
-  className,
-  orientation,
-  isReverse,
-  src,
-  alt,
-  caption,
-  children,
-}: CardProps) {
-  const styles = card({ className, orientation, isReverse });
+export function Card({ className, direction, isReverse, src, alt, caption, children }: CardProps) {
+  const styles = card({ direction, isReverse });
 
   return (
-    <div className={styles.base()}>
+    <div className={styles.base({ className })}>
       <figure>
         {src && (
           <AspectRatio ratio={16 / 9}>
             <Image className={styles.image()} src={src} alt={alt || ''} fill />
 
-            {orientation === 'column' && (
+            {direction === 'horizontal' && (
               <div
-                className={cn('absolute top-10 h-0.5 w-20 bg-theme-brand-100', {
-                  '-right-10': !isReverse,
-                  '-left-10': isReverse,
+                className={cn('absolute top-10 h-0.5 w-14 bg-theme-brand-100', {
+                  '-right-7': !isReverse,
+                  '-left-7': isReverse,
                 })}
               />
             )}
@@ -50,15 +42,15 @@ export function Card({
 }
 
 const card = tv({
-  base: 'grid items-center gap-8',
+  base: 'grid items-center',
   slots: {
-    content: '',
+    content: 'p-8',
     image: 'object-cover object-center',
   },
   variants: {
-    orientation: {
-      row: 'grid-flow-row',
-      column: 'grid-flow-col grid-cols-2',
+    direction: {
+      vertical: 'grid-flow-row',
+      horizontal: 'grid-flow-col grid-cols-2',
     },
     isReverse: {
       true: {
@@ -67,6 +59,6 @@ const card = tv({
     },
   },
   defaultVariants: {
-    orientation: 'row',
+    direction: 'vertical',
   },
 });

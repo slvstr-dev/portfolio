@@ -38,7 +38,7 @@ export function Hero({ className, children, backgroundImage }: HeroProps) {
 const hero = tv({
   base: 'relative pb-20 pt-36',
   slots: {
-    title: 'text-center text-8xl italic',
+    title: 'text-center text-5xl italic md:text-8xl',
   },
   variants: {
     hasBackgroundImage: {

@@ -17,12 +17,6 @@
       "title": "500",
       "description": "The page you are trying to visit cannot be displayed due to technical issues."
     },
-    "modal": {
-      "contact": {
-        "title": "Let's <tag>get in touch</tag> and <tag>drink coffee</tag>",
-        "description": "Contact form"
-      }
-    },
     "home": {
       "meta": {
         "title": "Home"
@@ -58,6 +52,15 @@
     }
   },
   "components": {
+    "dialogs": {
+      "contact_modal": {
+        "buttons": {
+          "trigger": "Contact request"
+        },
+        "title": "Let's <tag>get in touch</tag> and <tag>drink coffee</tag>",
+        "description": "Contact form"
+      }
+    },
     "layout": {
       "header": {
         "buttons": {

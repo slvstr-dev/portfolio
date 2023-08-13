@@ -1,7 +1,5 @@
 'use client';
 
-import { useSelectedLayoutSegment } from 'next/navigation';
-
 import { useTranslations } from 'next-intl';
 
 import { ContactForm } from '@/components/forms/ContactForm/ContactForm';
@@ -9,9 +7,6 @@ import { Container } from '@/components/layout/Container/Container';
 
 export function ContactSection() {
   const t = useTranslations('components.ui.contact');
-  const segment = useSelectedLayoutSegment();
-
-  if (segment === 'cpmtact') return <></>;
 
   return (
     <Container

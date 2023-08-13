@@ -6,7 +6,7 @@ import { Content } from './internal/Content';
 
 export interface DialogProps extends DialogPrimitive.DialogProps {}
 
-export function Dialog(props: DialogProps) {
+export function Dialog({ ...props }: DialogProps) {
   return <DialogPrimitive.Root {...props} />;
 }
 
