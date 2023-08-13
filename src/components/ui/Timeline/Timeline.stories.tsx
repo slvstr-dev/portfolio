@@ -14,45 +14,17 @@ export default {
   tags: ['autodocs'],
   render: (args) => (
     <Timeline {...args}>
-      <Timeline.Item year={1990}>
-        <Card src="https://placehold.co/600x400/png">
-          <h3 className="text-4xl uppercase italic">Card</h3>
+      {Array.from({ length: 5 }, (_, i) => (
+        <Timeline.Item key={i} year={1990 + i}>
+          <Card src="https://placehold.co/600x400/png">
+            <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
 
-          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
-        </Card>
-      </Timeline.Item>
-
-      <Timeline.Item year={1990}>
-        <Card src="https://placehold.co/600x400/png">
-          <h3 className="text-4xl uppercase italic">Card</h3>
-
-          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
-        </Card>
-      </Timeline.Item>
-
-      <Timeline.Item year={1990}>
-        <Card src="https://placehold.co/600x400/png">
-          <h3 className="text-4xl uppercase italic">Card</h3>
-
-          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
-        </Card>
-      </Timeline.Item>
-
-      <Timeline.Item year={1990}>
-        <Card src="https://placehold.co/600x400/png">
-          <h3 className="text-4xl uppercase italic">Card</h3>
-
-          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
-        </Card>
-      </Timeline.Item>
-
-      <Timeline.Item year={1990}>
-        <Card src="https://placehold.co/600x400/png">
-          <h3 className="text-4xl uppercase italic">Card</h3>
-
-          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
-        </Card>
-      </Timeline.Item>
+            <p className="mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            </p>
+          </Card>
+        </Timeline.Item>
+      ))}
     </Timeline>
   ),
 } satisfies Meta<typeof Timeline>;
