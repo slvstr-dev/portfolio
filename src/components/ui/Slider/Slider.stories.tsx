@@ -10,15 +10,11 @@ export default {
   render: (args) => (
     <Slider {...args}>
       {Array.from({ length: 5 }, (_, i) => (
-        <Slider.Item key={i}>
-          <Card src="https://placehold.co/600x400/png">
-            <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
+        <Card key={i} src="https://placehold.co/600x400/png">
+          <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
 
-            <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            </p>
-          </Card>
-        </Slider.Item>
+          <p className="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
+        </Card>
       ))}
     </Slider>
   ),
