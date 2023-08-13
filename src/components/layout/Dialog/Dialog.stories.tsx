@@ -16,4 +16,15 @@ export default {
 
 type Story = StoryObj<typeof Dialog>;
 
-export const Default: Story = {} satisfies Story;
+export const Modal: Story = {
+  args: {
+    modal: true,
+    children: <Dialog.Modal>Modal</Dialog.Modal>,
+  },
+} satisfies Story;
+
+export const Sidebar: Story = {
+  args: {
+    children: <Dialog.Sidebar>Sidebar</Dialog.Sidebar>,
+  },
+} satisfies Story;

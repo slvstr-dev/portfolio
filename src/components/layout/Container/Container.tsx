@@ -14,14 +14,14 @@ export function Container({
   className,
   children,
   isCentered,
-  direction,
+  orientation,
   maxWidth,
   verticalPadding,
   gap,
 }: ContainerProps) {
   const Component = as ?? 'section';
 
-  const styles = container({ isCentered, direction, maxWidth, verticalPadding, gap });
+  const styles = container({ isCentered, orientation, maxWidth, verticalPadding, gap });
 
   return (
     <Component className={styles.base({ className })}>
@@ -36,7 +36,7 @@ const container = tv({
     children: 'container flex flex-col gap-10',
   },
   variants: {
-    direction: {
+    orientation: {
       row: {
         children: 'flex-row items-center ',
       },
@@ -83,9 +83,9 @@ const container = tv({
     },
     verticalPadding: {
       none: 'py-0',
-      sm: 'py-5',
-      md: 'py-10',
-      lg: 'py-20',
+      sm: 'py-2.5 md:py-5',
+      md: 'py-5 md:py-10',
+      lg: 'py-10 md:py-20',
     },
     isCentered: {
       true: {
@@ -94,7 +94,7 @@ const container = tv({
     },
   },
   defaultVariants: {
-    direction: 'column',
+    orientation: 'column',
     maxWidth: 'xl',
     verticalPadding: 'md',
     gap: 'md',

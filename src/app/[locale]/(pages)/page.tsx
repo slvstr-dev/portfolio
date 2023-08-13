@@ -47,7 +47,7 @@ export default function HomePage() {
       <Container maxWidth="lg" gap="xs" verticalPadding="lg">
         <Slider>
           {Array.from({ length: 5 }, (_, i) => (
-            <Card key={i} src="https://placehold.co/600x400/png" direction="horizontal">
+            <Card key={i} src="https://placehold.co/600x400/png" orientation="horizontal">
               <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
 
               {Array.from({ length: i + 1 }, (_, j) => (

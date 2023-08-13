@@ -8,13 +8,13 @@ import { motion } from 'framer-motion';
 import { Icon } from '@/components/ui/Icon/Icon';
 import { cn } from '@/src/utils/tailwindUtils';
 
-export interface ContentProps extends PropsWithChildren {
+export interface ModalProps extends PropsWithChildren {
   className?: string;
   title?: ReactNode;
   description?: ReactNode;
 }
 
-export function Content({ children, className, title, description }: ContentProps) {
+export function Modal({ children, className, title, description }: ModalProps) {
   return (
     <DialogPrimitive.Portal forceMount>
       <DialogPrimitive.Overlay asChild>
@@ -51,13 +51,13 @@ export function Content({ children, className, title, description }: ContentProp
             y: '50%',
           }}
           className={cn(
-            'text-gray-900 data-[state=closed] fixed z-50 flex w-full max-w-lg flex-col items-center bg-theme-brand-100 p-8',
+            'text-gray-900 fixed z-50 flex w-full max-w-lg flex-col items-center bg-theme-brand-100 p-8',
             className,
           )}>
           <DialogPrimitive.Close asChild>
             <Icon
               icon="X"
-              className="align-self-end ml-auto h-8 w-8 cursor-pointer transition-opacity hover:opacity-50"
+              className="align-self-end ml-auto w-8 cursor-pointer transition-opacity hover:opacity-50"
             />
           </DialogPrimitive.Close>
 

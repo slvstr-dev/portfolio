@@ -13,7 +13,7 @@ export function Logo({ className }: LogoProps) {
   const t = useTranslations('components.ui.logo');
 
   return (
-    <span className={cn('text-3xl transition-opacity hover:opacity-50', className)}>
+    <span className={cn('text-3xl font-light transition-opacity hover:opacity-50', className)}>
       {t.rich('title', {
         tag: (chunks) => <Anchor href="/">{chunks}</Anchor>,
       })}

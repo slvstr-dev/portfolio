@@ -2,7 +2,6 @@ import { getTranslator } from 'next-intl/server';
 
 import { RootLayoutProps } from '@/app/[locale]/layout';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
-import { Logo } from '@/components/ui/Logo/Logo';
 import { getSocialAccounts, getUser } from '@/src/utils/fetchUtils';
 
 export interface UserInfoProps extends Pick<RootLayoutProps['params'], 'locale'> {}
@@ -13,11 +12,9 @@ export async function UserInfo({ locale }: UserInfoProps) {
   const socialAccounts = await getSocialAccounts();
 
   return (
-    <div className="flex w-full flex-col items-center gap-10 text-center md:flex-row md:gap-20 md:text-left">
-      <Logo className="text-9xl font-light text-theme-brand-300" />
-
+    <>
       {!!user && (
-        <div className="flex flex-col gap-1 self-start text-xl">
+        <div className="flex flex-col gap-1 text-xl">
           {user?.name && <h2 className="font-bold uppercase">{user.name}</h2>}
 
           {user?.company && (
@@ -34,7 +31,7 @@ export async function UserInfo({ locale }: UserInfoProps) {
       )}
 
       {(!!user || !!socialAccounts) && (
-        <div className="flex flex-col gap-1 self-start text-xl">
+        <div className="flex flex-col gap-1 text-xl">
           <h3 className="font-bold uppercase">{t('social_accounts.title')}</h3>
 
           {user?.html_url && (
@@ -56,6 +53,6 @@ export async function UserInfo({ locale }: UserInfoProps) {
           })}
         </div>
       )}
-    </div>
+    </>
   );
 }

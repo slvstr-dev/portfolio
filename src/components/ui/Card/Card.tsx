@@ -12,8 +12,16 @@ type CardVariants = VariantProps<typeof card>;
 
 export interface CardProps extends HTMLAttributes<HTMLElement>, CardVariants, ImageProps {}
 
-export function Card({ className, direction, isReverse, src, alt, caption, children }: CardProps) {
-  const styles = card({ direction, isReverse });
+export function Card({
+  className,
+  orientation,
+  isReverse,
+  src,
+  alt,
+  caption,
+  children,
+}: CardProps) {
+  const styles = card({ orientation, isReverse });
 
   return (
     <div className={styles.base({ className })}>
@@ -22,7 +30,7 @@ export function Card({ className, direction, isReverse, src, alt, caption, child
           <AspectRatio ratio={16 / 9}>
             <Image className={styles.image()} src={src} alt={alt || ''} fill />
 
-            {direction === 'horizontal' && (
+            {orientation === 'horizontal' && (
               <div
                 className={cn('absolute top-10 h-0.5 w-14 bg-theme-brand-100', {
                   '-right-7': !isReverse,
@@ -42,23 +50,19 @@ export function Card({ className, direction, isReverse, src, alt, caption, child
 }
 
 const card = tv({
-  base: 'grid items-center',
+  base: 'grid grid-flow-row items-center',
   slots: {
     content: 'p-8',
     image: 'object-cover object-center',
   },
   variants: {
-    direction: {
-      vertical: 'grid-flow-row',
-      horizontal: 'grid-flow-col grid-cols-2',
+    orientation: {
+      horizontal: 'md:grid-flow-col md:grid-cols-2',
     },
     isReverse: {
       true: {
         content: '-order-1',
       },
     },
-  },
-  defaultVariants: {
-    direction: 'vertical',
   },
 });

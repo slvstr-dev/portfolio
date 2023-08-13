@@ -14,9 +14,10 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Add slider with Framer Motion
 - [x] Replace current relevant animations with Framer Motion
 - [x] Replace icons
+- [x] Refactor UserInfo
+- [x] Improve responsiveness
 - [ ] Add DecorationWrapper
 - [ ] Add form inputs
-- [ ] Improve responsiveness
 - [ ] Replace static content with dynamic content
 - [ ] Fix broken stories
 - [ ] Decide on creation of Image to remove duplicate styling
@@ -26,3 +27,4 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Add statically typed routes through next-intl
 - [ ] Add sizes to images with fill
+- [ ] Add relevant meta data

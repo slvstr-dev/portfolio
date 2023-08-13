@@ -8,8 +8,13 @@ import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/components/forms/ContactForm/ContactForm';
 import { Dialog } from '@/components/layout/Dialog/Dialog';
 import { Button } from '@/components/ui/Button/Button';
+import { cn } from '@/src/utils/tailwindUtils';
 
-export function ContactModal() {
+export interface ContactModalProps {
+  className?: string;
+}
+
+export function ContactModal({ className }: ContactModalProps) {
   const t = useTranslations('components.dialogs.contact_modal');
   const [open, setOpen] = useState(false);
 
@@ -20,14 +25,17 @@ export function ContactModal() {
   return (
     <Dialog open={open} onOpenChange={setOpen} modal>
       <Dialog.Trigger asChild>
-        <Button color="brandRing" className="font-monospace font-bold tracking-wider" size="lg">
+        <Button
+          color="brandRing"
+          className={cn('font-monospace font-bold tracking-wider', className)}
+          size="lg">
           {t('buttons.trigger')}
         </Button>
       </Dialog.Trigger>
 
       <AnimatePresence>
         {open && (
-          <Dialog.Content
+          <Dialog.Modal
             title={t.rich('title', {
               tag: (chunks) => (
                 <span className="text-5xl font-normal uppercase italic">{chunks}</span>
@@ -35,7 +43,7 @@ export function ContactModal() {
             })}
             description={t('description')}>
             <ContactForm onSubmit={handleSubmit} />
-          </Dialog.Content>
+          </Dialog.Modal>
         )}
       </AnimatePresence>
     </Dialog>

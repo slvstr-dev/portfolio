@@ -2,12 +2,11 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { useTranslations } from 'next-intl';
-
 import { ContactModal } from '@/components/dialogs/ContactModal/ContactModal';
+import { MenuSidebar } from '@/components/dialogs/MenuSidebar/MenuSidebar';
 import { Container } from '@/components/layout/Container/Container';
+import { MainMenu } from '@/components/navigation/MainMenu/MainMenu';
 import { Logo } from '@/components/ui/Logo/Logo';
-import { NavigationMenu } from '@/components/ui/NavigationMenu/NavigationMenu';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface HeaderProps {
@@ -15,7 +14,6 @@ export interface HeaderProps {
 }
 
 export function Header({ className }: HeaderProps) {
-  const t = useTranslations('components.layout.header');
   const [isScrolled, setIsScrolled] = useState(false);
 
   const listenScrollEvent = useCallback(() => {
@@ -42,26 +40,16 @@ export function Header({ className }: HeaderProps) {
           'bg-theme-brand-100 text-theme-brand-300': isScrolled,
         },
       )}
-      direction="row">
+      orientation="row">
       <Logo />
 
-      <NavigationMenu className="grow">
-        <NavigationMenu.List>
-          <NavigationMenu.Item>
-            <NavigationMenu.Link href="/projects">{t('buttons.projects')}</NavigationMenu.Link>
-          </NavigationMenu.Item>
+      <div className="hidden grow md:flex md:items-center md:justify-between">
+        <MainMenu />
 
-          <NavigationMenu.Item>
-            <NavigationMenu.Link href="/experience">{t('buttons.experience')}</NavigationMenu.Link>
-          </NavigationMenu.Item>
+        <ContactModal />
+      </div>
 
-          <NavigationMenu.Item>
-            <NavigationMenu.Link href="/skills">{t('buttons.skills')}</NavigationMenu.Link>
-          </NavigationMenu.Item>
-        </NavigationMenu.List>
-      </NavigationMenu>
-
-      <ContactModal />
+      <MenuSidebar className="ml-auto md:hidden" />
     </Container>
   );
 }
