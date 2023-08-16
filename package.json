@@ -24,7 +24,6 @@
     "@hookform/resolvers": "^3.2.0",
     "@octokit/graphql": "^7.0.1",
     "@radix-ui/react-accordion": "^1.1.2",
-    "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-form": "^0.0.3",
