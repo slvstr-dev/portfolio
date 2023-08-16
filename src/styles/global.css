@@ -13,17 +13,19 @@
     --color-highlight: 243, 204, 77;
   }
 
+  html,
+  body {
+    font-family: var(--font-playfair);
+
+    @apply leading-loose text-theme-base;
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply hyphens-auto font-body font-light;
-  }
-
-  html,
-  body {
-    @apply font-body leading-loose text-theme-base;
+    @apply hyphens-auto font-light;
   }
 }
