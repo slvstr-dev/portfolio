@@ -15,9 +15,7 @@
 
   html,
   body {
-    font-family: var(--font-playfair);
-
-    @apply leading-loose text-theme-base;
+    @apply font-body leading-loose text-theme-base;
   }
 
   h1,
@@ -26,6 +24,6 @@
   h4,
   h5,
   h6 {
-    @apply hyphens-auto font-light;
+    @apply hyphens-auto font-body font-light;
   }
 }
