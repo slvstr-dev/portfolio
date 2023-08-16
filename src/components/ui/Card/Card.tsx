@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import { tv, VariantProps } from 'tailwind-variants';
 
-import { AspectRatio } from '@/components/ui/AspectRatio/AspectRatio';
 import { ImageProps } from '@/src/types/interfaces';
 import { cn } from '@/src/utils/tailwindUtils';
 
@@ -27,7 +26,7 @@ export function Card({
     <div className={styles.base({ className })}>
       <figure>
         {src && (
-          <AspectRatio ratio={16 / 9}>
+          <div className="relative aspect-video">
             <Image className={styles.image()} src={src} alt={alt || ''} fill />
 
             {orientation === 'horizontal' && (
@@ -38,7 +37,7 @@ export function Card({
                 })}
               />
             )}
-          </AspectRatio>
+          </div>
         )}
 
         {!!caption && <figcaption className="italic">{caption}</figcaption>}

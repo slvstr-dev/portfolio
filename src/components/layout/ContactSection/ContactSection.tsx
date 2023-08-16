@@ -15,15 +15,17 @@ export function ContactSection() {
       gap="xs"
       maxWidth="xs"
       isCentered>
-      <h2 className="text-center text-4xl lowercase italic">
+      <h2 className="text-center text-2xl lowercase italic md:text-3xl">
         {t.rich('title', {
-          tag: (chunks) => <span className="text-5xl font-normal uppercase">{chunks}</span>,
+          tag: (chunks) => (
+            <span className="text-3xl font-normal uppercase md:text-5xl">{chunks}</span>
+          ),
         })}
       </h2>
 
-      <h3 className="text-center text-3xl lowercase italic">{t('subtitle')}</h3>
+      <p className="text-center text-2xl lowercase italic">{t('subtitle')}</p>
 
-      <ContactForm className="mt-6" />
+      <ContactForm className="mt-4 w-full" />
     </Container>
   );
 }
