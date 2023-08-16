@@ -38,7 +38,7 @@ export function ContactModal({ className }: ContactModalProps) {
           <Dialog.Modal
             title={t.rich('title', {
               tag: (chunks) => (
-                <span className="text-5xl font-normal uppercase italic">{chunks}</span>
+                <span className="text-3xl font-normal uppercase italic md:text-5xl">{chunks}</span>
               ),
             })}
             description={t('description')}>
