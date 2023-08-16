@@ -51,29 +51,29 @@ export function Modal({ children, className, title, description }: ModalProps) {
             y: '50%',
           }}
           className={cn(
-            'text-gray-900 fixed z-50 flex w-full max-w-lg flex-col items-center bg-theme-brand-100 p-8',
+            'text-gray-900 fixed z-50 flex max-h-[90%] w-[90%] max-w-lg flex-col items-center gap-2.5 bg-theme-brand-100 px-8 pb-7 pt-10 md:gap-5 md:px-16 md:py-14',
             className,
           )}>
           <DialogPrimitive.Close asChild>
             <Icon
               icon="X"
-              className="align-self-end ml-auto w-8 cursor-pointer transition-opacity hover:opacity-50"
+              className="absolute right-4 top-4 w-8 cursor-pointer transition-opacity hover:opacity-50"
             />
           </DialogPrimitive.Close>
 
-          {(title || description) && (
-            <div className="flex flex-col items-center gap-4 text-center lowercase italic">
-              {title && <DialogPrimitive.Title className="text-4xl">{title}</DialogPrimitive.Title>}
-
-              {description && (
-                <DialogPrimitive.Description className="text-3xl">
-                  {description}
-                </DialogPrimitive.Description>
-              )}
-            </div>
+          {title && (
+            <DialogPrimitive.Title className="text-center text-2xl lowercase italic md:text-3xl">
+              {title}
+            </DialogPrimitive.Title>
           )}
 
-          <div className="mt-6">{children}</div>
+          {description && (
+            <DialogPrimitive.Description className="text-center text-xl lowercase italic md:text-2xl">
+              {description}
+            </DialogPrimitive.Description>
+          )}
+
+          <div className="mt-4 w-full overflow-x-scroll">{children}</div>
         </motion.div>
       </DialogPrimitive.Content>
     </DialogPrimitive.Portal>

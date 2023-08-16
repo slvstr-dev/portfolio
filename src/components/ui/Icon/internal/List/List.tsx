@@ -24,9 +24,9 @@ export const List = (props: SVGProps<SVGSVGElement>) => {
         y2="64"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="8"
       />
       <line
         x1="40"
@@ -35,9 +35,9 @@ export const List = (props: SVGProps<SVGSVGElement>) => {
         y2="192"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="8"
       />
     </svg>
   );
