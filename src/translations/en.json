@@ -25,9 +25,26 @@
       "intro": {
         "title": "About <tag>me</tag>",
         "description": "Since switching careers, I have experienced significant personal growth. Professionally, I have finally discovered the job I would like to pursue on a daily basis and have equipped myself accordingly. My intrinsic motivation drives me to continuously improve as a frontend developer every day."
+      }
+    },
+    "projects": {
+      "meta": {
+        "title": "Projects"
       },
+      "title": "Projects",
+      "intro": {
+        "title": "Pinned projects",
+        "description": "Work in progress! For a complete overview, please visit my <tag>GitHub</tag> profile."
+      }
+    },
+    "experience": {
+      "meta": {
+        "title": "Experience"
+      },
+      "title": "Experience",
       "timeline": {
         "title": "History <tag>of my</tag> development",
+        "message": "Work in progress! For a complete overview, please visit my <tag>LinkedIn</tag> profile.",
         "year": "2019",
         "experience": {
           "personal": {
@@ -59,27 +76,15 @@
         }
       }
     },
-    "projects": {
-      "meta": {
-        "title": "Projects"
-      },
-      "title": "Projects",
-      "pinned_projects": {
-        "title": "Pinned projects",
-        "description": "These are some of the personal projects I have worked on in the past. For a complete overview, please visit my <tag>GitHub</tag> profile."
-      }
-    },
-    "experience": {
-      "meta": {
-        "title": "Experience"
-      },
-      "title": "Experience"
-    },
     "skills": {
       "meta": {
         "title": "Skills"
       },
-      "title": "Skills"
+      "title": "Skills",
+      "intro": {
+        "title": "Overview of my skills",
+        "description": "Work in progress! For a complete overview, please visit my <tag>LinkedIn</tag> profile."
+      }
     },
     "contact": {
       "meta": {

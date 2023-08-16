@@ -20,7 +20,7 @@ export function Error({ className, title, description, ...props }: ErrorProps) {
 
       {description && <p className="text-2xl">{description}</p>}
 
-      <Link href="/" color="muted" size="sm">
+      <Link href="/" color="muted" size="lg">
         {t('buttons.home')}
       </Link>
     </Container>

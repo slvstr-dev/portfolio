@@ -17,14 +17,15 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Refactor UserInfo
 - [x] Improve responsiveness
 - [x] Add form inputs
-- [ ] Fix missing font override for 'Playfair'
-- [ ] Add DecorationWrapper
 - [ ] Replace static content with dynamic content
-- [ ] Fix broken stories
-- [ ] Decide on creation of Image to remove duplicate styling
 - [ ] Check semantic HTML
-- [ ] Check letter spacing
-- [ ] Check use of 'use client'
-- [ ] Add statically typed routes through next-intl
+- [ ] Add DecorationWrapper
+- [ ] Decide on creation of Image to remove duplicate styling
 - [ ] Add sizes to images with fill
+- [ ] Check letter spacing
 - [ ] Add relevant meta data
+- [ ] Check use of 'use client'
+- [ ] Fix broken stories
+- [ ] Fix missing font override for 'Playfair'
+- [ ] Add statically typed routes through next-intl
+- [ ] Add LinkedIn content through api

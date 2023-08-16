@@ -4,9 +4,7 @@ import { getTranslator } from 'next-intl/server';
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
 import { Page } from '@/components/layout/Page/Page';
-import { Card } from '@/components/ui/Card/Card';
-import { Seperator } from '@/components/ui/Seperator/Seperator';
-import { Slider } from '@/components/ui/Slider/Slider';
+import { Anchor } from '@/components/ui/Anchor/Anchor';
 import { Title } from '@/components/ui/Title/Title';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
@@ -23,12 +21,22 @@ export default function ProjectsPage() {
   return (
     <Page title={t('title')}>
       <Container maxWidth="lg" gap="xs" verticalPadding="lg">
-        <Title>{t('pinned_projects.title')}</Title>
+        <Title>
+          {t.rich('intro.title', {
+            tag: (chunks) => <span className="italic">{chunks}</span>,
+          })}
+        </Title>
 
-        <p className="text-center">{t('pinned_projects.description')}</p>
+        <p className="text-center">
+          {t.rich('intro.description', {
+            tag: (chunks) => (
+              <Anchor href={process.env.NEXT_PUBLIC_GITHUB_PROFILE}>{chunks}</Anchor>
+            ),
+          })}
+        </p>
       </Container>
 
-      <Container verticalPadding="none">
+      {/* <Container verticalPadding="none">
         <Seperator />
       </Container>
 
@@ -46,7 +54,7 @@ export default function ProjectsPage() {
             </Card>
           ))}
         </Slider>
-      </Container>
+      </Container> */}
     </Page>
   );
 }
