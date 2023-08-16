@@ -3,23 +3,16 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 
 import { Button } from '@/components/ui/Button/Button';
 import { Input } from '@/components/ui/Input/Input';
+import { ContactFormSchema, contactFormSchema } from '@/src/types/zod';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface ContactFormProps {
   className?: string;
   onSubmit?: () => void;
 }
-
-export const contactFormSchema = z.object({
-  subject: z.string().optional(),
-  body: z.string().min(1, { message: 'Please enter a message' }),
-});
-
-export type ContactFormSchema = z.infer<typeof contactFormSchema>;
 
 export function ContactForm({ className, onSubmit }: ContactFormProps) {
   const t = useTranslations('components.forms.contact_form');
