@@ -1,19 +1,15 @@
-import { PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 
 import { Footer } from '@/components/layout/Footer/Footer';
 
-export interface PagesLayout extends PropsWithChildren {
-  modal: ReactNode;
-}
+export interface PagesLayout extends PropsWithChildren {}
 
-export default function PagesLayout({ children, modal }: PagesLayout) {
+export default function PagesLayout({ children }: PagesLayout) {
   return (
     <>
       {children}
 
       <Footer />
-
-      {modal}
     </>
   );
 }

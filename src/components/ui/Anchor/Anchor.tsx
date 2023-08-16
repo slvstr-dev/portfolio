@@ -17,7 +17,7 @@ export const Anchor = forwardRef(function Anchor(
 });
 
 const anchor = tv({
-  base: 'outline-theme-brand-300 transition-opacity hover:opacity-50 active:underline',
+  base: 'text-theme-brand-300 outline-theme-brand-300 transition-opacity hover:opacity-50 active:underline',
   variants: {
     isItalic: {
       true: 'italic',

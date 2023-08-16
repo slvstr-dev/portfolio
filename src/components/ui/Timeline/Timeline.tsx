@@ -1,4 +1,4 @@
-import { Children, PropsWithChildren } from 'react';
+import { Children, PropsWithChildren, ReactNode } from 'react';
 
 import { cn } from '@/src/utils/tailwindUtils';
 
@@ -7,7 +7,7 @@ import { Item } from './internal/Item';
 export interface TimelineProps extends PropsWithChildren {
   className?: string;
   year?: number;
-  message?: string;
+  message?: ReactNode;
 }
 
 export function Timeline({ className, children, year, message }: TimelineProps) {
@@ -35,9 +35,9 @@ export function Timeline({ className, children, year, message }: TimelineProps) 
 
                 <div
                   className={cn(
-                    'absolute left-0 top-1/3 h-px w-12 -translate-x-12 bg-theme-muted',
+                    'absolute left-0 top-1/4 h-px w-10 -translate-x-12 bg-theme-muted',
                     {
-                      'md:left-full md:translate-x-0': isEven,
+                      'md:left-full md:translate-x-2': isEven,
                     },
                   )}
                 />

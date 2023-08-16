@@ -37,7 +37,7 @@ export const button = tv({
       brandRing:
         'border border-theme-brand-200 bg-theme-brand-100 text-theme-brand-300 ring-4 ring-theme-brand-100',
       muted: 'border border-theme-muted bg-white',
-      mutedRing: 'border border-theme-muted bg-white ring-4 ring-theme-muted',
+      mutedRing: 'border border-theme-muted bg-white',
     },
     size: {
       sm: 'px-2 text-sm',
