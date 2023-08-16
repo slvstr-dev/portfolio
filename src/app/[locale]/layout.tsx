@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react';
 
 import { Inconsolata, Playfair } from 'next/font/google';
 
+import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
@@ -46,6 +47,8 @@ export default async function RootLayout({ children, params: { locale } }: RootL
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider locale={locale} messages={translations}>
           {children}
+
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
