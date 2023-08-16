@@ -17,7 +17,7 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Refactor UserInfo
 - [x] Improve responsiveness
 - [x] Add form inputs
-- [x] Fix missing font override for 'Playfair'
+- [ ] Fix missing font override for 'Playfair'
 - [ ] Add DecorationWrapper
 - [ ] Replace static content with dynamic content
 - [ ] Fix broken stories

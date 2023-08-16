@@ -2,7 +2,7 @@
   "name": "portfolio",
   "description": "Portfolio site created with Next.js, TypeScript & Tailwind.",
   "author": "Sylvester Hofstra <hello@slvstr.dev>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -37,7 +37,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.4",
     "server-only": "^0.0.1",
-    "zod": "^3.22.1"
+    "zod": "3.21.4"
   },
   "devDependencies": {
     "@2digits/prettier-config": "^0.9.3",
