@@ -9,11 +9,16 @@ import { cn } from '@/src/utils/tailwindUtils';
 
 type CardVariants = VariantProps<typeof card>;
 
-export interface CardProps extends HTMLAttributes<HTMLElement>, CardVariants, ImageProps {}
+export interface CardProps
+  extends HTMLAttributes<HTMLElement>,
+    CardVariants,
+    Omit<ImageProps, 'src'> {
+  src?: string;
+}
 
 export function Card({
   className,
-  orientation,
+  orientation = 'vertical',
   isReverse,
   src,
   alt,
@@ -56,7 +61,13 @@ const card = tv({
   },
   variants: {
     orientation: {
-      horizontal: 'md:grid-flow-col md:grid-cols-2',
+      vertical: {
+        content: 'px-0',
+      },
+      horizontal: {
+        base: 'md:grid-flow-col md:grid-cols-2',
+        content: 'py-0',
+      },
     },
     isReverse: {
       true: {

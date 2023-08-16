@@ -7,7 +7,6 @@ import { Page } from '@/components/layout/Page/Page';
 import { Bio } from '@/components/network/Bio/Bio';
 import { Card } from '@/components/ui/Card/Card';
 import { Seperator } from '@/components/ui/Seperator/Seperator';
-import { Slider } from '@/components/ui/Slider/Slider';
 import { Timeline } from '@/components/ui/Timeline/Timeline';
 import { Title } from '@/components/ui/Title/Title';
 
@@ -26,60 +25,12 @@ export default function HomePage() {
     <Page title={t('title')} backgroundImage="https://placehold.co/600x400/png">
       <Container maxWidth="lg" gap="xs" verticalPadding="lg">
         <Title>
-          {t.rich('about_me.title', {
+          {t.rich('intro.title', {
             tag: (chunks) => <span className="italic">{chunks}</span>,
           })}
         </Title>
 
-        <p className="text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit non architecto nulla minus
-          explicabo magni dicta quasi iure molestiae. Quam tenetur eum perferendis explicabo dolor
-          quod deserunt dignissimos natus nulla. Corrupti delectus esse repudiandae quis! Culpa sit
-          facilis ipsam hic qui, magni nam illo? Dolorem suscipit unde hic. Itaque dolorum soluta
-          nihil, tenetur placeat fuga eveniet illum vel sunt aliquam?
-        </p>
-      </Container>
-
-      <Container verticalPadding="none">
-        <Seperator />
-      </Container>
-
-      <Container maxWidth="lg" gap="xs" verticalPadding="lg">
-        <Slider>
-          {Array.from({ length: 5 }, (_, i) => (
-            <Card key={i} src="https://placehold.co/600x400/png" orientation="horizontal">
-              <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
-
-              {Array.from({ length: i + 1 }, (_, j) => (
-                <p key={j} className="mt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                </p>
-              ))}
-            </Card>
-          ))}
-        </Slider>
-      </Container>
-
-      <Container verticalPadding="none">
-        <Seperator />
-      </Container>
-
-      <Container maxWidth="lg">
-        <Timeline
-          year={1990}
-          message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam">
-          {Array.from({ length: 5 }, (_, i) => (
-            <Timeline.Item key={i} year={i !== 0 ? 1990 + i : undefined}>
-              <Card src="https://placehold.co/600x400/png">
-                <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
-
-                <p className="mt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                </p>
-              </Card>
-            </Timeline.Item>
-          ))}
-        </Timeline>
+        <p className="text-center">{t('intro.description')}</p>
       </Container>
 
       <Container verticalPadding="none">
@@ -88,6 +39,83 @@ export default function HomePage() {
 
       <Container maxWidth="lg" verticalPadding="lg">
         <Bio />
+      </Container>
+
+      <Container verticalPadding="none">
+        <Seperator />
+      </Container>
+
+      <Container maxWidth="lg" gap="xs">
+        <Title>
+          {t.rich('timeline.title', {
+            tag: (chunks) => <span className="italic">{chunks}</span>,
+          })}
+        </Title>
+
+        <Timeline year={Number(t('timeline.year'))}>
+          <Timeline.Item>
+            <Card>
+              <h3 className="text-4xl uppercase italic">
+                {t('timeline.experience.personal.title')}
+              </h3>
+
+              <h4 className="text-2xl lowercase italic">
+                {t('timeline.experience.personal.type')}
+              </h4>
+            </Card>
+          </Timeline.Item>
+
+          <Timeline.Item year={Number(t('timeline.experience.fotofabriek.internship.year'))}>
+            <Card>
+              <h3 className="text-4xl uppercase italic">
+                {t('timeline.experience.fotofabriek.internship.title')}
+              </h3>
+
+              <h4 className="text-2xl lowercase italic">
+                {t('timeline.experience.fotofabriek.internship.company')} ·{' '}
+                {t('timeline.experience.fotofabriek.internship.type')}
+              </h4>
+            </Card>
+          </Timeline.Item>
+
+          <Timeline.Item year={Number(t('timeline.experience.fotofabriek.full_time.year'))}>
+            <Card>
+              <h3 className="text-4xl uppercase italic">
+                {t('timeline.experience.fotofabriek.full_time.title')}
+              </h3>
+
+              <h4 className="text-2xl lowercase italic">
+                {t('timeline.experience.fotofabriek.full_time.company')} ·{' '}
+                {t('timeline.experience.fotofabriek.full_time.type')}
+              </h4>
+
+              <ul className="mt-4 list-inside list-disc">
+                {t.rich('timeline.experience.fotofabriek.full_time.responsibilities', {
+                  tag: (chunks) => <li>{chunks}</li>,
+                })}
+              </ul>
+            </Card>
+          </Timeline.Item>
+
+          <Timeline.Item year={Number(t('timeline.experience.2_digits_agency.year'))}>
+            <Card>
+              <h3 className="text-4xl uppercase italic">
+                {t('timeline.experience.2_digits_agency.title')}
+              </h3>
+
+              <h4 className="text-2xl lowercase italic">
+                {t('timeline.experience.2_digits_agency.company')} ·{' '}
+                {t('timeline.experience.2_digits_agency.type')}
+              </h4>
+
+              <ul className="mt-4 list-inside list-disc">
+                {t.rich('timeline.experience.2_digits_agency.responsibilities', {
+                  tag: (chunks) => <li>{chunks}</li>,
+                })}
+              </ul>
+            </Card>
+          </Timeline.Item>
+        </Timeline>
       </Container>
     </Page>
   );
