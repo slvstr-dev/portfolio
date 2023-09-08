@@ -57,7 +57,7 @@ const card = tv({
   base: 'grid grid-flow-row items-center',
   slots: {
     content: 'p-8',
-    image: 'object-cover object-center',
+    image: 'bg-theme-brand-100 object-cover object-center',
   },
   variants: {
     orientation: {
