@@ -1,10 +1,17 @@
 import { Quote } from '@/components/ui/Quote/Quote';
-import { getUser } from '@/src/utils/fetchUtils';
+import { client } from '@/src/graphql';
 
 export async function Bio() {
-  const user = await getUser();
+  const { user } = await client.query({
+    user: {
+      __args: {
+        login: 'slvstr-dev',
+      },
+      bio: true,
+    },
+  });
 
-  if (!user?.bio) return <></>;
+  if (!user) return null;
 
   return <Quote icon="Commit">{user.bio}</Quote>;
 }
