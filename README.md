@@ -2,6 +2,8 @@
 
 Portfolio site created with Next.js, TypeScript & Tailwind.
 
+![Screenshot of project](https://raw.githubusercontent.com/slvstr-dev/portfolio/master/screenshot.png)
+
 ## TODO
 
 - [x] Fix forwardRef console error
