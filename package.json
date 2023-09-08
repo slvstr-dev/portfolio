@@ -2,7 +2,7 @@
   "name": "portfolio",
   "description": "Portfolio site created with Next.js, TypeScript & Tailwind.",
   "author": "Sylvester Hofstra <hello@slvstr.dev>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
