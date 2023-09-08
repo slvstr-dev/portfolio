@@ -4,7 +4,9 @@ import { getTranslator } from 'next-intl/server';
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
 import { Page } from '@/components/layout/Page/Page';
+import { Repositories } from '@/components/network/Repositories/Repositories';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
+import { Seperator } from '@/components/ui/Seperator/Seperator';
 import { Title } from '@/components/ui/Title/Title';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
@@ -36,25 +38,13 @@ export default function ProjectsPage() {
         </p>
       </Container>
 
-      {/* <Container verticalPadding="none">
+      <Container verticalPadding="none" as="div">
         <Seperator />
       </Container>
 
       <Container maxWidth="lg" gap="xs" verticalPadding="lg">
-        <Slider>
-          {Array.from({ length: 5 }, (_, i) => (
-            <Card key={i} src="https://placehold.co/600x400/png" orientation="horizontal">
-              <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
-
-              {Array.from({ length: i + 1 }, (_, j) => (
-                <p key={j} className="mt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                </p>
-              ))}
-            </Card>
-          ))}
-        </Slider>
-      </Container> */}
+        <Repositories />
+      </Container>
     </Page>
   );
 }

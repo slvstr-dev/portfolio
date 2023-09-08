@@ -1,5 +1,3 @@
-'use client';
-
 import { PropsWithChildren, ReactNode } from 'react';
 
 import * as DialogPrimitive from '@radix-ui/react-dialog';

@@ -12,6 +12,8 @@ jobs:
   code_checks:
     name: Code Checks
     runs-on: ubuntu-latest
+    env:
+      GRAPHQL_API_TOKEN: ${{ secrets.GRAPHQL_API_TOKEN }}
 
     steps:
       - name: Checkout code

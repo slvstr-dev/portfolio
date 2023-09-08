@@ -1,5 +1,3 @@
-'use client';
-
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 
 import { cn } from '@/src/utils/tailwindUtils';

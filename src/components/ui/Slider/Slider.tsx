@@ -1,13 +1,10 @@
-'use client';
-
 import { Children, PropsWithChildren, useState } from 'react';
 
 import { motion } from 'framer-motion';
 
 import { Button } from '@/components/ui/Button/Button';
+import { Icon } from '@/components/ui/Icon/Icon';
 import { cn } from '@/src/utils/tailwindUtils';
-
-import { Icon } from '../Icon/Icon';
 
 export interface SliderProps extends PropsWithChildren {
   className?: string;

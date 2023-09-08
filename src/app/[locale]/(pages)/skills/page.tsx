@@ -36,7 +36,7 @@ export default function SkillsPage() {
         </p>
       </Container>
 
-      {/* <Container>
+      {/* <Container  as="div">
         <Seperator />
       </Container>
 
