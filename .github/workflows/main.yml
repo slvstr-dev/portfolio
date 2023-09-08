@@ -12,6 +12,9 @@ jobs:
   code_checks:
     name: Code Checks
     runs-on: ubuntu-latest
+    env:
+      $GRAPHQL_API_TOKEN: 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
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
