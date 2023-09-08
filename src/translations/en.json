@@ -45,7 +45,7 @@
       "timeline": {
         "title": "History <tag>of my</tag> development",
         "message": "Work in progress! For a complete overview, please visit my <tag>LinkedIn</tag> profile.",
-        "year": "2019",
+        "year": "2018",
         "experience": {
           "personal": {
             "title": "Switched careers",
@@ -114,6 +114,12 @@
       }
     },
     "network": {
+      "pinned_items": {
+        "buttons": {
+          "github": "View on GitHub",
+          "website": "View website"
+        }
+      },
       "user_info": {
         "company": {
           "href": "https://2digits.agency/"
