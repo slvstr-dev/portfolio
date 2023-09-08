@@ -1,3 +1,5 @@
+'use client';
+
 import { Children, PropsWithChildren, useState } from 'react';
 
 import { motion } from 'framer-motion';
@@ -22,26 +24,28 @@ export function Slider({ className, ...props }: SliderProps) {
   };
 
   return (
-    <div className={cn('relative flex gap-8 overflow-x-visible', className)}>
-      {Children.map(props.children, (child, i) => (
-        <motion.div
-          key={i}
-          initial={{
-            opacity: position === i ? 1 : 0.1,
-          }}
-          animate={{
-            x: `calc(-${position} * (100% + 2rem))`,
-            opacity: position === i ? 1 : 0.2,
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 160,
-            damping: 20,
-          }}
-          className="w-full shrink-0">
-          {child}
-        </motion.div>
-      ))}
+    <div className={cn('relative', className)}>
+      <div className="mx-auto flex w-4/5 gap-8 overflow-x-visible">
+        {Children.map(props.children, (child, i) => (
+          <motion.div
+            key={i}
+            initial={{
+              opacity: position === i ? 1 : 0.1,
+            }}
+            animate={{
+              x: `calc(-${position} * (100% + 2rem))`,
+              opacity: position === i ? 1 : 0.2,
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 160,
+              damping: 20,
+            }}
+            className="w-full shrink-0">
+            {child}
+          </motion.div>
+        ))}
+      </div>
 
       <Button
         className="absolute left-0 top-1/2 -translate-y-1/2"

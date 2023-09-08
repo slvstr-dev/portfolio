@@ -1,12 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
 import { Page } from '@/components/layout/Page/Page';
-import { Repositories } from '@/components/network/Repositories/Repositories';
+import { PinnedItems } from '@/components/network/PinnedItems/PinnedItems';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
-import { Seperator } from '@/components/ui/Seperator/Seperator';
 import { Title } from '@/components/ui/Title/Title';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
@@ -18,6 +17,7 @@ export async function generateMetadata({ params: { locale } }: ParamsProps) {
 }
 
 export default function ProjectsPage() {
+  const locale = useLocale();
   const t = useTranslations('pages.projects');
 
   return (
@@ -38,12 +38,8 @@ export default function ProjectsPage() {
         </p>
       </Container>
 
-      <Container verticalPadding="none" as="div">
-        <Seperator />
-      </Container>
-
-      <Container maxWidth="lg" gap="xs" verticalPadding="lg">
-        <Repositories />
+      <Container maxWidth="lg" verticalPadding="lg" className="pt-0 md:pt-0">
+        <PinnedItems locale={locale} />
       </Container>
     </Page>
   );

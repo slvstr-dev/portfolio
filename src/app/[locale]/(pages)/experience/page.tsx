@@ -33,7 +33,7 @@ export default function ExperiencePage() {
           year={Number(t('timeline.year'))}
           message={t.rich('timeline.message', {
             tag: (chunks) => (
-              <Anchor href={process.env.NEXT_PUBLIC_GITHUB_PROFILE}>{chunks}</Anchor>
+              <Anchor href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE}>{chunks}</Anchor>
             ),
           })}>
           <Timeline.Item>
