@@ -17,6 +17,8 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Refactor UserInfo
 - [x] Improve responsiveness
 - [x] Add form inputs
+- [x] Replace Octokit with GraphQL + codegen
+- [x] Check use of 'use client'
 - [ ] Replace static content with dynamic content
 - [ ] Check semantic HTML
 - [ ] Add DecorationWrapper
@@ -24,7 +26,6 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [ ] Add sizes to images with fill
 - [ ] Check letter spacing
 - [ ] Add relevant meta data
-- [ ] Check use of 'use client'
 - [ ] Fix broken stories
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Add statically typed routes through next-intl

@@ -47,7 +47,7 @@ export default function HomePage() {
         <p className="text-center">{t('intro.description')}</p>
       </Container>
 
-      <Container verticalPadding="none">
+      <Container verticalPadding="none" as="div">
         <Seperator />
       </Container>
 
@@ -55,7 +55,7 @@ export default function HomePage() {
         <Bio />
       </Container>
 
-      {/* <Container verticalPadding="none">
+      {/* <Container verticalPadding="none"  as="div">
         <Seperator />
       </Container>
 

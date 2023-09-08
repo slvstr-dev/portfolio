@@ -1,5 +1,3 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
 
 import { ContactForm } from '@/components/forms/ContactForm/ContactForm';
