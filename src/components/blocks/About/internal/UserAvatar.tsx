@@ -5,7 +5,7 @@ export interface UserAvatarProps {
   className?: string;
 }
 
-export async function UserAvatar(props: UserAvatarProps) {
+export async function UserAvatar({ className }: UserAvatarProps) {
   const { user } = await client.query({
     user: {
       __args: {
@@ -17,9 +17,14 @@ export async function UserAvatar(props: UserAvatarProps) {
     },
   });
 
-  if (!user) return null;
+  if (!user) return;
 
   return (
-    <Avatar src={user.avatarUrl} name={user.name ?? ''} company={user.company ?? ''} {...props} />
+    <Avatar
+      className={className}
+      src={user.avatarUrl}
+      name={user.name ?? ''}
+      company={user.company ?? ''}
+    />
   );
 }

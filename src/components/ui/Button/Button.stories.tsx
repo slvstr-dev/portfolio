@@ -7,7 +7,6 @@ export default {
   component: Button,
   args: {
     children: 'Button',
-    onClick: console.log,
   },
   parameters: {
     layout: 'centered',

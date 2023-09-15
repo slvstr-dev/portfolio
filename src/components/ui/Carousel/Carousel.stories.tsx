@@ -2,13 +2,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Card } from '@/components/ui/Card/Card';
 
-import { Slider } from './Slider';
+import { Carousel } from './Carousel';
 
 export default {
-  title: 'ui/Slider',
-  component: Slider,
+  title: 'ui/Carousel',
+  component: Carousel,
   render: (args) => (
-    <Slider {...args}>
+    <Carousel {...args}>
       {Array.from({ length: 5 }, (_, i) => (
         <Card key={i} src="https://placehold.co/600x400/png">
           <h3 className="text-4xl uppercase italic">Card #{i + 1}</h3>
@@ -20,11 +20,11 @@ export default {
           ))}
         </Card>
       ))}
-    </Slider>
+    </Carousel>
   ),
   tags: ['autodocs'],
-} satisfies Meta<typeof Slider>;
+} satisfies Meta<typeof Carousel>;
 
-type Story = StoryObj<typeof Slider>;
+type Story = StoryObj<typeof Carousel>;
 
 export const Default: Story = {} satisfies Story;

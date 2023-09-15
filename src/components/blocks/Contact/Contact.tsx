@@ -3,8 +3,8 @@ import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/components/forms/ContactForm/ContactForm';
 import { Container } from '@/components/layout/Container/Container';
 
-export function ContactSection() {
-  const t = useTranslations('components.ui.contact');
+export function Contact() {
+  const t = useTranslations('components.blocks.contact');
 
   return (
     <Container

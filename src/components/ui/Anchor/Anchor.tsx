@@ -13,7 +13,7 @@ export const Anchor = forwardRef(function Anchor(
 ) {
   const styles = anchor({ hasUnderline, className });
 
-  return <NextIntlLink className={styles} href={{ pathname: href }} {...props} ref={ref} />;
+  return <NextIntlLink className={styles} href={href as never} {...props} ref={ref} />;
 });
 
 const anchor = tv({

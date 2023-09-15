@@ -1,11 +1,11 @@
-import { Quote } from '@/components/ui/Quote/Quote';
+import { FeaturedText } from '@/components/ui/FeaturedText/FeaturedText';
 import { client } from '@/src/graphql';
 
-export interface UserBioProps {
+export interface QuoteProps {
   className?: string;
 }
 
-export async function UserBio(props: UserBioProps) {
+export async function Quote(props: QuoteProps) {
   const { user } = await client.query({
     user: {
       __args: {
@@ -18,8 +18,8 @@ export async function UserBio(props: UserBioProps) {
   if (!user) return null;
 
   return (
-    <Quote icon="Commit" {...props}>
+    <FeaturedText icon="Commit" {...props}>
       {user.bio}
-    </Quote>
+    </FeaturedText>
   );
 }

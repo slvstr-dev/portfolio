@@ -15,19 +15,19 @@ export function MainMenu({ className, isLight }: MainMenuProps) {
     <NavigationMenu>
       <NavigationMenu.List className={cn('flex gap-8', className)}>
         <NavigationMenu.Item>
-          <NavigationMenu.Link href="/projects" isLight={isLight}>
+          <NavigationMenu.Link href="/#projects" isLight={isLight}>
             {t('buttons.projects')}
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link href="/experience" isLight={isLight}>
+          <NavigationMenu.Link href="/#experience" isLight={isLight}>
             {t('buttons.experience')}
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link href="/skills" isLight={isLight}>
+          <NavigationMenu.Link href="/#skills" isLight={isLight}>
             {t('buttons.skills')}
           </NavigationMenu.Link>
         </NavigationMenu.Item>

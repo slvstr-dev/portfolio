@@ -8,11 +8,11 @@ import { Button } from '@/components/ui/Button/Button';
 import { Icon } from '@/components/ui/Icon/Icon';
 import { cn } from '@/src/utils/tailwindUtils';
 
-export interface SliderProps extends PropsWithChildren {
+export interface CarouselProps extends PropsWithChildren {
   className?: string;
 }
 
-export function Slider({ className, ...props }: SliderProps) {
+export function Carousel({ className, ...props }: CarouselProps) {
   const [position, setPosition] = useState(0);
 
   const handlePrevious = () => {
@@ -25,7 +25,7 @@ export function Slider({ className, ...props }: SliderProps) {
 
   return (
     <div className={cn('relative', className)}>
-      <div className="mx-auto flex w-4/5 gap-8 overflow-x-visible">
+      <div className="mx-auto flex w-4/5 gap-20 overflow-x-visible">
         {Children.map(props.children, (child, i) => (
           <motion.div
             key={i}
@@ -33,7 +33,7 @@ export function Slider({ className, ...props }: SliderProps) {
               opacity: position === i ? 1 : 0.1,
             }}
             animate={{
-              x: `calc(-${position} * (100% + 2rem))`,
+              x: `calc(-${position} * (100% + 5rem))`,
               opacity: position === i ? 1 : 0.2,
             }}
             transition={{

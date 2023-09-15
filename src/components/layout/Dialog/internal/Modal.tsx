@@ -70,7 +70,7 @@ export function Modal({ children, className, title, description }: ModalProps) {
             </DialogPrimitive.Description>
           )}
 
-          <div className="mt-4 w-full overflow-x-scroll">{children}</div>
+          <div className="mt-4 w-full">{children}</div>
         </motion.div>
       </DialogPrimitive.Content>
     </DialogPrimitive.Portal>

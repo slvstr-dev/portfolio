@@ -16,7 +16,10 @@ export function Copyright({ className }: CopyrightProps) {
     <p className={cn('font-bold uppercase', className)}>
       {t.rich('date', {
         tag: (chunks) => (
-          <Anchor href={t('href')} target="_blank" className="transition-opacity hover:opacity-50">
+          <Anchor
+            href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE}
+            target="_blank"
+            className="transition-opacity hover:opacity-50">
             {chunks}
           </Anchor>
         ),

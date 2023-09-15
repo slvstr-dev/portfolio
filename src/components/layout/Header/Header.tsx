@@ -2,10 +2,10 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
+import { MainMenu } from '@/components/blocks/MainMenu/MainMenu';
 import { ContactModal } from '@/components/dialogs/ContactModal/ContactModal';
 import { MenuSidebar } from '@/components/dialogs/MenuSidebar/MenuSidebar';
 import { Container } from '@/components/layout/Container/Container';
-import { MainMenu } from '@/components/navigation/MainMenu/MainMenu';
 import { Logo } from '@/components/ui/Logo/Logo';
 import { cn } from '@/src/utils/tailwindUtils';
 
@@ -22,6 +22,10 @@ export function Header({ className, isLight }: HeaderProps) {
   }, []);
 
   useEffect(() => {
+    if (window.scrollY > 80) {
+      setIsScrolled(true);
+    }
+
     window.addEventListener('scroll', listenScrollEvent);
 
     return () => {
