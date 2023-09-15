@@ -22,8 +22,7 @@ export function Modal({ children, className, title, description }: ModalProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{
-            type: 'spring',
-            duration: 0.4,
+            duration: 0.2,
           }}
         />
       </DialogPrimitive.Overlay>
@@ -71,7 +70,7 @@ export function Modal({ children, className, title, description }: ModalProps) {
             </DialogPrimitive.Description>
           )}
 
-          <div className="mt-4 w-full overflow-x-scroll">{children}</div>
+          <div className="mt-4 w-full">{children}</div>
         </motion.div>
       </DialogPrimitive.Content>
     </DialogPrimitive.Portal>

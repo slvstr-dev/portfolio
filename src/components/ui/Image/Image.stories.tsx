@@ -1,18 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Avatar } from './Avatar';
+import { Image } from './Image';
 
 export default {
-  title: 'ui/Avatar',
-  component: Avatar,
+  title: 'ui/Image',
+  component: Image,
   args: {
     src: 'https://placehold.co/600x400/png',
-    name: 'Sylvester Hofstra',
-    company: 'ACME',
+  },
+  parameters: {
+    layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Avatar>;
+} satisfies Meta<typeof Image>;
 
-type Story = StoryObj<typeof Avatar>;
+type Story = StoryObj<typeof Image>;
 
 export const Default: Story = {} satisfies Story;

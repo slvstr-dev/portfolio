@@ -2,18 +2,19 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
+import { MainMenu } from '@/components/blocks/MainMenu/MainMenu';
 import { ContactModal } from '@/components/dialogs/ContactModal/ContactModal';
 import { MenuSidebar } from '@/components/dialogs/MenuSidebar/MenuSidebar';
 import { Container } from '@/components/layout/Container/Container';
-import { MainMenu } from '@/components/navigation/MainMenu/MainMenu';
 import { Logo } from '@/components/ui/Logo/Logo';
 import { cn } from '@/src/utils/tailwindUtils';
 
 export interface HeaderProps {
   className?: string;
+  isLight?: boolean;
 }
 
-export function Header({ className }: HeaderProps) {
+export function Header({ className, isLight }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const listenScrollEvent = useCallback(() => {
@@ -21,6 +22,10 @@ export function Header({ className }: HeaderProps) {
   }, []);
 
   useEffect(() => {
+    if (window.scrollY > 80) {
+      setIsScrolled(true);
+    }
+
     window.addEventListener('scroll', listenScrollEvent);
 
     return () => {
@@ -41,15 +46,15 @@ export function Header({ className }: HeaderProps) {
         },
       )}
       orientation="row">
-      <Logo />
+      <Logo isLight={isLight && !isScrolled} />
 
       <div className="hidden grow md:flex md:items-center md:justify-between">
-        <MainMenu />
+        <MainMenu isLight={isLight && !isScrolled} />
 
         <ContactModal />
       </div>
 
-      <MenuSidebar className="ml-auto md:hidden" />
+      <MenuSidebar className={cn('ml-auto md:hidden', { 'text-white': isLight && !isScrolled })} />
     </Container>
   );
 }

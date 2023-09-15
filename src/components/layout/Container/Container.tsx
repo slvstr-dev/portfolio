@@ -5,12 +5,13 @@ import { tv, VariantProps } from 'tailwind-variants';
 type ContainerVariants = VariantProps<typeof container>;
 
 export interface ContainerProps extends PropsWithChildren<ContainerVariants> {
+  id?: string;
   as?: ElementType;
   className?: string;
 }
 
 export function Container({
-  as,
+  id,
   className,
   children,
   isCentered,
@@ -19,14 +20,12 @@ export function Container({
   verticalPadding,
   gap,
 }: ContainerProps) {
-  const Component = as ?? 'section';
-
   const styles = container({ isCentered, orientation, maxWidth, verticalPadding, gap });
 
   return (
-    <Component className={styles.base({ className })}>
+    <div id={id} className={styles.base({ className })}>
       <div className={styles.children()}>{children}</div>
-    </Component>
+    </div>
   );
 }
 

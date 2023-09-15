@@ -1,15 +1,17 @@
 import { getTranslator } from 'next-intl/server';
 
-import { RootLayoutProps } from '@/app/[locale]/layout';
 import { Card } from '@/components/ui/Card/Card';
+import { Carousel } from '@/components/ui/Carousel/Carousel';
 import { Link } from '@/components/ui/Link/Link';
-import { Slider } from '@/components/ui/Slider/Slider';
 import { client } from '@/src/graphql';
 
-export interface PinnedItemsProps extends Pick<RootLayoutProps['params'], 'locale'> {}
+export interface UserPinnedItemsProps {
+  className?: string;
+  locale: string;
+}
 
-export async function PinnedItems({ locale }: PinnedItemsProps) {
-  const t = await getTranslator(locale, 'components.network.pinned_items');
+export async function UserPinnedItems({ locale, className }: UserPinnedItemsProps) {
+  const t = await getTranslator(locale, 'components.blocks.projects');
 
   const { user } = await client.query({
     user: {
@@ -36,16 +38,13 @@ export async function PinnedItems({ locale }: PinnedItemsProps) {
     },
   });
 
-  if (!user) return null;
+  if (!user) return;
 
   return (
-    <Slider>
+    <Carousel className={className}>
       {user.pinnedItems.nodes?.map((respository) => {
         if (!respository || respository.__typename !== 'Repository') return null;
 
-        console.log(
-          `https://raw.githubusercontent.com${respository.resourcePath}master/screenshot.png`,
-        );
         return (
           <Card
             key={respository.id}
@@ -70,6 +69,6 @@ export async function PinnedItems({ locale }: PinnedItemsProps) {
           </Card>
         );
       })}
-    </Slider>
+    </Carousel>
   );
 }

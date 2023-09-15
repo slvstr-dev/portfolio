@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import { AnimatePresence } from 'framer-motion';
 
+import { MainMenu } from '@/components/blocks/MainMenu/MainMenu';
 import { ContactModal } from '@/components/dialogs/ContactModal/ContactModal';
 import { Dialog } from '@/components/layout/Dialog/Dialog';
-import { MainMenu } from '@/components/navigation/MainMenu/MainMenu';
 import { Button } from '@/components/ui/Button/Button';
 import { Icon } from '@/components/ui/Icon/Icon';
 

@@ -30,6 +30,11 @@ export function Sidebar({ children, className }: SidebarProps) {
           animate={{
             x: '10%',
           }}
+          transition={{
+            type: 'spring',
+            bounce: 0.25,
+            duration: 0.4,
+          }}
           exit={{
             x: '100%',
           }}

@@ -21,30 +21,23 @@
       "meta": {
         "title": "Home"
       },
-      "title": "Frontend developer",
-      "intro": {
-        "title": "About <tag>me</tag>",
+      "title": "Frontend developer"
+    }
+  },
+  "components": {
+    "blocks": {
+      "about": {
+        "title": "About me",
+        "subtitle": "Summary",
         "description": "Since switching careers, I have experienced significant personal growth. Professionally, I have finally discovered the job I would like to pursue on a daily basis and have equipped myself accordingly. My intrinsic motivation drives me to continuously improve as a frontend developer every day."
-      }
-    },
-    "projects": {
-      "meta": {
-        "title": "Projects"
       },
-      "title": "Projects",
-      "intro": {
-        "title": "Pinned projects",
-        "description": "Work in progress! For a complete overview, please visit my <tag>GitHub</tag> profile."
-      }
-    },
-    "experience": {
-      "meta": {
-        "title": "Experience"
+      "contact": {
+        "title": "Let's <tag>get in touch</tag> and <tag>drink coffee</tag>",
+        "subtitle": "Contact form"
       },
-      "title": "Experience",
-      "timeline": {
+      "experience": {
         "title": "History <tag>of my</tag> development",
-        "message": "Work in progress! For a complete overview, please visit my <tag>LinkedIn</tag> profile.",
+        "message": "For a complete overview, please visit my <tag>LinkedIn</tag> profile.",
         "year": "2018",
         "experience": {
           "personal": {
@@ -74,26 +67,16 @@
             "responsibilities": "<tag>Break designs down into reusable components.</tag><tag>Build TypeScript components in Storybook.</tag><tag>Add React Hook Form forms with Zod validation.</tag><tag>Create headless React, React Native & Next.js apps.</tag><tag>Fetch data through React Query.</tag><tag>Test integration with Cypress.</tag>"
           }
         }
+      },
+      "projects": {
+        "title": "Pinned projects",
+        "description": "For a complete overview, please visit my <tag>GitHub</tag> profile.",
+        "buttons": {
+          "github": "View on GitHub",
+          "website": "View website"
+        }
       }
     },
-    "skills": {
-      "meta": {
-        "title": "Skills"
-      },
-      "title": "Skills",
-      "intro": {
-        "title": "Overview of my skills",
-        "description": "Work in progress! For a complete overview, please visit my <tag>LinkedIn</tag> profile."
-      }
-    },
-    "contact": {
-      "meta": {
-        "title": "Contact"
-      },
-      "title": "Contact"
-    }
-  },
-  "components": {
     "dialogs": {
       "contact_modal": {
         "buttons": {
@@ -104,23 +87,7 @@
       }
     },
     "layout": {
-      "header": {
-        "buttons": {
-          "projects": "Projects",
-          "experience": "Experience",
-          "skills": "Skills",
-          "contact": "Contact"
-        }
-      }
-    },
-    "network": {
-      "pinned_items": {
-        "buttons": {
-          "github": "View on GitHub",
-          "website": "View website"
-        }
-      },
-      "user_info": {
+      "footer": {
         "company": {
           "href": "https://2digits.agency/"
         },
@@ -130,29 +97,14 @@
             "title": "GitHub"
           }
         }
-      }
-    },
-    "ui": {
-      "error": {
+      },
+      "header": {
         "buttons": {
-          "home": "Go to homepage"
+          "projects": "Projects",
+          "experience": "Experience",
+          "skills": "Skills",
+          "contact": "Contact"
         }
-      },
-      "logo": {
-        "title": "<tag>S</tag>"
-      },
-      "navigation_menu": {
-        "projects": "Projects",
-        "experience": "Experience",
-        "skills": "Skills"
-      },
-      "contact": {
-        "title": "Let's <tag>get in touch</tag> and <tag>drink coffee</tag>",
-        "subtitle": "Contact form"
-      },
-      "copyright": {
-        "href": "https://www.linkedin.com/in/sylvesterhofstra/",
-        "date": "© {date} - <tag>slvstr</tag>"
       }
     },
     "forms": {
@@ -174,6 +126,27 @@
           "submit": "Send message"
         },
         "subject": "Message from slvstr.dev"
+      }
+    },
+    "ui": {
+      "avatar": {
+        "job_title": "React developer {company}"
+      },
+      "error": {
+        "buttons": {
+          "home": "Go to homepage"
+        }
+      },
+      "logo": {
+        "title": "<tag>S</tag>"
+      },
+      "navigation_menu": {
+        "projects": "Projects",
+        "experience": "Experience",
+        "skills": "Skills"
+      },
+      "copyright": {
+        "date": "© {date} - <tag>slvstr</tag>"
       }
     }
   }
