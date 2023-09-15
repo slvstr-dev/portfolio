@@ -10,4 +10,22 @@ export default {
 
 type Story = StoryObj<typeof NavigationMenu>;
 
-export const Default: Story = {} satisfies Story;
+export const Default: Story = {
+  args: {
+    children: (
+      <NavigationMenu.List className="flex gap-8">
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="/projects">Projects</NavigationMenu.Link>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="/experience">Experience</NavigationMenu.Link>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="/skills">Skills</NavigationMenu.Link>
+        </NavigationMenu.Item>
+      </NavigationMenu.List>
+    ),
+  },
+} satisfies Story;

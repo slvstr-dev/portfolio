@@ -10,4 +10,8 @@ export default {
 
 type Story = StoryObj<typeof Hero>;
 
-export const Default: Story = {} satisfies Story;
+export const Default: Story = {
+  args: {
+    children: 'Hero',
+  },
+} satisfies Story;
