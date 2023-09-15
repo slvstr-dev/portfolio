@@ -2,28 +2,15 @@ import React, { SVGProps } from 'react';
 
 export const ArrowLeft = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
-      <rect width="256" height="256" fill="none" />
-
-      <line
-        x1="216"
-        y1="128"
-        x2="40"
-        y2="128"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="8"
-      />
-
-      <polyline
-        points="112 56 40 128 112 200"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="8"
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 -960 960 960"
+      transform="rotate(180)"
+      width="24"
+      {...props}>
+      <path
+        d="m684-336-20-20 110-110H172v-28h602L664-604l20-20 144 144-144 144Z"
+        fill="currentColor"
       />
     </svg>
   );

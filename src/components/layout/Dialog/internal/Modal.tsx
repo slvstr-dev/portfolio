@@ -22,8 +22,7 @@ export function Modal({ children, className, title, description }: ModalProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{
-            type: 'spring',
-            duration: 0.4,
+            duration: 0.2,
           }}
         />
       </DialogPrimitive.Overlay>
