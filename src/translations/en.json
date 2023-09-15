@@ -22,8 +22,9 @@
         "title": "Home"
       },
       "title": "Frontend developer",
-      "intro": {
-        "title": "About <tag>me</tag>",
+      "about": {
+        "title": "About me",
+        "subtitle": "Summary",
         "description": "Since switching careers, I have experienced significant personal growth. Professionally, I have finally discovered the job I would like to pursue on a daily basis and have equipped myself accordingly. My intrinsic motivation drives me to continuously improve as a frontend developer every day."
       }
     },
@@ -133,6 +134,9 @@
       }
     },
     "ui": {
+      "avatar": {
+        "job_title": "React developer {company}"
+      },
       "error": {
         "buttons": {
           "home": "Go to homepage"
