@@ -1,19 +1,16 @@
 import { HTMLAttributes } from 'react';
 
-import Image from 'next/image';
-
 import { tv, VariantProps } from 'tailwind-variants';
 
-import { ImageProps } from '@/src/types/interfaces';
+import { Image, ImageProps } from '@/components/ui/Image/Image';
 import { cn } from '@/src/utils/tailwindUtils';
 
 type CardVariants = VariantProps<typeof card>;
 
-export interface CardProps
-  extends HTMLAttributes<HTMLElement>,
-    CardVariants,
-    Omit<ImageProps, 'src'> {
-  src?: string;
+export interface CardProps extends HTMLAttributes<HTMLElement>, CardVariants {
+  alt?: ImageProps['alt'];
+  src?: ImageProps['src'];
+  caption?: string;
 }
 
 export function Card({
@@ -29,10 +26,10 @@ export function Card({
 
   return (
     <div className={styles.base({ className })}>
-      <figure>
-        {src && (
+      {src && (
+        <figure>
           <div className="relative aspect-video">
-            <Image className={styles.image()} src={src} alt={alt || ''} fill />
+            <Image className="bg-theme-brand-100" src={src} alt={alt} fill />
 
             {orientation === 'horizontal' && (
               <div
@@ -43,10 +40,10 @@ export function Card({
               />
             )}
           </div>
-        )}
 
-        {!!caption && <figcaption className="italic">{caption}</figcaption>}
-      </figure>
+          {!!caption && <figcaption className="italic">{caption}</figcaption>}
+        </figure>
+      )}
 
       <div className={styles.content()}>{children}</div>
     </div>
@@ -57,7 +54,6 @@ const card = tv({
   base: 'grid grid-flow-row items-center',
   slots: {
     content: 'p-8',
-    image: 'bg-theme-brand-100 object-cover object-center',
   },
   variants: {
     orientation: {

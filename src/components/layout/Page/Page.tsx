@@ -7,15 +7,15 @@ import { cn } from '@/src/utils/tailwindUtils';
 export interface PageProps extends PropsWithChildren {
   className?: string;
   title?: string;
-  backgroundImage?: string;
+  src?: string;
 }
 
-export function Page({ children, className, title, backgroundImage }: PageProps) {
+export function Page({ children, className, title, src }: PageProps) {
   return (
     <>
-      <Header isLight={!!backgroundImage} />
+      <Header isLight={!!src} />
 
-      {(!!title || !!backgroundImage) && <Hero backgroundImage={backgroundImage}>{title}</Hero>}
+      {(!!title || !!src) && <Hero src={src}>{title}</Hero>}
 
       <main className={cn('flex grow flex-col overflow-x-hidden bg-theme-inverted', className)}>
         {children}

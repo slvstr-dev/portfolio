@@ -1,11 +1,13 @@
-import Image from 'next/image';
-
-import { ImageProps } from '@/src/types/interfaces';
+import { Image, ImageProps } from '@/components/ui/Image/Image';
 import { cn } from '@/src/utils/tailwindUtils';
+
+type MasonryImage = ImageProps & {
+  caption?: string;
+};
 
 export interface MasonryBlockProps {
   className?: string;
-  images: [ImageProps, ImageProps, ImageProps, ImageProps];
+  images: [MasonryImage, MasonryImage, MasonryImage, MasonryImage];
 }
 
 export function MasonryBlock({ className, images }: MasonryBlockProps) {
@@ -25,12 +27,7 @@ export function MasonryBlock({ className, images }: MasonryBlockProps) {
               'md:col-span-1 md:row-span-1': idx === 3,
             })}>
             <div className="relative h-full w-full">
-              <Image
-                src={image.src}
-                alt={image.alt || ''}
-                className="object-cover object-center"
-                fill
-              />
+              <Image src={image.src} alt={image.alt} fill />
             </div>
 
             {!!image.caption && <figcaption className="italic">{image.caption}</figcaption>}

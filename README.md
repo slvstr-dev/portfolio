@@ -21,17 +21,16 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Add form inputs
 - [x] Replace Octokit with GraphQL + codegen
 - [x] Check use of 'use client'
+- [x] Decide on creation of Image to remove duplicate styling
 - [ ] Replace static content with dynamic content
-- [ ] Check semantic HTML
-- [ ] Add DecorationWrapper
-- [ ] Decide on creation of Image to remove duplicate styling
-- [ ] Add sizes to images with fill
 - [ ] Check letter spacing
+- [ ] Check semantic HTML
+- [ ] Add sizes to images with fill
 - [ ] Add relevant meta data
 - [ ] Fix broken stories
-- [ ] Fix missing font override for 'Playfair'
-- [ ] Add statically typed routes through next-intl
 - [ ] Clean up translations
 - [ ] Improve prepare script
+- [ ] Add statically typed routes through next-intl
+- [ ] Fix missing font override for 'Playfair'
 - [ ] Upgrade Prettier to ^3.0.0
 - [ ] Add LinkedIn content through api

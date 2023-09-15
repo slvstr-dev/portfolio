@@ -1,14 +1,14 @@
-import Image from 'next/image';
-
 import { useTranslations } from 'next-intl';
 
-import { ImageProps } from '@/src/types/interfaces';
+import { Image, ImageProps } from '@/components/ui/Image/Image';
 import { cn } from '@/src/utils/tailwindUtils';
 
-export interface AvatarProps extends Omit<ImageProps, 'caption'> {
+export interface AvatarProps {
   className?: string;
   name?: string;
   company?: string;
+  alt?: ImageProps['alt'];
+  src?: ImageProps['src'];
 }
 
 export function Avatar({ className, src, alt, name, company }: AvatarProps) {
@@ -19,9 +19,9 @@ export function Avatar({ className, src, alt, name, company }: AvatarProps) {
       {src && (
         <div className="relative">
           <Image
-            className="h-60 w-40 rounded-full object-cover object-center p-px contrast-125 saturate-50 sepia-[.5]"
+            className="h-60 w-40 rounded-full p-px contrast-125 saturate-50 sepia-[.5]"
             src={src}
-            alt={alt || ''}
+            alt={alt}
             width={160}
             height={240}
           />
