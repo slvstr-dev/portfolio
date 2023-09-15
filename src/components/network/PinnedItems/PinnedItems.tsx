@@ -43,9 +43,6 @@ export async function PinnedItems({ locale }: PinnedItemsProps) {
       {user.pinnedItems.nodes?.map((respository) => {
         if (!respository || respository.__typename !== 'Repository') return null;
 
-        console.log(
-          `https://raw.githubusercontent.com${respository.resourcePath}master/screenshot.png`,
-        );
         return (
           <Card
             key={respository.id}
