@@ -6,20 +6,23 @@ import { cn } from '@/src/utils/tailwindUtils';
 export interface AvatarProps extends Omit<ImageProps, 'caption'> {
   className?: string;
   name?: string;
-  occupation?: string;
+  company?: string;
 }
 
-export function Avatar({ className, src, alt, name, occupation }: AvatarProps) {
+export function Avatar({ className, src, alt, name, company }: AvatarProps) {
   return (
     <figure className={cn('flex flex-col items-center gap-6 text-center', className)}>
       {src && (
-        <div className="relative h-60 w-40 overflow-hidden rounded-full shadow-[inset_0px_0px_10px_5px_rgba(255,255,255,1)]">
+        <div className="relative">
           <Image
-            className="-z-10 object-cover object-center sepia"
+            className="h-60 w-40 rounded-full object-cover object-center contrast-125 saturate-50 sepia-[.5]"
             src={src}
             alt={alt || ''}
-            fill
+            width={160}
+            height={240}
           />
+
+          <span className="absolute inset-0 rounded-full shadow-[inset_0px_0px_10px_5px_rgba(255,255,255,1)]" />
         </div>
       )}
 
@@ -27,7 +30,7 @@ export function Avatar({ className, src, alt, name, occupation }: AvatarProps) {
         <figcaption>
           <p className="text-xl font-medium uppercase text-theme-brand-300">{name}</p>
 
-          {!!occupation && <p className="text-sm">{occupation}</p>}
+          {!!company && <p className="text-sm">{company}</p>}
         </figcaption>
       )}
     </figure>

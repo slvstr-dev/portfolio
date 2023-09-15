@@ -8,7 +8,7 @@ export default {
   args: {
     src: 'https://placehold.co/600x400/png',
     name: 'Sylvester Hofstra',
-    occupation: 'Frontend Developer',
+    company: 'ACME',
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Avatar>;
