@@ -32,3 +32,4 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Add statically typed routes through next-intl
 - [ ] Add LinkedIn content through api
+- [ ] Upgrade Prettier to ^3.0.0
