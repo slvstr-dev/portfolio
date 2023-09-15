@@ -13,7 +13,7 @@ export interface PageProps extends PropsWithChildren {
 export function Page({ children, className, title, backgroundImage }: PageProps) {
   return (
     <>
-      <Header className={cn({ 'text-white': !!backgroundImage })} />
+      <Header isLight={!!backgroundImage} />
 
       {(!!title || !!backgroundImage) && <Hero backgroundImage={backgroundImage}>{title}</Hero>}
 

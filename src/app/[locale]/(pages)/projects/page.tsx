@@ -4,7 +4,7 @@ import { getTranslator } from 'next-intl/server';
 import { ParamsProps } from '@/app/[locale]/layout';
 import { Container } from '@/components/layout/Container/Container';
 import { Page } from '@/components/layout/Page/Page';
-import { PinnedItems } from '@/components/network/PinnedItems/PinnedItems';
+import { UserPinnedItems } from '@/components/network/UserPinnedItems/UserPinnedItems';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
 import { Title } from '@/components/ui/Title/Title';
 
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
       </Container>
 
       <Container maxWidth="lg" verticalPadding="lg" className="pt-0 md:pt-0">
-        <PinnedItems locale={locale} />
+        <UserPinnedItems locale={locale} />
       </Container>
     </Page>
   );

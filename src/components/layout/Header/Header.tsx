@@ -11,9 +11,10 @@ import { cn } from '@/src/utils/tailwindUtils';
 
 export interface HeaderProps {
   className?: string;
+  isLight?: boolean;
 }
 
-export function Header({ className }: HeaderProps) {
+export function Header({ className, isLight }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const listenScrollEvent = useCallback(() => {
@@ -41,15 +42,15 @@ export function Header({ className }: HeaderProps) {
         },
       )}
       orientation="row">
-      <Logo />
+      <Logo isLight={isLight && !isScrolled} />
 
       <div className="hidden grow md:flex md:items-center md:justify-between">
-        <MainMenu />
+        <MainMenu isLight={isLight && !isScrolled} />
 
         <ContactModal />
       </div>
 
-      <MenuSidebar className="ml-auto md:hidden" />
+      <MenuSidebar className={cn('ml-auto md:hidden', { 'text-white': isLight && !isScrolled })} />
     </Container>
   );
 }

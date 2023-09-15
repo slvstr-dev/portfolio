@@ -2,11 +2,15 @@ import { getTranslator } from 'next-intl/server';
 
 import { RootLayoutProps } from '@/app/[locale]/layout';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
+import { Logo } from '@/components/ui/Logo/Logo';
 import { client } from '@/src/graphql';
+import { cn } from '@/src/utils/tailwindUtils';
 
-export interface UserInfoProps extends Pick<RootLayoutProps['params'], 'locale'> {}
+export interface UserInfoProps extends Pick<RootLayoutProps['params'], 'locale'> {
+  className?: string;
+}
 
-export async function UserInfo({ locale }: UserInfoProps) {
+export async function UserInfo({ locale, className }: UserInfoProps) {
   const t = await getTranslator(locale, 'components.network.user_info');
 
   const { user } = await client.query({
@@ -33,7 +37,13 @@ export async function UserInfo({ locale }: UserInfoProps) {
   if (!user) return null;
 
   return (
-    <>
+    <div
+      className={cn(
+        'flex w-full flex-col items-center gap-10 text-center md:flex-row md:gap-20 md:text-left',
+        className,
+      )}>
+      <Logo className="text-9xl text-theme-brand-300" />
+
       {!!user && (
         <div className="flex flex-col gap-1 text-xl">
           <h2 className="font-bold uppercase">{user.name}</h2>
@@ -67,6 +77,6 @@ export async function UserInfo({ locale }: UserInfoProps) {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

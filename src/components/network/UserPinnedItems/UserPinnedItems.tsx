@@ -6,9 +6,11 @@ import { Link } from '@/components/ui/Link/Link';
 import { Slider } from '@/components/ui/Slider/Slider';
 import { client } from '@/src/graphql';
 
-export interface PinnedItemsProps extends Pick<RootLayoutProps['params'], 'locale'> {}
+export interface UserPinnedItemsProps extends Pick<RootLayoutProps['params'], 'locale'> {
+  className?: string;
+}
 
-export async function PinnedItems({ locale }: PinnedItemsProps) {
+export async function UserPinnedItems({ locale, ...props }: UserPinnedItemsProps) {
   const t = await getTranslator(locale, 'components.network.pinned_items');
 
   const { user } = await client.query({
@@ -39,7 +41,7 @@ export async function PinnedItems({ locale }: PinnedItemsProps) {
   if (!user) return null;
 
   return (
-    <Slider>
+    <Slider {...props}>
       {user.pinnedItems.nodes?.map((respository) => {
         if (!respository || respository.__typename !== 'Repository') return null;
 

@@ -1,7 +1,11 @@
 import { Quote } from '@/components/ui/Quote/Quote';
 import { client } from '@/src/graphql';
 
-export async function Bio() {
+export interface UserBioProps {
+  className?: string;
+}
+
+export async function UserBio(props: UserBioProps) {
   const { user } = await client.query({
     user: {
       __args: {
@@ -13,5 +17,9 @@ export async function Bio() {
 
   if (!user) return null;
 
-  return <Quote icon="Commit">{user.bio}</Quote>;
+  return (
+    <Quote icon="Commit" {...props}>
+      {user.bio}
+    </Quote>
+  );
 }
