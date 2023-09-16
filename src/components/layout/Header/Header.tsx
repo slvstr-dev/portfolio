@@ -7,7 +7,7 @@ import { ContactModal } from '@/components/dialogs/ContactModal/ContactModal';
 import { MenuSidebar } from '@/components/dialogs/MenuSidebar/MenuSidebar';
 import { Container } from '@/components/layout/Container/Container';
 import { Logo } from '@/components/ui/Logo/Logo';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface HeaderProps {
   className?: string;

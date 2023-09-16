@@ -1,5 +1,5 @@
 import { Avatar } from '@/components/ui/Avatar/Avatar';
-import { client } from '@/src/graphql';
+import { client } from '@/graphql/index';
 
 export interface UserAvatarProps {
   className?: string;

@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/components/forms/ContactForm/ContactForm';
 import { Dialog } from '@/components/layout/Dialog/Dialog';
 import { Button } from '@/components/ui/Button/Button';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface ContactModalProps {
   className?: string;

@@ -1,5 +1,5 @@
 import { Image, ImageProps } from '@/components/ui/Image/Image';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 type MasonryImage = ImageProps & {
   caption?: string;

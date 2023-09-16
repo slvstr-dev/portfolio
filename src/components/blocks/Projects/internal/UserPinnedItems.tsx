@@ -3,7 +3,7 @@ import { getTranslator } from 'next-intl/server';
 import { Card } from '@/components/ui/Card/Card';
 import { Carousel } from '@/components/ui/Carousel/Carousel';
 import { Link } from '@/components/ui/Link/Link';
-import { client } from '@/src/graphql';
+import { client } from '@/graphql/index';
 
 export interface UserPinnedItemsProps {
   className?: string;

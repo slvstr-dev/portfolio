@@ -6,8 +6,8 @@ import { useForm } from 'react-hook-form';
 
 import { Button } from '@/components/ui/Button/Button';
 import { Input } from '@/components/ui/Input/Input';
-import { ContactFormSchema, contactFormSchema } from '@/src/types/zod';
-import { cn } from '@/src/utils/tailwindUtils';
+import { ContactFormSchema, contactFormSchema } from '@/types/zod';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface ContactFormProps {
   className?: string;

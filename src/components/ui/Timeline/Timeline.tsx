@@ -1,6 +1,6 @@
 import { Children, PropsWithChildren, ReactNode } from 'react';
 
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 import { Item } from './internal/Item';
 
@@ -14,7 +14,9 @@ export function Timeline({ className, children, year, message }: TimelineProps) 
   return (
     <div className={cn('flex flex-col gap-10', className)}>
       {!!year && (
-        <h4 className="truncate text-9xl font-black text-theme-brand-100 md:text-center">{year}</h4>
+        <span className="truncate text-9xl font-black text-theme-brand-100 md:text-center">
+          {year}
+        </span>
       )}
 
       <div

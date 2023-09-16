@@ -1,5 +1,5 @@
 import { FeaturedText } from '@/components/ui/FeaturedText/FeaturedText';
-import { client } from '@/src/graphql';
+import { client } from '@/graphql/index';
 
 export interface QuoteProps {
   className?: string;

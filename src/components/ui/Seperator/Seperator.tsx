@@ -1,4 +1,4 @@
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface SeperatorProps {
   className?: string;

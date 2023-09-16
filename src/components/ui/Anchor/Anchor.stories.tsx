@@ -9,9 +9,6 @@ export default {
     children: 'Anchor',
     href: 'https://slvstr.dev',
   },
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
 } satisfies Meta<typeof Anchor>;
 

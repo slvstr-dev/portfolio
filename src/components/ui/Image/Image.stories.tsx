@@ -7,6 +7,8 @@ export default {
   component: Image,
   args: {
     src: 'https://placehold.co/600x400/png',
+    width: 600,
+    height: 400,
   },
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { Anchor } from '@/components/ui/Anchor/Anchor';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface CopyrightProps extends PropsWithChildren {
   className?: string;

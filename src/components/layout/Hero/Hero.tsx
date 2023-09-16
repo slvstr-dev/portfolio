@@ -3,7 +3,7 @@ import { tv, VariantProps } from 'tailwind-variants';
 import { Container } from '@/components/layout/Container/Container';
 import { Image, ImageProps } from '@/components/ui/Image/Image';
 import { Title } from '@/components/ui/Title/Title';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 type HeroVariants = VariantProps<typeof hero>;
 

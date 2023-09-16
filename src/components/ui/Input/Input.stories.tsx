@@ -6,6 +6,9 @@ export default {
   title: 'ui/Input',
   component: Input,
   tags: ['autodocs'],
+  args: {
+    placeholder: 'Placeholder',
+  },
 } satisfies Meta<typeof Input>;
 
 type Story = StoryObj<typeof Input>;

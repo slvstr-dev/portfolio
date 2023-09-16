@@ -3,16 +3,18 @@
 import { Children, PropsWithChildren, useState } from 'react';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/Button/Button';
 import { Icon } from '@/components/ui/Icon/Icon';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface CarouselProps extends PropsWithChildren {
   className?: string;
 }
 
 export function Carousel({ className, ...props }: CarouselProps) {
+  const t = useTranslations('components.ui.carousel');
   const [position, setPosition] = useState(0);
 
   const handlePrevious = () => {
@@ -48,6 +50,7 @@ export function Carousel({ className, ...props }: CarouselProps) {
       </div>
 
       <Button
+        name={t('buttons.previous')}
         className="absolute left-0 top-1/2 -translate-y-1/2"
         onClick={handlePrevious}
         isDisabled={position === 0}>
@@ -55,6 +58,7 @@ export function Carousel({ className, ...props }: CarouselProps) {
       </Button>
 
       <Button
+        name={t('buttons.next')}
         className="absolute right-0 top-1/2 -translate-y-1/2"
         onClick={handleNext}
         isDisabled={position === Children.count(props.children) - 1}>
