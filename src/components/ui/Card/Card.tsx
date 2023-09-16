@@ -3,7 +3,7 @@ import { HTMLAttributes } from 'react';
 import { tv, VariantProps } from 'tailwind-variants';
 
 import { Image, ImageProps } from '@/components/ui/Image/Image';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 type CardVariants = VariantProps<typeof card>;
 

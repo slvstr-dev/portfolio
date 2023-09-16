@@ -2,7 +2,7 @@ import { InputHTMLAttributes } from 'react';
 
 import { UseFormRegisterReturn } from 'react-hook-form';
 
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface InputProps {
   className?: string;

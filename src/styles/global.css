@@ -13,8 +13,12 @@
     --color-highlight: 243, 204, 77;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   html,
-  body {
+  #storybook-root div {
     @apply font-body leading-loose text-theme-base;
   }
 

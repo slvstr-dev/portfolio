@@ -14,11 +14,13 @@
     "paths": {
       "@/app/*": ["./src/app/*"],
       "@/components/*": ["./src/components/*"],
-      "@/translations/*": ["./src/translations/*"],
-      "@/hooks/*": ["./src/hooks/*"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/graphql/*": ["./src/graphql/*"],
       "@/styles/*": ["./src/styles/*"],
-      "@/src/*": ["./src/*"],
-      "@/utils/*": ["./src/utils/*"]
+      "@/translations/*": ["./src/translations/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/src/*": ["./src/*"]
     },
     "declarationMap": false,
     "declaration": false

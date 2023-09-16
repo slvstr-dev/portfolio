@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface TitleProps extends PropsWithChildren {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

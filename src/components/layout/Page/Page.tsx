@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react';
 
 import { Header } from '@/components/layout/Header/Header';
 import { Hero } from '@/components/layout/Hero/Hero';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface PageProps extends PropsWithChildren {
   className?: string;

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 
 import { NavigationMenu } from '@/components/ui/NavigationMenu/NavigationMenu';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface MainMenuProps {
   className?: string;

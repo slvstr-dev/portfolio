@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 import * as Icons from './internal/index';
 

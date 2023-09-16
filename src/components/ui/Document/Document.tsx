@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface ErrorProps extends PropsWithChildren {
   className?: string;

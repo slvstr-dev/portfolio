@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/Button/Button';
 import { Icon } from '@/components/ui/Icon/Icon';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface CarouselProps extends PropsWithChildren {
   className?: string;

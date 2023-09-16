@@ -5,7 +5,7 @@ import { Container } from '@/components/layout/Container/Container';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
 import { Copyright } from '@/components/ui/Copyright/Copyright';
 import { Logo } from '@/components/ui/Logo/Logo';
-import { client } from '@/src/graphql';
+import { client } from '@/graphql/index';
 
 export interface FooterProps {
   locale: string;

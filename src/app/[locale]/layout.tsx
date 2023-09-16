@@ -1,25 +1,14 @@
 import { PropsWithChildren } from 'react';
 
-import { Inconsolata, Playfair } from 'next/font/google';
-
 import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
-import { getTranslations } from '@/src/utils/translationUtils';
+import { getTranslations } from '@/utils/translationUtils';
 
 import '@/styles/global.css';
 
-const playfair = Playfair({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  variable: '--font-playfair',
-});
-
-const inconsolata = Inconsolata({
-  subsets: ['latin'],
-  variable: '--font-inconsolata',
-});
+import { fonts } from '@/constants/fonts';
 
 export interface ParamsProps {
   params: { locale: string };
@@ -28,7 +17,7 @@ export interface ParamsProps {
 export interface RootLayoutProps extends PropsWithChildren<ParamsProps> {}
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
-  const t = await getTranslator(locale, 'global.meta');
+  const t = await getTranslator(locale, 'common.meta');
 
   return {
     title: {
@@ -43,7 +32,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
   const translations = await getTranslations(locale);
 
   return (
-    <html lang={locale} className={`${playfair.variable} ${inconsolata.variable} scroll-smooth`}>
+    <html lang={locale} className={fonts}>
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider locale={locale} messages={translations}>
           {children}

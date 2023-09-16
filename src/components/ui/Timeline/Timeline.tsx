@@ -1,6 +1,6 @@
 import { Children, PropsWithChildren, ReactNode } from 'react';
 
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 import { Item } from './internal/Item';
 

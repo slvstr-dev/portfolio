@@ -22,13 +22,13 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Replace Octokit with GraphQL + codegen
 - [x] Check use of 'use client'
 - [x] Decide on creation of Image to remove duplicate styling
+- [x] Clean up translations
+- [x] Fix broken stories
 - [ ] Replace static content with dynamic content
 - [ ] Check letter spacing
 - [ ] Check semantic HTML
 - [ ] Add sizes to images with fill
 - [ ] Add relevant meta data
-- [ ] Fix broken stories
-- [ ] Clean up translations
 - [ ] Improve prepare script
 - [ ] Add statically typed routes through next-intl
 - [ ] Fix missing font override for 'Playfair'

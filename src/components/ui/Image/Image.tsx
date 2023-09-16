@@ -1,6 +1,6 @@
 import NextImage, { ImageProps as NextImageProps } from 'next/image';
 
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface ImageProps extends Omit<NextImageProps, 'alt'> {
   alt?: string;

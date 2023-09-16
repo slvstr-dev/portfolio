@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 
 import { Image, ImageProps } from '@/components/ui/Image/Image';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface AvatarProps {
   className?: string;

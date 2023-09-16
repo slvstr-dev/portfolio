@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 
 import { Anchor } from '@/components/ui/Anchor/Anchor';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface LinkProps extends NavigationMenuPrimitive.NavigationMenuLinkProps {
   isLight?: boolean;

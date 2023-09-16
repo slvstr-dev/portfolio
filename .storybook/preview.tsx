@@ -2,22 +2,10 @@ import type { Preview } from '@storybook/react';
 
 import '@/styles/global.css';
 
-import { Inconsolata, Playfair } from 'next/font/google';
-
 import { NextIntlClientProvider } from 'next-intl';
 
-import translations from '@/translations/en.json';
-
-const playfair = Playfair({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  variable: '--font-playfair',
-});
-
-const inconsolata = Inconsolata({
-  subsets: ['latin'],
-  variable: '--font-inconsolata',
-});
+import { fonts } from '@/constants/fonts';
+import translations from '@/translations/en';
 
 const preview: Preview = {
   parameters: {
@@ -33,7 +21,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <NextIntlClientProvider locale="en" messages={translations}>
-        <div className={`${playfair.variable} ${inconsolata.variable} flex min-h-screen flex-col`}>
+        <div className={fonts}>
           <Story />
         </div>
       </NextIntlClientProvider>

@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
 import { Icon, IconProps } from '@/components/ui/Icon/Icon';
-import { cn } from '@/src/utils/tailwindUtils';
+import { cn } from '@/utils/tailwindUtils';
 
 export interface FeaturedTextProps extends PropsWithChildren {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
