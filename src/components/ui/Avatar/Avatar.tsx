@@ -9,9 +9,10 @@ export interface AvatarProps {
   company?: string;
   alt?: ImageProps['alt'];
   src?: ImageProps['src'];
+  priority?: boolean;
 }
 
-export function Avatar({ className, src, alt, name, company }: AvatarProps) {
+export function Avatar({ className, src, alt, name, company, priority }: AvatarProps) {
   const t = useTranslations('components.ui.avatar');
 
   return (
@@ -24,6 +25,7 @@ export function Avatar({ className, src, alt, name, company }: AvatarProps) {
             alt={alt}
             width={160}
             height={240}
+            priority={priority}
           />
 
           <span className="absolute inset-0 rounded-full shadow-[inset_0px_0px_10px_10px_rgba(255,255,255,1)]" />
