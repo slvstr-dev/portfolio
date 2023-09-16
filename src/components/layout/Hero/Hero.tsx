@@ -1,6 +1,7 @@
 import { tv, VariantProps } from 'tailwind-variants';
 
 import { Container } from '@/components/layout/Container/Container';
+import { IconsWrapper } from '@/components/ui/IconsWrapper/IconsWrapper';
 import { Image, ImageProps } from '@/components/ui/Image/Image';
 import { Title } from '@/components/ui/Title/Title';
 import { cn } from '@/utils/tailwindUtils';
@@ -21,15 +22,19 @@ export function Hero({ className, children, src, alt }: HeroProps) {
     <section className={cn('relative bg-theme-brand-100', className)}>
       {!!src && <Image className="absolute inset-0" src={src} alt={alt} fill priority />}
 
-      <Container className={styles.base({ className })} isCentered>
-        {children && <Title className={styles.title()}>{children}</Title>}
+      <Container className={styles.base({ className })} isCentered maxWidth="md">
+        {children && (
+          <IconsWrapper icons={['HTML', 'JS', 'CSS', 'Terminal']} color="brand">
+            <Title className={styles.title()}>{children}</Title>
+          </IconsWrapper>
+        )}
       </Container>
     </section>
   );
 }
 
 const hero = tv({
-  base: 'relative pb-10 pt-20 md:pb-20 md:pt-40',
+  base: 'relative',
   slots: {
     title: 'text-center text-5xl italic tracking-widest md:text-8xl',
   },

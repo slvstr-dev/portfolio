@@ -44,7 +44,7 @@ export function Sidebar({ children, className }: SidebarProps) {
           )}>
           <DialogPrimitive.Close asChild>
             <Icon
-              icon="X"
+              icon="Close"
               className="absolute left-6 top-6 w-8 cursor-pointer transition-opacity hover:opacity-50"
             />
           </DialogPrimitive.Close>

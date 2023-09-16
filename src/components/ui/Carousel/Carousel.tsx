@@ -54,7 +54,7 @@ export function Carousel({ className, children }: CarouselProps) {
         className="absolute left-0 top-1/2 -translate-y-1/2"
         onClick={handlePrevious}
         isDisabled={position === 0}>
-        <Icon icon="ArrowLeft" className="w-10 text-theme-muted" />
+        <Icon icon="TrendingFlat" className="w-10 rotate-180 text-theme-muted" />
       </Button>
 
       <Button
@@ -62,7 +62,7 @@ export function Carousel({ className, children }: CarouselProps) {
         className="absolute right-0 top-1/2 -translate-y-1/2"
         onClick={handleNext}
         isDisabled={position === Children.count(children) - 1}>
-        <Icon icon="ArrowRight" className="w-10 text-theme-muted" />
+        <Icon icon="TrendingFlat" className="w-10 text-theme-muted" />
       </Button>
     </div>
   );

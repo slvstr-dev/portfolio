@@ -6,7 +6,7 @@ export default {
   title: 'ui/Icon',
   component: Icon,
   args: {
-    icon: 'X',
+    icon: 'Close',
   },
   parameters: {
     layout: 'centered',

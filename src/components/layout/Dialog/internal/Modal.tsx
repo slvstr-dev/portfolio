@@ -53,7 +53,7 @@ export function Modal({ children, className, title, description }: ModalProps) {
           )}>
           <DialogPrimitive.Close asChild>
             <Icon
-              icon="X"
+              icon="Close"
               className="absolute right-4 top-4 w-8 cursor-pointer transition-opacity hover:opacity-50"
             />
           </DialogPrimitive.Close>
