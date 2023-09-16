@@ -25,6 +25,7 @@ export async function UserAvatar({ className }: UserAvatarProps) {
       src={user.avatarUrl}
       name={user.name ?? ''}
       company={user.company ?? ''}
+      priority
     />
   );
 }
