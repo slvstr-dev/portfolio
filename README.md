@@ -24,11 +24,11 @@ Portfolio site created with Next.js, TypeScript & Tailwind.
 - [x] Decide on creation of Image to remove duplicate styling
 - [x] Clean up translations
 - [x] Fix broken stories
+- [x] Add sizes to images with fill
 - [ ] Replace isLight with TW variants
 - [ ] Replace static content with dynamic content
 - [ ] Check letter spacing
 - [ ] Check semantic HTML
-- [ ] Add sizes to images with fill
 - [ ] Add relevant meta data
 - [ ] Improve prepare script
 - [ ] Add statically typed routes through next-intl
