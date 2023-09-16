@@ -11,11 +11,11 @@ export interface ErrorProps extends PropsWithChildren<ContainerProps> {
   description?: string;
 }
 
-export function Error({ className, title, description, ...props }: ErrorProps) {
+export function Error({ className, title, description }: ErrorProps) {
   const t = useTranslations('components.ui.error');
 
   return (
-    <Container {...props} maxWidth="xs" gap="sm" isCentered>
+    <Container className={className} maxWidth="xs" gap="sm" isCentered>
       <h1 className="text-9xl italic text-theme-brand-200">{title}</h1>
 
       {description && <p className="text-2xl">{description}</p>}

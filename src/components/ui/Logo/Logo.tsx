@@ -1,5 +1,3 @@
-import { PropsWithChildren } from 'react';
-
 import { useTranslations } from 'next-intl';
 import { tv, VariantProps } from 'tailwind-variants';
 
@@ -7,7 +5,7 @@ import { Anchor } from '@/components/ui/Anchor/Anchor';
 
 type LogoVariants = VariantProps<typeof logo>;
 
-export interface LogoProps extends LogoVariants, PropsWithChildren {
+export interface LogoProps extends LogoVariants {
   className?: string;
 }
 
