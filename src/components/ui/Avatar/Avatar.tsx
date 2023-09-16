@@ -19,7 +19,7 @@ export function Avatar({ className, src, alt, name, company }: AvatarProps) {
       {src && (
         <div className="relative">
           <Image
-            className="h-60 w-40 rounded-full p-px contrast-125 saturate-50 sepia-[.5]"
+            className="h-60 w-40 rounded-full bg-theme-muted p-px contrast-125 saturate-50 sepia-[.5]"
             src={src}
             alt={alt}
             width={160}

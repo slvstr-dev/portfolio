@@ -24,8 +24,8 @@ export function MenuSidebar({ className }: MenuSidebarProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen} modal>
       <Dialog.Trigger asChild>
-        <Button name={t('buttons.open')} className={className} onClick={handleOpen}>
-          <Icon icon="List" className="w-8" />
+        <Button title={t('buttons.open')} className={className} onClick={handleOpen}>
+          <Icon icon="Menu" className="w-8" />
         </Button>
       </Dialog.Trigger>
 

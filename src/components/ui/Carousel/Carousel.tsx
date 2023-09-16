@@ -13,7 +13,7 @@ export interface CarouselProps extends PropsWithChildren {
   className?: string;
 }
 
-export function Carousel({ className, ...props }: CarouselProps) {
+export function Carousel({ className, children }: CarouselProps) {
   const t = useTranslations('components.ui.carousel');
   const [position, setPosition] = useState(0);
 
@@ -28,7 +28,7 @@ export function Carousel({ className, ...props }: CarouselProps) {
   return (
     <div className={cn('relative', className)}>
       <div className="mx-auto flex w-4/5 gap-20 overflow-x-visible">
-        {Children.map(props.children, (child, i) => (
+        {Children.map(children, (child, i) => (
           <motion.div
             key={i}
             initial={{
@@ -50,19 +50,19 @@ export function Carousel({ className, ...props }: CarouselProps) {
       </div>
 
       <Button
-        name={t('buttons.previous')}
+        title={t('buttons.previous')}
         className="absolute left-0 top-1/2 -translate-y-1/2"
         onClick={handlePrevious}
         isDisabled={position === 0}>
-        <Icon icon="ArrowLeft" className="w-10 text-theme-muted" />
+        <Icon icon="TrendingFlat" className="w-10 rotate-180 text-theme-muted" />
       </Button>
 
       <Button
-        name={t('buttons.next')}
+        title={t('buttons.next')}
         className="absolute right-0 top-1/2 -translate-y-1/2"
         onClick={handleNext}
-        isDisabled={position === Children.count(props.children) - 1}>
-        <Icon icon="ArrowRight" className="w-10 text-theme-muted" />
+        isDisabled={position === Children.count(children) - 1}>
+        <Icon icon="TrendingFlat" className="w-10 text-theme-muted" />
       </Button>
     </div>
   );

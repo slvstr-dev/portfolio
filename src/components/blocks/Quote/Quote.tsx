@@ -5,7 +5,7 @@ export interface QuoteProps {
   className?: string;
 }
 
-export async function Quote(props: QuoteProps) {
+export async function Quote({ className }: QuoteProps) {
   const { user } = await client.query({
     user: {
       __args: {
@@ -18,7 +18,7 @@ export async function Quote(props: QuoteProps) {
   if (!user) return null;
 
   return (
-    <FeaturedText icon="Commit" {...props}>
+    <FeaturedText icon="Commit" className={className}>
       {user.bio}
     </FeaturedText>
   );
