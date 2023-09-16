@@ -50,7 +50,7 @@ export function Carousel({ className, children }: CarouselProps) {
       </div>
 
       <Button
-        name={t('buttons.previous')}
+        title={t('buttons.previous')}
         className="absolute left-0 top-1/2 -translate-y-1/2"
         onClick={handlePrevious}
         isDisabled={position === 0}>
@@ -58,7 +58,7 @@ export function Carousel({ className, children }: CarouselProps) {
       </Button>
 
       <Button
-        name={t('buttons.next')}
+        title={t('buttons.next')}
         className="absolute right-0 top-1/2 -translate-y-1/2"
         onClick={handleNext}
         isDisabled={position === Children.count(children) - 1}>
