@@ -84,6 +84,11 @@
         },
         "title": "Let's <tag>get in touch</tag> and <tag>drink coffee</tag>",
         "description": "Contact form"
+      },
+      "menu_sidebar": {
+        "buttons": {
+          "open": "Open menu"
+        }
       }
     },
     "layout": {
@@ -131,6 +136,12 @@
     "ui": {
       "avatar": {
         "job_title": "React developer {company}"
+      },
+      "carousel": {
+        "buttons": {
+          "previous": "Previous slide",
+          "next": "Next slide"
+        }
       },
       "error": {
         "buttons": {

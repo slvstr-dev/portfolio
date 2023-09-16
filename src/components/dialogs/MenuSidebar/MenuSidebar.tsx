@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 import { MainMenu } from '@/components/blocks/MainMenu/MainMenu';
 import { ContactModal } from '@/components/dialogs/ContactModal/ContactModal';
@@ -13,6 +14,7 @@ export interface MenuSidebarProps {
 }
 
 export function MenuSidebar({ className }: MenuSidebarProps) {
+  const t = useTranslations('components.dialogs.menu_sidebar');
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -22,7 +24,7 @@ export function MenuSidebar({ className }: MenuSidebarProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen} modal>
       <Dialog.Trigger asChild>
-        <Button className={className} onClick={handleOpen}>
+        <Button name={t('buttons.open')} className={className} onClick={handleOpen}>
           <Icon icon="List" className="w-8" />
         </Button>
       </Dialog.Trigger>

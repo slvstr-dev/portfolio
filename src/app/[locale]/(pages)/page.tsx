@@ -22,7 +22,7 @@ export default function HomePage() {
   const t = useTranslations('pages.home');
 
   return (
-    <Page title={t('title')} src="/images/hero.jpg">
+    <Page title={t('title')}>
       <Container id="about" maxWidth="lg" gap="xs" verticalPadding="lg">
         <About />
       </Container>
