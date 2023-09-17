@@ -9,7 +9,7 @@ export interface AvatarProps {
   company?: string;
   alt?: ImageProps['alt'];
   src?: ImageProps['src'];
-  priority?: boolean;
+  priority?: ImageProps['priority'];
 }
 
 export function Avatar({ className, src, alt, name, company, priority }: AvatarProps) {
@@ -20,7 +20,7 @@ export function Avatar({ className, src, alt, name, company, priority }: AvatarP
       {src && (
         <div className="relative">
           <Image
-            className="h-60 w-40 rounded-full bg-theme-muted p-px contrast-125 saturate-50 sepia-[.5]"
+            className="h-60 w-40 rounded-full bg-theme-muted/25 p-px contrast-125 saturate-50 sepia-[.5]"
             src={src}
             alt={alt}
             width={160}

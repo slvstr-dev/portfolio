@@ -29,7 +29,15 @@ export function Card({
       {src && (
         <figure>
           <div className="relative aspect-video">
-            <Image className="bg-theme-muted" src={src} alt={alt} fill />
+            <Image
+              className="bg-theme-muted-/25"
+              src={src}
+              alt={alt}
+              fill
+              sizes="
+                (max-width: 1024px) 90vw,
+                800px"
+            />
 
             {orientation === 'horizontal' && (
               <div
