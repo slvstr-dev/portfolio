@@ -40,8 +40,8 @@
     "zod": "3.22.2"
   },
   "devDependencies": {
-    "@2digits/prettier-config": "^0.9.3",
-    "@2digits/tsconfig": "^0.2.1",
+    "@2digits/prettier-config": "^0.9.4",
+    "@2digits/tsconfig": "^0.3.0",
     "@storybook/addon-essentials": "^7.4.1",
     "@storybook/addon-interactions": "^7.4.1",
     "@storybook/addon-links": "^7.4.1",
