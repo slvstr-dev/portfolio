@@ -34,9 +34,7 @@ export function Card({
               src={src}
               alt={alt}
               fill
-              sizes="
-                (max-width: 1024px) 90vw,
-                800px"
+              sizes="(max-width: 1024px) 90vw, 800px"
             />
 
             {orientation === 'horizontal' && (
