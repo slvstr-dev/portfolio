@@ -20,7 +20,9 @@ export function Hero({ className, children, src, alt }: HeroProps) {
 
   return (
     <section className={cn('relative bg-theme-brand-100', className)}>
-      {!!src && <Image className="absolute inset-0" src={src} alt={alt} fill priority />}
+      {!!src && (
+        <Image className="absolute inset-0" src={src} alt={alt} sizes="100vw" fill priority />
+      )}
 
       <Container className={styles.base({ className })} isCentered maxWidth="md">
         {children && (
