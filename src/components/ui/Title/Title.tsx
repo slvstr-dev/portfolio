@@ -13,7 +13,7 @@ export function Title({ className, as, children }: TitleProps) {
   return (
     <Component
       className={cn(
-        'text-center text-5xl uppercase leading-relaxed tracking-widest [&_.italic]:text-4xl [&_.italic]:lowercase',
+        'text-center text-4xl uppercase tracking-widest md:text-5xl [&_.italic]:text-4xl [&_.italic]:lowercase',
         className,
       )}>
       {children}

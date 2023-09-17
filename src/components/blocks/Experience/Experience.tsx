@@ -31,7 +31,7 @@ export function Experience({ className }: ExperienceProps) {
           <Card>
             <h3 className="text-4xl uppercase italic">{t('experience.personal.title')}</h3>
 
-            <h4 className="text-2xl lowercase italic">{t('experience.personal.type')}</h4>
+            <p className="text-2xl lowercase italic">{t('experience.personal.type')}</p>
           </Card>
         </Timeline.Item>
 
@@ -41,10 +41,10 @@ export function Experience({ className }: ExperienceProps) {
               {t('experience.fotofabriek.internship.title')}
             </h3>
 
-            <h4 className="text-2xl lowercase italic">
+            <p className="text-2xl lowercase italic">
               {t('experience.fotofabriek.internship.company')} ·{' '}
               {t('experience.fotofabriek.internship.type')}
-            </h4>
+            </p>
           </Card>
         </Timeline.Item>
 
@@ -54,10 +54,10 @@ export function Experience({ className }: ExperienceProps) {
               {t('experience.fotofabriek.full_time.title')}
             </h3>
 
-            <h4 className="text-2xl lowercase italic">
+            <p className="text-2xl lowercase italic">
               {t('experience.fotofabriek.full_time.company')} ·{' '}
               {t('experience.fotofabriek.full_time.type')}
-            </h4>
+            </p>
 
             <ul className="mt-4 list-inside list-disc">
               {t.rich('experience.fotofabriek.full_time.responsibilities', {
@@ -71,9 +71,9 @@ export function Experience({ className }: ExperienceProps) {
           <Card>
             <h3 className="text-4xl uppercase italic">{t('experience.2_digits_agency.title')}</h3>
 
-            <h4 className="text-2xl lowercase italic">
+            <p className="text-2xl lowercase italic">
               {t('experience.2_digits_agency.company')} · {t('experience.2_digits_agency.type')}
-            </h4>
+            </p>
 
             <ul className="mt-4 list-inside list-disc">
               {t.rich('experience.2_digits_agency.responsibilities', {

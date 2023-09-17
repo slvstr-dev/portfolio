@@ -53,11 +53,11 @@ dependencies:
 
 devDependencies:
   '@2digits/prettier-config':
-    specifier: ^0.9.3
-    version: 0.9.3(prettier@2.8.8)
+    specifier: ^0.9.4
+    version: 0.9.4(prettier@2.8.8)
   '@2digits/tsconfig':
-    specifier: ^0.2.1
-    version: 0.2.1(typescript@5.2.2)
+    specifier: ^0.3.0
+    version: 0.3.0(typescript@5.2.2)
   '@storybook/addon-essentials':
     specifier: ^7.4.1
     version: 7.4.2(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
@@ -127,16 +127,16 @@ devDependencies:
 
 packages:
 
-  /@2digits/constants@0.0.4:
-    resolution: {integrity: sha512-euSnZ05uel1FzkVE7g0u9IhIG5bpzw6PYmTwZCKTZB9wczdSa2mhkZHsUJBAyrSFHTaq0YAWQyzqLgPPt09HWA==}
+  /@2digits/constants@0.0.5:
+    resolution: {integrity: sha512-L7NWuVw8r/xFzuIq9RCsvtp+ybSyXsS4YNmGL83isu7WMso+xAIsMtGCoFnOCNUCdWECtvIuqwDvddjsdo7Nog==}
     dev: true
 
-  /@2digits/prettier-config@0.9.3(prettier@2.8.8):
-    resolution: {integrity: sha512-T2fCGFopFihbBbt+HDtqOEcBLBGlN3L1w47UUvGH2iuTna8DtcoP9kNiJuqxqY17bAP6BaFT06Hh/4ixTNwySQ==}
+  /@2digits/prettier-config@0.9.4(prettier@2.8.8):
+    resolution: {integrity: sha512-zitoM+QLJvfsx4UG9NsmZAfttuyyK8aEIJXjDjWu/867mRQGzawGsojyu+pchunPc2bZtmVHfwLAap0F66SLbA==}
     peerDependencies:
       prettier: '>=2.8.0'
     dependencies:
-      '@2digits/constants': 0.0.4
+      '@2digits/constants': 0.0.5
       '@ianvs/prettier-plugin-sort-imports': 4.1.0(prettier@2.8.8)
       local-pkg: 0.4.3
       prettier: 2.8.8
@@ -162,8 +162,8 @@ packages:
       - supports-color
     dev: true
 
-  /@2digits/tsconfig@0.2.1(typescript@5.2.2):
-    resolution: {integrity: sha512-097Q/rc1MNV77c5wl3Ravkt2rUG/1qHMbN3YTorDvZ2ayo1xy0M4/yJOXquBZDpW0pib8FFx+DL6TNfeBwpUTQ==}
+  /@2digits/tsconfig@0.3.0(typescript@5.2.2):
+    resolution: {integrity: sha512-7RN7SOAbPNgzEBXk4+OEAZAyjA1YwJKpIIlCgruQr23lET1R5ZAb3elcaXD5XBr03XVD007A23tAmKvhVP8UZA==}
     peerDependencies:
       typescript: '>=4.9'
     dependencies:
@@ -226,6 +226,29 @@ packages:
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
+
+  /@babel/core@7.22.20:
+    resolution: {integrity: sha512-Y6jd1ahLubuYweD/zJH+vvOY141v4f9igNQAQ+MBgq9JlHS2iTsZKn1aMsb3vGccZsXI16VzTBw52Xx0DWmtnA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@ampproject/remapping': 2.2.1
+      '@babel/code-frame': 7.22.13
+      '@babel/generator': 7.22.15
+      '@babel/helper-compilation-targets': 7.22.15
+      '@babel/helper-module-transforms': 7.22.20(@babel/core@7.22.20)
+      '@babel/helpers': 7.22.15
+      '@babel/parser': 7.22.16
+      '@babel/template': 7.22.15
+      '@babel/traverse': 7.22.20
+      '@babel/types': 7.22.19
+      convert-source-map: 1.9.0
+      debug: 4.3.4
+      gensync: 1.0.0-beta.2
+      json5: 2.2.3
+      semver: 6.3.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /@babel/generator@7.22.15:
     resolution: {integrity: sha512-Zu9oWARBqeVOW0dZOjXc3JObrzuqothQ3y/n1kUtrjCoCPLkXUwMvOo/F/TCfoHMbWIFlWwpZtkZVb9ga4U2pA==}
@@ -305,6 +328,11 @@ packages:
       - supports-color
     dev: true
 
+  /@babel/helper-environment-visitor@7.22.20:
+    resolution: {integrity: sha512-zfedSIzFhat/gFhWfHtgWvlec0nqB9YEIVrpuwjruLlXfUSnA8cJB0miHKwqDnQ7d32aKo2xt88/xZptwxbfhA==}
+    engines: {node: '>=6.9.0'}
+    dev: true
+
   /@babel/helper-environment-visitor@7.22.5:
     resolution: {integrity: sha512-XGmhECfVA/5sAt+H+xpSg0mfrHq6FzNr9Oxh7PSEBBRUb/mL7Kz3NICXb194rCqAEdxkhPT1a88teizAFyvk8Q==}
     engines: {node: '>=6.9.0'}
@@ -347,6 +375,20 @@ packages:
       '@babel/helper-simple-access': 7.22.5
       '@babel/helper-split-export-declaration': 7.22.6
       '@babel/helper-validator-identifier': 7.22.19
+
+  /@babel/helper-module-transforms@7.22.20(@babel/core@7.22.20):
+    resolution: {integrity: sha512-dLT7JVWIUUxKOs1UnJUBR3S70YK+pKX6AbJgB2vMIvEkZkrfJDbYDJesnPshtKV4LhDOR3Oc5YULeDizRek+5A==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.22.20
+      '@babel/helper-environment-visitor': 7.22.20
+      '@babel/helper-module-imports': 7.22.15
+      '@babel/helper-simple-access': 7.22.5
+      '@babel/helper-split-export-declaration': 7.22.6
+      '@babel/helper-validator-identifier': 7.22.20
+    dev: true
 
   /@babel/helper-optimise-call-expression@7.22.5:
     resolution: {integrity: sha512-HBwaojN0xFRx4yIvpwGqxiV2tUfl7401jlok564NgB9EHS1y6QT17FmKWm4ztqjeVdXLuC4fSvHc5ePpQjoTbw==}
@@ -410,6 +452,11 @@ packages:
   /@babel/helper-validator-identifier@7.22.19:
     resolution: {integrity: sha512-Tinq7ybnEPFFXhlYOYFiSjespWQk0dq2dRNAiMdRTOYQzEGqnnNyrTxPYHP5r6wGjlF1rFgABdDV0g8EwD6Qbg==}
     engines: {node: '>=6.9.0'}
+
+  /@babel/helper-validator-identifier@7.22.20:
+    resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
+    engines: {node: '>=6.9.0'}
+    dev: true
 
   /@babel/helper-validator-option@7.22.15:
     resolution: {integrity: sha512-bMn7RmyFjY/mdECUbgn9eoSY4vqvacUnS9i9vGAGttgFWesO6B4CYWA7XlpbWgBt71iv/hfbPlynohStqnu5hA==}
@@ -1574,6 +1621,24 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
+  /@babel/traverse@7.22.20:
+    resolution: {integrity: sha512-eU260mPZbU7mZ0N+X10pxXhQFMGTeLb9eFS0mxehS8HZp9o1uSnFeWQuG1UPrlxgA7QoUzFhOnilHDp0AXCyHw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/code-frame': 7.22.13
+      '@babel/generator': 7.22.15
+      '@babel/helper-environment-visitor': 7.22.20
+      '@babel/helper-function-name': 7.22.5
+      '@babel/helper-hoist-variables': 7.22.5
+      '@babel/helper-split-export-declaration': 7.22.6
+      '@babel/parser': 7.22.16
+      '@babel/types': 7.22.19
+      debug: 4.3.4
+      globals: 11.12.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@babel/types@7.22.19:
     resolution: {integrity: sha512-P7LAw/LbojPzkgp5oznjE6tQEIWbp4PkkfrZDINTro9zgBRtI324/EYsiSI7lhPbpIQ+DCeR2NNmMWANGGfZsg==}
     engines: {node: '>=6.9.0'}
@@ -2079,10 +2144,10 @@ packages:
       '@vue/compiler-sfc':
         optional: true
     dependencies:
-      '@babel/core': 7.22.19
+      '@babel/core': 7.22.20
       '@babel/generator': 7.22.15
       '@babel/parser': 7.22.16
-      '@babel/traverse': 7.22.19
+      '@babel/traverse': 7.22.20
       '@babel/types': 7.22.19
       prettier: 2.8.8
       semver: 7.5.4

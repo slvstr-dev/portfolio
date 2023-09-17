@@ -53,7 +53,7 @@ export async function UserPinnedItems({ locale, className }: UserPinnedItemsProp
 
             <p className="mt-2">{respository.description}</p>
 
-            <div className="mt-4 flex flex-wrap items-center gap-4">
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               {!!respository.url && (
                 <Link href={respository.url} color="mutedRing" size="lg" target="_blank">
                   {t('buttons.github')}

@@ -10,6 +10,7 @@ type CardVariants = VariantProps<typeof card>;
 export interface CardProps extends HTMLAttributes<HTMLElement>, CardVariants {
   alt?: ImageProps['alt'];
   src?: ImageProps['src'];
+  priority?: ImageProps['priority'];
   caption?: string;
 }
 
@@ -21,6 +22,7 @@ export function Card({
   alt,
   caption,
   children,
+  priority,
 }: CardProps) {
   const styles = card({ orientation, isReverse });
 
@@ -29,7 +31,14 @@ export function Card({
       {src && (
         <figure>
           <div className="relative aspect-video">
-            <Image className="bg-theme-muted" src={src} alt={alt} fill />
+            <Image
+              className="bg-theme-muted-/25"
+              src={src}
+              alt={alt}
+              sizes="(max-width: 1024px) 90vw, 800px"
+              priority={priority}
+              fill
+            />
 
             {orientation === 'horizontal' && (
               <div
@@ -51,18 +60,15 @@ export function Card({
 }
 
 const card = tv({
-  base: 'grid grid-flow-row items-center',
+  base: 'grid grid-flow-row items-center gap-8',
   slots: {
-    content: 'p-8',
+    content: '',
   },
   variants: {
     orientation: {
-      vertical: {
-        content: 'px-0',
-      },
+      vertical: '',
       horizontal: {
         base: 'md:grid-flow-col md:grid-cols-2',
-        content: 'py-0',
       },
     },
     isReverse: {

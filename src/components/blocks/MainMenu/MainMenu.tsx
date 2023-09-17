@@ -25,12 +25,6 @@ export function MainMenu({ className, isLight }: MainMenuProps) {
             {t('buttons.experience')}
           </NavigationMenu.Link>
         </NavigationMenu.Item>
-
-        <NavigationMenu.Item>
-          <NavigationMenu.Link href="/#skills" isLight={isLight}>
-            {t('buttons.skills')}
-          </NavigationMenu.Link>
-        </NavigationMenu.Item>
       </NavigationMenu.List>
     </NavigationMenu>
   );
