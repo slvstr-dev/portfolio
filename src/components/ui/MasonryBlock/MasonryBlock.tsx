@@ -27,7 +27,7 @@ export function MasonryBlock({ className, images }: MasonryBlockProps) {
               'md:col-span-1 md:row-span-1': idx === 3,
             })}>
             <div className="relative h-full w-full">
-              <Image src={image.src} alt={image.alt} fill />
+              <Image fill alt="" {...image} />
             </div>
 
             {!!image.caption && <figcaption className="italic">{image.caption}</figcaption>}

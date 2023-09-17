@@ -25,7 +25,9 @@ export function Hero({ className, children, src, alt }: HeroProps) {
       <Container className={styles.base({ className })} isCentered maxWidth="md">
         {children && (
           <IconsWrapper icons={['HTML', 'JS', 'CSS', 'Terminal']} color="brand">
-            <Title className={styles.title()}>{children}</Title>
+            <Title as="h1" className={styles.title()}>
+              {children}
+            </Title>
           </IconsWrapper>
         )}
       </Container>

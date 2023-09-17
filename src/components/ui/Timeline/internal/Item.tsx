@@ -14,9 +14,9 @@ export function Item({ className, year, children }: ItemProps) {
         'pt-[6.25rem]': !!year,
       })}>
       {!!year && (
-        <h4 className="absolute top-0 z-10 truncate text-9xl font-black text-theme-brand-100">
+        <span className="absolute top-0 z-10 truncate text-9xl font-black text-theme-brand-100">
           {year}
-        </h4>
+        </span>
       )}
 
       {children}
