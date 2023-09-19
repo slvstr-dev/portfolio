@@ -9,7 +9,4 @@ module.exports = withNextIntl({
       'avatars.githubusercontent.com',
     ],
   },
-  experimental: {
-    typedRoutes: true,
-  },
 });
