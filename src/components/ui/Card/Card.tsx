@@ -32,7 +32,7 @@ export function Card({
         <figure>
           <div className="relative aspect-video">
             <Image
-              className="bg-theme-muted-/25"
+              className="bg-theme-muted/25"
               src={src}
               alt={alt}
               sizes="(max-width: 1024px) 90vw, 800px"

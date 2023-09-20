@@ -23,31 +23,31 @@ export default function HomePage() {
 
   return (
     <Page title={t('title')}>
-      <Container id="about" maxWidth="lg" gap="xs" verticalPadding="lg">
+      <Container id="about" maxWidth="lg" gap="xs" verticalPadding="xl">
         <About />
       </Container>
 
-      <Container verticalPadding="none" as="div">
+      <Container verticalPadding="none">
         <Seperator />
       </Container>
 
-      <Container maxWidth="lg" verticalPadding="lg">
+      <Container maxWidth="lg" verticalPadding="xl">
         <Quote />
       </Container>
 
-      <Container verticalPadding="none" as="div">
+      <Container verticalPadding="none">
         <Seperator />
       </Container>
 
-      <Container id="projects" maxWidth="lg" verticalPadding="lg">
+      <Container id="projects" className="scroll-mt-10" maxWidth="lg" verticalPadding="xl">
         <Projects />
       </Container>
 
-      <Container verticalPadding="none" as="div">
+      <Container verticalPadding="none">
         <Seperator />
       </Container>
 
-      <Container id="experience" maxWidth="lg" verticalPadding="lg">
+      <Container id="experience" className="scroll-mt-10" maxWidth="lg" verticalPadding="xl">
         <Experience />
       </Container>
     </Page>

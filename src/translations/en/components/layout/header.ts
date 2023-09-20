@@ -1,8 +1,8 @@
 export const header = {
   buttons: {
+    about: 'About',
     projects: 'Projects',
     experience: 'Experience',
-    skills: 'Skills',
     contact: 'Contact',
   },
 };

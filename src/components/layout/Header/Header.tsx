@@ -35,7 +35,6 @@ export function Header({ className, isLight }: HeaderProps) {
 
   return (
     <Container
-      as="header"
       verticalPadding="sm"
       gap="sm"
       className={cn(
