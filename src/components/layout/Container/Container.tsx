@@ -1,4 +1,4 @@
-import { ElementType, PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 import { tv, VariantProps } from 'tailwind-variants';
 
@@ -6,7 +6,6 @@ type ContainerVariants = VariantProps<typeof container>;
 
 export interface ContainerProps extends PropsWithChildren<ContainerVariants> {
   id?: string;
-  as?: ElementType;
   className?: string;
 }
 
@@ -23,9 +22,9 @@ export function Container({
   const styles = container({ isCentered, orientation, maxWidth, verticalPadding, gap });
 
   return (
-    <div id={id} className={styles.base({ className })}>
+    <section id={id} className={styles.base({ className })}>
       <div className={styles.children()}>{children}</div>
-    </div>
+    </section>
   );
 }
 
@@ -85,6 +84,7 @@ const container = tv({
       sm: 'py-2.5 md:py-5',
       md: 'py-5 md:py-10',
       lg: 'py-10 md:py-20',
+      xl: 'py-20 md:py-40',
     },
     isCentered: {
       true: {

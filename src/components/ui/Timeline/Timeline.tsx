@@ -27,24 +27,19 @@ export function Timeline({ className, children, year, message }: TimelineProps) 
           const isEven = idx % 2 === 0;
 
           return (
-            child && (
-              <div
-                className={cn('relative row-span-3 ml-12 md:col-start-2 md:ml-0', {
-                  'md:row-start-2': idx === 1,
-                  'md:col-start-1': isEven,
-                })}>
-                {child}
+            <div
+              className={cn('relative row-span-3 ml-12 md:col-start-2 md:ml-0', {
+                'md:row-start-2': idx === 1,
+                'md:col-start-1': isEven,
+              })}>
+              {child}
 
-                <div
-                  className={cn(
-                    'absolute left-0 top-1/4 h-px w-10 -translate-x-12 bg-theme-muted',
-                    {
-                      'md:left-full md:translate-x-2': isEven,
-                    },
-                  )}
-                />
-              </div>
-            )
+              <div
+                className={cn('absolute left-0 top-1/4 h-px w-10 -translate-x-12 bg-theme-muted', {
+                  'md:left-full md:translate-x-2': isEven,
+                })}
+              />
+            </div>
           );
         })}
 

@@ -13,9 +13,11 @@ export interface PageProps extends PropsWithChildren {
 export function Page({ children, className, title, src }: PageProps) {
   return (
     <>
-      <Header isLight={!!src} />
+      <header>
+        <Header isLight={!!src} />
 
-      {(!!title || !!src) && <Hero src={src}>{title}</Hero>}
+        {(!!title || !!src) && <Hero src={src}>{title}</Hero>}
+      </header>
 
       <main className={cn('flex grow flex-col overflow-x-hidden bg-theme-inverted', className)}>
         {children}

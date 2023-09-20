@@ -21,6 +21,10 @@ export function MenuSidebar({ className }: MenuSidebarProps) {
     setOpen(true);
   };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Dialog open={open} onOpenChange={setOpen} modal>
       <Dialog.Trigger asChild>
@@ -32,7 +36,7 @@ export function MenuSidebar({ className }: MenuSidebarProps) {
       <AnimatePresence>
         {open && (
           <Dialog.Sidebar>
-            <MainMenu className="flex-col gap-4" />
+            <MainMenu className="flex-col gap-4" onChange={handleClose} />
 
             <ContactModal className="mt-auto" />
           </Dialog.Sidebar>

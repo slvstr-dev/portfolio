@@ -43,9 +43,10 @@ export function IconsWrapper({ className, color, children, icons }: IconsWrapper
 
 const iconsWrapper = tv({
   slots: {
-    base: 'relative grid grid-cols-8 grid-rows-6',
+    base: 'grid grid-cols-8 grid-rows-6',
     icon: 'w-full',
-    children: 'absolute inset-0 flex flex-col items-center justify-center',
+    children:
+      'col-span-8 col-start-1 row-span-2 row-start-3 flex flex-col items-center justify-center',
   },
   variants: {
     color: {
