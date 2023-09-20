@@ -56,7 +56,7 @@ const container = tv({
         children: 'gap-10 md:gap-20',
       },
       lg: {
-        children: 'gap-20 md:gap-40',
+        children: 'gap-20',
       },
     },
     maxWidth: {
@@ -84,7 +84,7 @@ const container = tv({
       sm: 'py-2.5 md:py-5',
       md: 'py-5 md:py-10',
       lg: 'py-10 md:py-20',
-      xl: 'py-20 md:py-40',
+      xl: 'py-20',
     },
     isCentered: {
       true: {
