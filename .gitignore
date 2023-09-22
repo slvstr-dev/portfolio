@@ -40,6 +40,3 @@ next-env.d.ts
 
 # storybook
 /storybook-static
-
-# codegen
-/src/graphql/generated

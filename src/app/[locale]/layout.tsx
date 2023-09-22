@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { type PropsWithChildren } from 'react';
 
 import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';

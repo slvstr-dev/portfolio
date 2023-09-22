@@ -1,6 +1,6 @@
-import { InputHTMLAttributes } from 'react';
+import type { InputHTMLAttributes } from 'react';
 
-import { UseFormRegisterReturn } from 'react-hook-form';
+import type { UseFormRegisterReturn } from 'react-hook-form';
 
 import { cn } from '@/utils/tailwindUtils';
 

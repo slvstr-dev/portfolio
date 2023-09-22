@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ForwardedRef, forwardRef } from 'react';
+import { forwardRef, type ButtonHTMLAttributes, type ForwardedRef } from 'react';
 
 import { tv, type VariantProps } from 'tailwind-variants';
 

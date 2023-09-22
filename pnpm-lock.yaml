@@ -10,7 +10,7 @@ dependencies:
     version: 6.2.1
   '@hookform/resolvers':
     specifier: ^3.3.1
-    version: 3.3.1(react-hook-form@7.46.1)
+    version: 3.3.1(react-hook-form@7.46.2)
   '@radix-ui/react-accordion':
     specifier: ^1.1.2
     version: 1.1.2(@types/react-dom@18.2.7)(@types/react@18.2.22)(react-dom@18.2.0)(react@18.2.0)
@@ -45,8 +45,8 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   react-hook-form:
-    specifier: ^7.46.1
-    version: 7.46.1(react@18.2.0)
+    specifier: ^7.46.2
+    version: 7.46.2(react@18.2.0)
   zod:
     specifier: 3.22.2
     version: 3.22.2
@@ -55,9 +55,6 @@ devDependencies:
   '@2digits/prettier-config':
     specifier: ^0.9.4
     version: 0.9.4(prettier@2.8.8)
-  '@2digits/tsconfig':
-    specifier: ^0.3.0
-    version: 0.3.0(typescript@5.2.2)
   '@storybook/addon-essentials':
     specifier: ^7.4.3
     version: 7.4.3(@types/react-dom@18.2.7)(@types/react@18.2.22)(react-dom@18.2.0)(react@18.2.0)
@@ -89,8 +86,8 @@ devDependencies:
     specifier: 18.2.7
     version: 18.2.7
   autoprefixer:
-    specifier: 10.4.15
-    version: 10.4.15(postcss@8.4.30)
+    specifier: 10.4.16
+    version: 10.4.16(postcss@8.4.30)
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
@@ -101,8 +98,8 @@ devDependencies:
     specifier: 13.5.2
     version: 13.5.2(eslint@8.49.0)(typescript@5.2.2)
   eslint-plugin-storybook:
-    specifier: ^0.6.13
-    version: 0.6.13(eslint@8.49.0)(typescript@5.2.2)
+    specifier: ^0.6.14
+    version: 0.6.14(eslint@8.49.0)(typescript@5.2.2)
   postcss:
     specifier: 8.4.30
     version: 8.4.30
@@ -160,14 +157,6 @@ packages:
       - prettier-plugin-svelte
       - prettier-plugin-twig-melody
       - supports-color
-    dev: true
-
-  /@2digits/tsconfig@0.3.0(typescript@5.2.2):
-    resolution: {integrity: sha512-7RN7SOAbPNgzEBXk4+OEAZAyjA1YwJKpIIlCgruQr23lET1R5ZAb3elcaXD5XBr03XVD007A23tAmKvhVP8UZA==}
-    peerDependencies:
-      typescript: '>=4.9'
-    dependencies:
-      typescript: 5.2.2
     dev: true
 
   /@aashutoshrathi/word-wrap@1.2.6:
@@ -256,7 +245,7 @@ packages:
     dependencies:
       '@babel/compat-data': 7.22.20
       '@babel/helper-validator-option': 7.22.15
-      browserslist: 4.21.10
+      browserslist: 4.21.11
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -2042,12 +2031,12 @@ packages:
       graphql: 16.8.1
     dev: false
 
-  /@hookform/resolvers@3.3.1(react-hook-form@7.46.1):
+  /@hookform/resolvers@3.3.1(react-hook-form@7.46.2):
     resolution: {integrity: sha512-K7KCKRKjymxIB90nHDQ7b9nli474ru99ZbqxiqDAWYsYhOsU3/4qLxW91y+1n04ic13ajjZ66L3aXbNef8PELQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.46.1(react@18.2.0)
+      react-hook-form: 7.46.2(react@18.2.0)
     dev: false
 
   /@humanwhocodes/config-array@0.11.11:
@@ -5278,14 +5267,14 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: true
 
-  /autoprefixer@10.4.15(postcss@8.4.30):
-    resolution: {integrity: sha512-KCuPB8ZCIqFdA4HwKXsvz7j6gvSDNhDP7WnUjBleRkKjPdvCmHFuQ77ocavI8FT6NdvlBnE2UFr2H4Mycn8Vew==}
+  /autoprefixer@10.4.16(postcss@8.4.30):
+    resolution: {integrity: sha512-7vd3UC6xKp0HLfua5IjZlcXvGAGy7cBAXTg2lyQ/8WpNhd6SiZ8Be+xm3FyBSYJx5GKcpRCzBh7RH4/0dnY+uQ==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.21.10
+      browserslist: 4.21.11
       caniuse-lite: 1.0.30001538
       fraction.js: 4.3.6
       normalize-range: 0.1.2
@@ -5560,15 +5549,15 @@ packages:
       pako: 1.0.11
     dev: true
 
-  /browserslist@4.21.10:
-    resolution: {integrity: sha512-bipEBdZfVH5/pwrvqc+Ub0kUPVfGUhlKxbvfD+z1BDnPEO/X98ruXGA1WP5ASpAFKan7Qr6j736IacbZQuAlKQ==}
+  /browserslist@4.21.11:
+    resolution: {integrity: sha512-xn1UXOKUz7DjdGlg9RrUr0GGiWzI97UQJnugHtH0OLDfJB7jMgoIkYvRIEO1l9EeEERVqeqLYOcFBW9ldjypbQ==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001538
-      electron-to-chromium: 1.4.524
+      electron-to-chromium: 1.4.527
       node-releases: 2.0.13
-      update-browserslist-db: 1.0.11(browserslist@4.21.10)
+      update-browserslist-db: 1.0.13(browserslist@4.21.11)
 
   /bser@2.1.1:
     resolution: {integrity: sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==}
@@ -5953,7 +5942,7 @@ packages:
   /core-js-compat@3.32.2:
     resolution: {integrity: sha512-+GjlguTDINOijtVRUxrQOv3kfu9rl+qPNdX2LTbJ/ZyVTuxK+ksVSAGX1nHstu4hrv1En/uPTtWgq2gI5wt4AQ==}
     dependencies:
-      browserslist: 4.21.10
+      browserslist: 4.21.11
     dev: true
 
   /core-js-pure@3.32.2:
@@ -6395,8 +6384,8 @@ packages:
       jake: 10.8.7
     dev: true
 
-  /electron-to-chromium@1.4.524:
-    resolution: {integrity: sha512-iTmhuiGXYo29QoFXwwXbxhAKiDRZQzme6wYVaZNoitg9h1iRaMGu3vNvDyk+gqu5ETK1D6ug9PC5GVS7kSURuw==}
+  /electron-to-chromium@1.4.527:
+    resolution: {integrity: sha512-EafxEiEDzk2aLrdbtVczylHflHdHkNrpGNHIgDyA63sUQLQVS2ayj2hPw3RsVB42qkwURH+T2OxV7kGPUuYszA==}
 
   /elliptic@6.5.4:
     resolution: {integrity: sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==}
@@ -6832,8 +6821,8 @@ packages:
       string.prototype.matchall: 4.0.10
     dev: true
 
-  /eslint-plugin-storybook@0.6.13(eslint@8.49.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-smd+CS0WH1jBqUEJ3znGS7DU4ayBE9z6lkQAK2yrSUv1+rq8BT/tiI5C/rKE7rmiqiAfojtNYZRhzo5HrulccQ==}
+  /eslint-plugin-storybook@0.6.14(eslint@8.49.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-IeYigPur/MvESNDo43Z+Z5UvlcEVnt0dDZmnw1odi9X2Th1R3bpGyOZsHXb9bp1pFecOpRUuoMG5xdID2TwwOg==}
     engines: {node: 12.x || 14.x || >= 16}
     peerDependencies:
       eslint: '>=6'
@@ -9824,8 +9813,8 @@ packages:
       react-is: 18.1.0
     dev: true
 
-  /react-hook-form@7.46.1(react@18.2.0):
-    resolution: {integrity: sha512-0GfI31LRTBd5tqbXMGXT1Rdsv3rnvy0FjEk8Gn9/4tp6+s77T7DPZuGEpBRXOauL+NhyGT5iaXzdIM2R6F/E+w==}
+  /react-hook-form@7.46.2(react@18.2.0):
+    resolution: {integrity: sha512-x1DWmHQchV7x2Rq9l99M/cQHC8JGchAnw9Z0uTz5KrPa0bTl/Inm1NR7ceOARfIrkNuQNAhuSuZPYa6k7QYn3Q==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
@@ -11238,13 +11227,13 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /update-browserslist-db@1.0.11(browserslist@4.21.10):
-    resolution: {integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==}
+  /update-browserslist-db@1.0.13(browserslist@4.21.11):
+    resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
-      browserslist: 4.21.10
+      browserslist: 4.21.11
       escalade: 3.1.1
       picocolors: 1.0.0
 
@@ -11444,7 +11433,7 @@ packages:
       '@webassemblyjs/wasm-parser': 1.11.6
       acorn: 8.10.0
       acorn-import-assertions: 1.9.0(acorn@8.10.0)
-      browserslist: 4.21.10
+      browserslist: 4.21.11
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.15.0
       es-module-lexer: 1.3.1

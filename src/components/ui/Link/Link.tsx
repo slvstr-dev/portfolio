@@ -1,7 +1,7 @@
-import { AnchorHTMLAttributes } from 'react';
+import type { AnchorHTMLAttributes } from 'react';
 
 import NextIntlLink from 'next-intl/link';
-import { VariantProps } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
 
 import { button } from '@/components/ui/Button/Button';
 import { Icon } from '@/components/ui/Icon/Icon';

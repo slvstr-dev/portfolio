@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, forwardRef, Ref } from 'react';
+import { forwardRef, type AnchorHTMLAttributes, type Ref } from 'react';
 
 import NextIntlLink from 'next-intl/link';
 import { tv, type VariantProps } from 'tailwind-variants';

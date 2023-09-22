@@ -1,4 +1,4 @@
-import { Children, PropsWithChildren, ReactNode } from 'react';
+import { Children, type PropsWithChildren, type ReactNode } from 'react';
 
 import { cn } from '@/utils/tailwindUtils';
 

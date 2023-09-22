@@ -1,8 +1,8 @@
-import { HTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
 
-import { tv, VariantProps } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
-import { Image, ImageProps } from '@/components/ui/Image/Image';
+import { Image, type ImageProps } from '@/components/ui/Image/Image';
 import { cn } from '@/utils/tailwindUtils';
 
 type CardVariants = VariantProps<typeof card>;

@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { type PropsWithChildren } from 'react';
 
 import { Header } from '@/components/layout/Header/Header';
 import { Hero } from '@/components/layout/Hero/Hero';

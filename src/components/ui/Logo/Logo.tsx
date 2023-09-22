@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { tv, VariantProps } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
 import { Anchor } from '@/components/ui/Anchor/Anchor';
 

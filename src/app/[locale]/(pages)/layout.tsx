@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
-import { ParamsProps } from '@/app/[locale]/layout';
+import type { ParamsProps } from '@/app/[locale]/layout';
 import { Footer } from '@/components/layout/Footer/Footer';
 
 export interface PagesLayout extends ParamsProps, PropsWithChildren {}

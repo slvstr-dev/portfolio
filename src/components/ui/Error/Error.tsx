@@ -1,8 +1,8 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import { useTranslations } from 'next-intl';
 
-import { Container, ContainerProps } from '@/components/layout/Container/Container';
+import { Container, type ContainerProps } from '@/components/layout/Container/Container';
 import { Link } from '@/components/ui/Link/Link';
 
 export interface ErrorProps extends PropsWithChildren<ContainerProps> {

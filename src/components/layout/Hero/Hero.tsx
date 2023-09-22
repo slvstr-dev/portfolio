@@ -1,8 +1,8 @@
-import { tv, VariantProps } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
 import { Container } from '@/components/layout/Container/Container';
 import { IconsWrapper } from '@/components/ui/IconsWrapper/IconsWrapper';
-import { Image, ImageProps } from '@/components/ui/Image/Image';
+import { Image, type ImageProps } from '@/components/ui/Image/Image';
 import { Title } from '@/components/ui/Title/Title';
 import { cn } from '@/utils/tailwindUtils';
 

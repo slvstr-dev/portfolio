@@ -1,6 +1,6 @@
 'use client';
 
-import { Children, PropsWithChildren, useState } from 'react';
+import { Children, useState, type PropsWithChildren } from 'react';
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
