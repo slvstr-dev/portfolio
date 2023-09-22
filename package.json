@@ -14,7 +14,6 @@
     "format:fix": "prettier --write \"**/*.{js,ts,tsx,md}\"",
     "types": "tsc --noEmit",
     "types:watch": "tsc --noEmit --watch",
-    "prepare": "pnpm codegen",
     "codegen": "source .env.local && npx genql --endpoint https://api.github.com/graphql --output ./src/graphql/generated -H \"Authorization: Bearer $GRAPHQL_API_TOKEN\"",
     "check": "pnpm types && pnpm lint && pnpm format",
     "storybook": "storybook dev -p 6006 --no-open",
