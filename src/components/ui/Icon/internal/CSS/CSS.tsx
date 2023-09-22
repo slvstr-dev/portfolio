@@ -1,4 +1,4 @@
-import React, { SVGProps } from 'react';
+import type { SVGProps } from 'react';
 
 export const CSS = (props: SVGProps<SVGSVGElement>) => {
   return (

@@ -1,8 +1,8 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
-import { tv, VariantProps } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
-import { Icon, IconProps } from '@/components/ui/Icon/Icon';
+import { Icon, type IconProps } from '@/components/ui/Icon/Icon';
 import { cn } from '@/utils/tailwindUtils';
 
 type IconsWrapperVariants = VariantProps<typeof iconsWrapper>;

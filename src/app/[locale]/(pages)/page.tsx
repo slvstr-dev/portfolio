@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getTranslator } from 'next-intl/server';
 
-import { ParamsProps } from '@/app/[locale]/layout';
+import type { ParamsProps } from '@/app/[locale]/layout';
 import { About } from '@/components/blocks/About/About';
 import { Experience } from '@/components/blocks/Experience/Experience';
 import { Projects } from '@/components/blocks/Projects/Projects';

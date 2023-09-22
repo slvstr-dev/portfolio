@@ -1,4 +1,4 @@
-import NextImage, { ImageProps as NextImageProps } from 'next/image';
+import NextImage, { type ImageProps as NextImageProps } from 'next/image';
 
 import { cn } from '@/utils/tailwindUtils';
 

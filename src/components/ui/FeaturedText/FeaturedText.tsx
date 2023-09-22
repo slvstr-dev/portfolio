@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
-import { Icon, IconProps } from '@/components/ui/Icon/Icon';
+import { Icon, type IconProps } from '@/components/ui/Icon/Icon';
 import { cn } from '@/utils/tailwindUtils';
 
 export interface FeaturedTextProps extends PropsWithChildren {

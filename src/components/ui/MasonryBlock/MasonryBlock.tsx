@@ -1,4 +1,4 @@
-import { Image, ImageProps } from '@/components/ui/Image/Image';
+import { Image, type ImageProps } from '@/components/ui/Image/Image';
 import { cn } from '@/utils/tailwindUtils';
 
 type MasonryImage = ImageProps & {
