@@ -27,11 +27,11 @@ Portfolio site created with Next.js, TypeScript, Tailwind & Storybook.
 - [x] Add sizes to images with fill
 - [x] Check letter spacing
 - [x] Check semantic HTML
+- [x] Improve prepare script
+- [x] Add statically typed routes through next-intl
 - [ ] Replace isLight with TW variants
 - [ ] Replace static content with dynamic content
 - [ ] Add relevant meta data
-- [ ] Improve prepare script
-- [ ] Add statically typed routes through next-intl
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Upgrade Prettier to ^3.0.0
 - [ ] Add LinkedIn content through api
