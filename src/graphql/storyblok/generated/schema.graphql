@@ -1,0 +1,428 @@
+schema {
+  query: QueryType
+}
+
+type Alternate {
+  fullSlug: String!
+  id: Int!
+  isFolder: Boolean
+  name: String!
+  parentId: Int
+  published: Boolean!
+  slug: String!
+}
+
+type Asset {
+  alt: String
+  copyright: String
+  filename: String!
+  focus: String
+  id: Int
+  name: String
+  title: String
+}
+
+scalar BlockScalar
+
+type BodycompComponent {
+  _editable: String
+  _uid: String
+  body: BlockScalar
+  component: String
+}
+
+type BodycompItem {
+  alternates: [Alternate]
+  content: BodycompComponent
+  created_at: String
+  default_full_slug: String
+  first_published_at: String
+  full_slug: String
+  group_id: Int
+  id: Int
+  is_startpage: Boolean
+  lang: String
+  meta_data: JsonScalar
+  name: String
+  parent_id: Int
+  path: String
+  position: Int
+  published_at: String
+  release_id: Int
+  slug: String
+  sort_by_date: String
+  tag_list: [String]
+  translated_slugs: [TranslatedSlug]
+  uuid: String
+}
+
+type BodycompItems {
+  items: [BodycompItem]
+  total: Int
+}
+
+type ContentItem {
+  alternates: [Alternate]
+  content: JsonScalar
+  content_string: String
+  created_at: String
+  default_full_slug: String
+  first_published_at: String
+  full_slug: String
+  group_id: Int
+  id: Int
+  is_startpage: Boolean
+  lang: String
+  meta_data: JsonScalar
+  name: String
+  parent_id: Int
+  path: String
+  position: Int
+  published_at: String
+  release_id: Int
+  slug: String
+  sort_by_date: String
+  tag_list: [String]
+  translated_slugs: [TranslatedSlug]
+  uuid: String
+}
+
+type ContentItems {
+  items: [ContentItem]
+  total: Int
+}
+
+type Datasource {
+  id: Int!
+  name: String!
+  slug: String!
+}
+
+type DatasourceEntries {
+  items: [DatasourceEntry!]!
+  total: Int!
+}
+
+type DatasourceEntry {
+  dimensionValue: String
+  id: Int!
+  name: String!
+  value: String!
+}
+
+type Datasources {
+  items: [Datasource!]!
+}
+
+input FilterQueryOperations {
+  """Matches exactly one value"""
+  in: String
+
+  """Matches all without the given value"""
+  not_in: String
+
+  """Matches exactly one value with a wildcard search using *"""
+  like: String
+
+  """Matches all without the given value"""
+  not_like: String
+
+  """Matches any value of given array"""
+  in_array: [String]
+
+  """Must match all values of given array"""
+  all_in_array: [String]
+
+  """Greater than date (Exmples: 2019-03-03 or 2020-03-03T03:03:03)"""
+  gt_date: ISO8601DateTime
+
+  """Less than date (Format: 2019-03-03 or 2020-03-03T03:03:03)"""
+  lt_date: ISO8601DateTime
+
+  """Greater than integer value"""
+  gt_int: Int
+
+  """Less than integer value"""
+  lt_int: Int
+
+  """Matches exactly one integer value"""
+  in_int: Int
+
+  """Greater than float value"""
+  gt_float: Float
+
+  """Less than float value"""
+  lt_float: Float
+}
+
+"""An ISO 8601-encoded datetime"""
+scalar ISO8601DateTime
+
+scalar JsonScalar
+
+type Link {
+  cachedUrl: String!
+  email: String
+  fieldtype: String!
+  id: String!
+  linktype: String!
+  story: Story
+  url: String!
+}
+
+type LinkEntries {
+  items: [LinkEntry!]!
+}
+
+type LinkEntry {
+  id: Int
+  isFolder: Boolean
+  isStartpage: Boolean
+  name: String
+  parentId: Int
+  position: Int
+  published: Boolean
+  slug: String
+  uuid: String
+}
+
+type PageComponent {
+  _editable: String
+  _uid: String
+  asset: Asset
+  assets: [Asset]
+  body: BlockScalar
+  component: String
+  filter: String
+  link: Link
+  link1: Link
+  live: Boolean
+  multioptions: [String]
+  newfield_hello: String
+  nr: String
+  number: String
+  plugin: JsonScalar
+  single_product(fields: [String], language: String, resolve_relations: String): Story
+  stories(fields: [String], language: String, sort_by: String): [Story]
+  table: String
+  table_json: JsonScalar
+  teasered_products(fields: [String], language: String, sort_by: String): [Story]
+  testItem: String
+}
+
+input PageFilterQuery {
+  filter: FilterQueryOperations
+  teasered_products: FilterQueryOperations
+  live: FilterQueryOperations
+  number: FilterQueryOperations
+  multioptions: FilterQueryOperations
+  stories: FilterQueryOperations
+  newfield_hello: FilterQueryOperations
+  single_product: FilterQueryOperations
+  nr: FilterQueryOperations
+  testItem: FilterQueryOperations
+}
+
+type PageItem {
+  alternates: [Alternate]
+  content: PageComponent
+  created_at: String
+  default_full_slug: String
+  first_published_at: String
+  full_slug: String
+  group_id: Int
+  id: Int
+  is_startpage: Boolean
+  lang: String
+  meta_data: JsonScalar
+  name: String
+  parent_id: Int
+  path: String
+  position: Int
+  published_at: String
+  release_id: Int
+  slug: String
+  sort_by_date: String
+  tag_list: [String]
+  translated_slugs: [TranslatedSlug]
+  uuid: String
+}
+
+type PageItems {
+  items: [PageItem]
+  total: Int
+}
+
+type ProductComponent {
+  _editable: String
+  _uid: String
+  asset: [Asset]
+  component: String
+  home(fields: [String], language: String, resolve_relations: String): Story
+  image: String
+  link: Link
+  name: String
+  newfield: String
+  tbl: String
+  tbl_json: JsonScalar
+}
+
+input ProductFilterQuery {
+  name: FilterQueryOperations
+  home: FilterQueryOperations
+  newfield: FilterQueryOperations
+}
+
+type ProductItem {
+  alternates: [Alternate]
+  content: ProductComponent
+  created_at: String
+  default_full_slug: String
+  first_published_at: String
+  full_slug: String
+  group_id: Int
+  id: Int
+  is_startpage: Boolean
+  lang: String
+  meta_data: JsonScalar
+  name: String
+  parent_id: Int
+  path: String
+  position: Int
+  published_at: String
+  release_id: Int
+  slug: String
+  sort_by_date: String
+  tag_list: [String]
+  translated_slugs: [TranslatedSlug]
+  uuid: String
+}
+
+type ProductItems {
+  items: [ProductItem]
+  total: Int
+}
+
+type QueryType {
+  BodycompItem(
+    """Slug, ID or UUID of item"""
+    id: ID!
+
+    """Can be empty or 'uuid'"""
+    find_by: String
+
+    """Release id"""
+    from_release: Int
+
+    """Can be 'story' or 'url'"""
+    resolve_links: String
+    resolve_relations: String
+    language: String
+  ): BodycompItem
+  BodycompItems(first_published_at_gt: String, first_published_at_lt: String, published_at_gt: String, published_at_lt: String, starts_with: String, by_slugs: String, excluding_slugs: String, fallback_lang: String, by_uuids: String, by_uuids_ordered: String, excluding_ids: String, excluding_fields: String, resolve_links: String, resolve_relations: String, from_release: String, sort_by: String, search_term: String, is_startpage: String, language: String, with_tag: String, page: Int, per_page: Int, filter_query: JsonScalar): BodycompItems
+  ContentNode(
+    """Slug, ID or UUID of item"""
+    id: ID!
+
+    """Can be empty or 'uuid'"""
+    find_by: String
+
+    """Release id"""
+    from_release: Int
+
+    """Can be 'story' or 'url'"""
+    resolve_links: String
+    resolve_relations: String
+    language: String
+  ): ContentItem
+  ContentNodes(first_published_at_gt: String, first_published_at_lt: String, published_at_gt: String, published_at_lt: String, starts_with: String, by_slugs: String, excluding_slugs: String, fallback_lang: String, by_uuids: String, by_uuids_ordered: String, excluding_ids: String, excluding_fields: String, resolve_links: String, resolve_relations: String, from_release: String, sort_by: String, search_term: String, is_startpage: String, language: String, with_tag: String, page: Int, per_page: Int, filter_query: JsonScalar): ContentItems
+  DatasourceEntries(datasource: String, dimension: String, page: Int, per_page: Int): DatasourceEntries
+  Datasources(search: String, by_ids: [String]): Datasources
+  Links(starts_with: String, paginated: Boolean): LinkEntries
+  PageItem(
+    """Slug, ID or UUID of item"""
+    id: ID!
+
+    """Can be empty or 'uuid'"""
+    find_by: String
+
+    """Release id"""
+    from_release: Int
+
+    """Can be 'story' or 'url'"""
+    resolve_links: String
+    resolve_relations: String
+    language: String
+  ): PageItem
+  PageItems(first_published_at_gt: String, first_published_at_lt: String, published_at_gt: String, published_at_lt: String, starts_with: String, by_slugs: String, excluding_slugs: String, fallback_lang: String, by_uuids: String, by_uuids_ordered: String, excluding_ids: String, excluding_fields: String, resolve_links: String, resolve_relations: String, from_release: String, sort_by: String, search_term: String, is_startpage: String, language: String, with_tag: String, page: Int, per_page: Int, filter_query: JsonScalar, filter_query_v2: PageFilterQuery): PageItems
+  ProductItem(
+    """Slug, ID or UUID of item"""
+    id: ID!
+
+    """Can be empty or 'uuid'"""
+    find_by: String
+
+    """Release id"""
+    from_release: Int
+
+    """Can be 'story' or 'url'"""
+    resolve_links: String
+    resolve_relations: String
+    language: String
+  ): ProductItem
+  ProductItems(first_published_at_gt: String, first_published_at_lt: String, published_at_gt: String, published_at_lt: String, starts_with: String, by_slugs: String, excluding_slugs: String, fallback_lang: String, by_uuids: String, by_uuids_ordered: String, excluding_ids: String, excluding_fields: String, resolve_links: String, resolve_relations: String, from_release: String, sort_by: String, search_term: String, is_startpage: String, language: String, with_tag: String, page: Int, per_page: Int, filter_query: JsonScalar, filter_query_v2: ProductFilterQuery): ProductItems
+  RateLimit: RateLimit
+  Space: Space
+  Tags(starts_with: String): Tags
+}
+
+type RateLimit {
+  maxCost: Int!
+}
+
+type Space {
+  domain: String!
+  id: Int!
+  languageCodes: [String]!
+  name: String!
+  version: Int!
+}
+
+type Story {
+  alternates: [Alternate]
+  content: JsonScalar
+  createdAt: String
+  firstPublishedAt: String
+  fullSlug: String
+  groupId: Int
+  id: Int
+  isStartpage: Boolean
+  lang: String
+  metaData: JsonScalar
+  name: String
+  parentId: Int
+  path: String
+  position: Int
+  publishedAt: String
+  releaseId: Int
+  slug: String
+  sortByDate: String
+  tagList: [String]
+  translatedSlugs: [TranslatedSlug]
+  uuid: String
+}
+
+type Tag {
+  name: String!
+  taggingsCount: Int!
+}
+
+type Tags {
+  items: [Tag!]!
+}
+
+type TranslatedSlug {
+  lang: String!
+  name: String
+  path: String
+}

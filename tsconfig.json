@@ -10,6 +10,7 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedParameters": true,
+    "noUnusedLocals": true,
     "moduleResolution": "Bundler",
     "module": "ESNext",
     "noEmit": true,
@@ -29,7 +30,8 @@
       "@/translations/*": ["./src/translations/*"],
       "@/types/*": ["./src/types/*"],
       "@/utils/*": ["./src/utils/*"],
-      "@/src/*": ["./src/*"]
+      "@/src/*": ["./src/*"],
+      "@/root/*": ["./*"]
     },
     "incremental": true
   },

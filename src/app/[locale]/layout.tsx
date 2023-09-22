@@ -1,4 +1,4 @@
-import { type PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';
@@ -8,7 +8,15 @@ import { getTranslations } from '@/utils/translationUtils';
 
 import '@/styles/global.css';
 
+import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
+
+import { StoryblokProvider } from '@/components/providers/StoryblokProvider/StoryblokProvider';
 import { fonts } from '@/constants/fonts';
+
+storyblokInit({
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
+  use: [apiPlugin],
+});
 
 export interface ParamsProps {
   params: { locale: string };
@@ -32,14 +40,16 @@ export default async function RootLayout({ children, params: { locale } }: RootL
   const translations = await getTranslations(locale);
 
   return (
-    <html lang={locale} className={fonts}>
-      <body className="flex min-h-screen flex-col">
-        <NextIntlClientProvider locale={locale} messages={translations}>
-          {children}
+    <StoryblokProvider>
+      <html lang={locale} className={fonts}>
+        <body className="flex min-h-screen flex-col">
+          <NextIntlClientProvider locale={locale} messages={translations}>
+            {children}
 
-          <Analytics />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+            <Analytics />
+          </NextIntlClientProvider>
+        </body>
+      </html>
+    </StoryblokProvider>
   );
 }
