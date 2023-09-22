@@ -1,23 +1,23 @@
-import { StoryblokStory } from 'storyblok-generate-ts';
+import {StoryblokStory} from 'storyblok-generate-ts'
 
 export interface FeatureStoryblok {
   name?: string;
   _uid: string;
-  component: 'feature';
+  component: "feature";
   [k: string]: any;
 }
 
 export interface GridStoryblok {
   columns?: any[];
   _uid: string;
-  component: 'grid';
+  component: "grid";
   [k: string]: any;
 }
 
 export interface PageStoryblok {
   body?: any[];
   _uid: string;
-  component: 'page';
+  component: "page";
   uuid?: string;
   [k: string]: any;
 }
@@ -25,6 +25,6 @@ export interface PageStoryblok {
 export interface TeaserStoryblok {
   headline?: string;
   _uid: string;
-  component: 'teaser';
+  component: "teaser";
   [k: string]: any;
 }

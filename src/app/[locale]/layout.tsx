@@ -14,7 +14,7 @@ import { StoryblokProvider } from '@/components/providers/StoryblokProvider/Stor
 import { fonts } from '@/constants/fonts';
 
 storyblokInit({
-  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
+  accessToken: process.env.STORYBLOK_API_TOKEN,
   use: [apiPlugin],
 });
 
@@ -40,16 +40,16 @@ export default async function RootLayout({ children, params: { locale } }: RootL
   const translations = await getTranslations(locale);
 
   return (
-    <StoryblokProvider>
-      <html lang={locale} className={fonts}>
-        <body className="flex min-h-screen flex-col">
-          <NextIntlClientProvider locale={locale} messages={translations}>
+    <html lang={locale} className={fonts}>
+      <body className="flex min-h-screen flex-col">
+        <NextIntlClientProvider locale={locale} messages={translations}>
+          <StoryblokProvider>
             {children}
 
             <Analytics />
-          </NextIntlClientProvider>
-        </body>
-      </html>
-    </StoryblokProvider>
+          </StoryblokProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

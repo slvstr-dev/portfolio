@@ -4,6 +4,29 @@ Portfolio site created with Next.js, TypeScript, Tailwind & Storybook.
 
 ![Screenshot of project](https://raw.githubusercontent.com/slvstr-dev/portfolio/master/screenshot.png)
 
+## Setting up Storyblok
+
+_Install mkcert for creating a valid certificate and Install localhost with mkcert_
+
+```
+brew install mkcert
+mkcert -install
+mkcert localhost
+```
+
+_Install the HTTPS proxy and run the proxy with the commands below_
+
+```
+npm install -g local-ssl-proxy // Installing the proxy
+local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem  // Running the proxy to target port 3000, you can change that any port of your choice but it should be what your app is running on in development.
+```
+
+_Generate component types_
+
+```
+pnpm codegen:storyblok
+```
+
 ## TODO
 
 - [x] Fix forwardRef console error
@@ -29,8 +52,8 @@ Portfolio site created with Next.js, TypeScript, Tailwind & Storybook.
 - [x] Check semantic HTML
 - [x] Improve prepare script
 - [x] Add statically typed routes through next-intl
-- [ ] Replace isLight with TW variants
 - [ ] Replace static content with dynamic content
+- [ ] Replace isLight with TW variants
 - [ ] Add relevant meta data
 - [ ] Fix missing font override for 'Playfair'
 - [ ] Upgrade Prettier to ^3.0.0
