@@ -53,7 +53,7 @@ export function Header({ className, isLight }: HeaderProps) {
         <ContactModal />
       </div>
 
-      <MenuSidebar className={cn('ml-auto md:hidden', { 'text-white': isLight && !isScrolled })} />
+      <MenuSidebar className="ml-auto md:hidden" isLight={isLight && !isScrolled} />
     </Container>
   );
 }

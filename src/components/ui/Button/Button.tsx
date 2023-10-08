@@ -26,8 +26,8 @@ export const Button = forwardRef(function Button(
 });
 
 export const button = tv({
-  base: 'relative inline-flex cursor-pointer items-center justify-center uppercase outline-theme-brand-300 transition-opacity hover:opacity-50 active:opacity-75',
   slots: {
+    base: 'relative inline-flex cursor-pointer items-center justify-center uppercase outline-theme-brand-300 transition-opacity hover:opacity-50 active:opacity-75',
     label: '',
     loader: 'absolute inset-0 animate-spin',
   },

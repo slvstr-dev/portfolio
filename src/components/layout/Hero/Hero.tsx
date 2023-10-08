@@ -38,8 +38,8 @@ export function Hero({ className, children, src, alt }: HeroProps) {
 }
 
 const hero = tv({
-  base: 'relative',
   slots: {
+    base: 'relative',
     title: 'text-center text-5xl italic tracking-widest md:text-8xl',
   },
   variants: {

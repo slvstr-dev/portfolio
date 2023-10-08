@@ -11,6 +11,7 @@ export interface LogoProps extends LogoVariants {
 
 export function Logo({ className, isLight }: LogoProps) {
   const t = useTranslations('components.ui.logo');
+
   const styles = logo({ isLight });
 
   return (
