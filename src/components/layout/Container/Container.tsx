@@ -29,8 +29,8 @@ export function Container({
 }
 
 const container = tv({
-  base: '',
   slots: {
+    base: '',
     children: 'container flex flex-col gap-10',
   },
   variants: {

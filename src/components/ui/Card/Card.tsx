@@ -60,8 +60,8 @@ export function Card({
 }
 
 const card = tv({
-  base: 'grid grid-flow-row items-center gap-8',
   slots: {
+    base: 'grid grid-flow-row items-center gap-8',
     content: '',
   },
   variants: {
