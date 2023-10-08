@@ -1,6 +1,5 @@
 import { getTranslator } from 'next-intl/server';
 
-import { Contact } from '@/components/blocks/Contact/Contact';
 import { Container } from '@/components/layout/Container/Container';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
 import { Copyright } from '@/components/ui/Copyright/Copyright';
@@ -37,9 +36,12 @@ export async function Footer({ locale }: FooterProps) {
 
   return (
     <footer>
-      <Contact />
-
-      <Container gap="md" maxWidth="lg" verticalPadding="lg" isCentered>
+      <Container
+        gap="md"
+        maxWidth="lg"
+        verticalPadding="lg"
+        isCentered
+        className="bg-theme-brand-100">
         {!!user && (
           <div className="flex w-full flex-col items-center gap-10 text-center md:flex-row md:gap-20 md:text-left">
             <Logo className="text-9xl text-theme-brand-300" />
