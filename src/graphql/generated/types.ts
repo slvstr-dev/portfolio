@@ -2151,6 +2151,7 @@ export default {
     },
     CreateLinkedBranchPayload: {
       clientMutationId: [1232],
+      issue: [531],
       linkedBranch: [576],
       __typename: [1232],
     },
@@ -2866,6 +2867,7 @@ export default {
     DeploymentOrderField: {},
     DeploymentProtectionRule: {
       databaseId: [520],
+      preventSelfReview: [81],
       reviewers: [
         351,
         {
@@ -3066,6 +3068,7 @@ export default {
       editor: [6],
       id: [518],
       includesCreatedEdit: [81],
+      isAnswered: [81],
       labels: [
         557,
         {
@@ -12543,6 +12546,7 @@ export default {
           categoryId: [518],
           states: [382, '[DiscussionState!]'],
           orderBy: [374],
+          answered: [81],
         },
       ],
       diskUsage: [520],
@@ -16001,6 +16005,7 @@ export default {
       environmentId: [518],
       waitTimer: [520],
       reviewers: [518],
+      preventSelfReview: [81],
       clientMutationId: [1232],
       __typename: [1232],
     },

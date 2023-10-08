@@ -2117,6 +2117,8 @@ export interface CreateIssuePayload {
 export interface CreateLinkedBranchPayload {
   /** A unique identifier for the client performing the mutation. */
   clientMutationId: Scalars['String'] | null;
+  /** The issue that was linked to. */
+  issue: Issue | null;
   /** The new branch issue reference. */
   linkedBranch: LinkedBranch | null;
   __typename: 'CreateLinkedBranchPayload';
@@ -2954,6 +2956,8 @@ export type DeploymentOrderField = 'CREATED_AT';
 export interface DeploymentProtectionRule {
   /** Identifies the primary key from the database. */
   databaseId: Scalars['Int'] | null;
+  /** Whether deployments to this environment can be approved by the user who created the deployment. */
+  preventSelfReview: Scalars['Boolean'] | null;
   /** The teams or users that can review the deployment */
   reviewers: DeploymentReviewerConnection;
   /** The timeout in minutes for this protection rule. */
@@ -3238,6 +3242,8 @@ export interface Discussion {
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
+  /** Only return answered/unanswered discussions */
+  isAnswered: Scalars['Boolean'] | null;
   /** A list of labels associated with the object. */
   labels: LabelConnection | null;
   /** The moment the editor made the last edit */
@@ -14309,7 +14315,7 @@ export interface RequestedReviewerEdge {
 /** Represents a type that can be required by a pull request for merging. */
 export type RequirableByPullRequest = (CheckRun | StatusContext) & { __isUnion?: true };
 
-/** Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule. */
+/** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
 export interface RequiredDeploymentsParameters {
   /** The environments that must be successfully deployed to before branches can be merged. */
   requiredDeploymentEnvironments: Scalars['String'][];
@@ -14325,7 +14331,7 @@ export interface RequiredStatusCheckDescription {
   __typename: 'RequiredStatusCheckDescription';
 }
 
-/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed. */
+/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed. */
 export interface RequiredStatusChecksParameters {
   /** Status checks that are required. */
   requiredStatusChecks: StatusCheckConfiguration[];
@@ -21976,6 +21982,8 @@ export interface CreateLinkedBranchInput {
 export interface CreateLinkedBranchPayloadGenqlSelection {
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: boolean | number;
+  /** The issue that was linked to. */
+  issue?: IssueGenqlSelection;
   /** The new branch issue reference. */
   linkedBranch?: LinkedBranchGenqlSelection;
   __typename?: boolean | number;
@@ -23385,6 +23393,8 @@ export interface DeploymentOrder {
 export interface DeploymentProtectionRuleGenqlSelection {
   /** Identifies the primary key from the database. */
   databaseId?: boolean | number;
+  /** Whether deployments to this environment can be approved by the user who created the deployment. */
+  preventSelfReview?: boolean | number;
   /** The teams or users that can review the deployment */
   reviewers?: DeploymentReviewerConnectionGenqlSelection & {
     __args?: {
@@ -23730,6 +23740,8 @@ export interface DiscussionGenqlSelection {
   id?: boolean | number;
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit?: boolean | number;
+  /** Only return answered/unanswered discussions */
+  isAnswered?: boolean | number;
   /** A list of labels associated with the object. */
   labels?: LabelConnectionGenqlSelection & {
     __args?: {
@@ -39185,6 +39197,8 @@ export interface RepositoryGenqlSelection {
       states?: DiscussionState[] | null;
       /** Ordering options for discussions returned from the connection. */
       orderBy?: DiscussionOrder | null;
+      /** Only show answered or unanswered discussions */
+      answered?: Scalars['Boolean'] | null;
     };
   };
   /** The number of kilobytes this repository occupies on disk. */
@@ -40814,7 +40828,7 @@ export interface RequirableByPullRequestGenqlSelection {
   __scalar?: boolean | number;
 }
 
-/** Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule. */
+/** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
 export interface RequiredDeploymentsParametersGenqlSelection {
   /** The environments that must be successfully deployed to before branches can be merged. */
   requiredDeploymentEnvironments?: boolean | number;
@@ -40822,7 +40836,7 @@ export interface RequiredDeploymentsParametersGenqlSelection {
   __scalar?: boolean | number;
 }
 
-/** Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule. */
+/** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
 export interface RequiredDeploymentsParametersInput {
   /** The environments that must be successfully deployed to before branches can be merged. */
   requiredDeploymentEnvironments: Scalars['String'][];
@@ -40846,7 +40860,7 @@ export interface RequiredStatusCheckInput {
   appId?: Scalars['ID'] | null;
 }
 
-/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed. */
+/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed. */
 export interface RequiredStatusChecksParametersGenqlSelection {
   /** Status checks that are required. */
   requiredStatusChecks?: StatusCheckConfigurationGenqlSelection;
@@ -40856,7 +40870,7 @@ export interface RequiredStatusChecksParametersGenqlSelection {
   __scalar?: boolean | number;
 }
 
-/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed. */
+/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed. */
 export interface RequiredStatusChecksParametersInput {
   /** Status checks that are required. */
   requiredStatusChecks: StatusCheckConfigurationInput[];
@@ -45163,6 +45177,8 @@ export interface UpdateEnvironmentInput {
   waitTimer?: Scalars['Int'] | null;
   /** The ids of users or teams that can approve deployments to this environment */
   reviewers?: Scalars['ID'][] | null;
+  /** Whether deployments to this environment can be approved by the user who created the deployment. */
+  preventSelfReview?: Scalars['Boolean'] | null;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: Scalars['String'] | null;
 }
