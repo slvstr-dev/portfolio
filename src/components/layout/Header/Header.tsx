@@ -38,7 +38,7 @@ export function Header({ className, isLight }: HeaderProps) {
       verticalPadding="sm"
       gap="sm"
       className={cn(
-        'fixed inset-x-0 top-0 z-10 text-theme-brand-300 transition-colors',
+        'fixed inset-x-0 top-0 z-20 text-theme-brand-300 transition-colors',
         className,
         {
           'bg-theme-brand-100 text-theme-brand-300': isScrolled,
