@@ -31,5 +31,13 @@ export const experience = {
       responsibilities:
         '<tag>Break designs down into reusable components.</tag><tag>Build TypeScript components in Storybook.</tag><tag>Add React Hook Form forms with Zod validation.</tag><tag>Create headless React, React Native & Next.js apps.</tag><tag>Fetch data through React Query.</tag><tag>Test integration with Cypress.</tag>',
     },
+    tenzinger: {
+      year: '2024',
+      company: 'Tenzinger',
+      title: 'Software Engineer',
+      type: 'Part-time',
+      responsibilities:
+        '<tag>Optimizing user interfaces for Medicore, a Tenzinger company, specializing in web-based electronic health record solutions.</tag>',
+    },
   },
 };
