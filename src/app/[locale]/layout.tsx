@@ -1,6 +1,7 @@
 import { type PropsWithChildren } from 'react';
 
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { fonts } from '@/constants/fonts';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
@@ -41,6 +42,8 @@ export default async function LocaleLayout({ children, params: { locale } }: Roo
         </NextIntlClientProvider>
 
         <Analytics />
+
+        <SpeedInsights />
       </body>
     </html>
   );
