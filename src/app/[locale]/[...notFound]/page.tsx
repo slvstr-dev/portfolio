@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-
 import { Error } from '@/components/ui/Error/Error';
 
 export default function NotFoundPage() {

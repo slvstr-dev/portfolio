@@ -1,8 +1,7 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-
 import { Error as ErrorComponent } from '@/components/ui/Error/Error';
+import { useTranslations } from 'next-intl';
 
 export default function Error() {
   const t = useTranslations('pages.not_found');

@@ -1,11 +1,13 @@
+import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
-
-import { getTranslations } from './utils/translationUtils';
+import { locales } from '@/navigation';
 
 export default getRequestConfig(async ({ locale }) => {
-  const messages = await getTranslations(locale);
+  if (!locales.includes(locale as any)) notFound();
+
+  const translations = await import(`./translations/${locale}`);
 
   return {
-    messages,
+    messages: translations.default,
   };
 });
