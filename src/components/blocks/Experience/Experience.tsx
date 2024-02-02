@@ -82,6 +82,22 @@ export function Experience({ className }: ExperienceProps) {
             </ul>
           </Card>
         </Timeline.Item>
+
+        <Timeline.Item year={Number(t('experience.tenzinger.year'))}>
+          <Card>
+            <h3 className="text-4xl uppercase italic">{t('experience.tenzinger.title')}</h3>
+
+            <p className="text-2xl lowercase italic">
+              {t('experience.tenzinger.company')} · {t('experience.tenzinger.type')}
+            </p>
+
+            <ul className="mt-4 list-inside list-disc">
+              {t.rich('experience.tenzinger.responsibilities', {
+                tag: (chunks) => <li>{chunks}</li>,
+              })}
+            </ul>
+          </Card>
+        </Timeline.Item>
       </Timeline>
     </article>
   );

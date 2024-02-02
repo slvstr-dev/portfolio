@@ -1,3 +1,3 @@
 export const avatar = {
-  job_title: 'React developer {company}',
+  job_title: 'Software Engineer at {company}',
 };

@@ -1,9 +1,8 @@
-import { getTranslator } from 'next-intl/server';
-
 import { Card } from '@/components/ui/Card/Card';
 import { Carousel } from '@/components/ui/Carousel/Carousel';
 import { Link } from '@/components/ui/Link/Link';
 import { client } from '@/graphql/index';
+import { getTranslations } from 'next-intl/server';
 
 export interface UserPinnedItemsProps {
   className?: string;
@@ -11,7 +10,7 @@ export interface UserPinnedItemsProps {
 }
 
 export async function UserPinnedItems({ locale, className }: UserPinnedItemsProps) {
-  const t = await getTranslator(locale, 'components.blocks.projects');
+  const t = await getTranslations({ locale, namespace: 'components.blocks.projects' });
 
   const { user } = await client.query({
     user: {

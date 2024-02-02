@@ -1,2 +1,4 @@
 .next
+pnpm-lock.yaml
+next-env.d.ts
 storybook-static

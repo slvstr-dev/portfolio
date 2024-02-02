@@ -17,6 +17,7 @@ const preview: Preview = {
       },
     },
     layout: 'fullscreen',
+    appDirectory: true,
   },
   decorators: [
     (Story) => (

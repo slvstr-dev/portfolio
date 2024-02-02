@@ -21,15 +21,7 @@
       }
     ],
     "paths": {
-      "@/app/*": ["./src/app/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/constants/*": ["./src/constants/*"],
-      "@/graphql/*": ["./src/graphql/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/translations/*": ["./src/translations/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/src/*": ["./src/*"]
+      "@/*": ["./src/*"],
     },
     "incremental": true
   },
@@ -40,7 +32,7 @@
     "**/*.tsx",
     "./.storybook/*",
     ".next/types/**/*.ts",
-    "next.config.js"
+    "next.config.mjs"
   ],
   "exclude": ["node_modules", "storybook-static"]
 }
