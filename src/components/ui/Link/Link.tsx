@@ -1,6 +1,6 @@
 import type { AnchorHTMLAttributes } from 'react';
 
-import NextIntlLink from 'next-intl/link';
+import { Link as NextIntlLink } from '@/navigation';
 import type { VariantProps } from 'tailwind-variants';
 
 import { button } from '@/components/ui/Button/Button';

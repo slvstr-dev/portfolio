@@ -1,17 +1,16 @@
-import { getTranslator } from 'next-intl/server';
-
 import { Container } from '@/components/layout/Container/Container';
 import { Anchor } from '@/components/ui/Anchor/Anchor';
 import { Copyright } from '@/components/ui/Copyright/Copyright';
 import { Logo } from '@/components/ui/Logo/Logo';
 import { client } from '@/graphql/index';
+import { getTranslations } from 'next-intl/server';
 
 export interface FooterProps {
   locale: string;
 }
 
 export async function Footer({ locale }: FooterProps) {
-  const t = await getTranslator(locale, 'components.layout.footer');
+  const t = await getTranslations({ locale, namespace: 'components.layout.footer' });
 
   const { user } = await client.query({
     user: {
@@ -20,7 +19,6 @@ export async function Footer({ locale }: FooterProps) {
       },
       name: true,
       url: true,
-      company: true,
       location: true,
       socialAccounts: {
         __args: {
@@ -49,13 +47,6 @@ export async function Footer({ locale }: FooterProps) {
             {!!user && (
               <div className="flex flex-col gap-1 text-xl">
                 <h2 className="font-bold uppercase">{user.name}</h2>
-
-                <Anchor
-                  href={t('company.href')}
-                  target="_blank"
-                  className="block font-light capitalize">
-                  {user.company}
-                </Anchor>
 
                 <p className="font-light">{user.location}</p>
               </div>

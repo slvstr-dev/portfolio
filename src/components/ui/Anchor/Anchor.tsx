@@ -1,6 +1,6 @@
 import { forwardRef, type AnchorHTMLAttributes, type Ref } from 'react';
 
-import NextIntlLink from 'next-intl/link';
+import { Link as NextIntlLink } from '@/navigation';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 type AnchorVariants = VariantProps<typeof anchor>;

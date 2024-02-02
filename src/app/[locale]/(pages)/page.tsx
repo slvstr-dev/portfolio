@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { getTranslator } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import type { ParamsProps } from '@/app/[locale]/layout';
 import { About } from '@/components/blocks/About/About';
@@ -11,14 +11,16 @@ import { Page } from '@/components/layout/Page/Page';
 import { Seperator } from '@/components/ui/Seperator/Seperator';
 
 export async function generateMetadata({ params: { locale } }: ParamsProps) {
-  const t = await getTranslator(locale, 'pages.home.meta');
+  const t = await getTranslations({ locale, namespace: 'pages.home.meta' });
 
   return {
     title: t('title'),
   };
 }
 
-export default function HomePage() {
+export default function HomePage({ params: { locale } }: ParamsProps) {
+  unstable_setRequestLocale(locale);
+
   const t = useTranslations('pages.home');
 
   return (
