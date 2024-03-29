@@ -21,7 +21,7 @@
     "check": "pnpm types && pnpm lint && pnpm format",
     "storybook": "sb dev -p 6006 --no-open",
     "storybook:build": "sb build",
-    "chromatic": "npx chromatic --build-script-name=storybook:build",
+    "chromatic": "npx chromatic",
     "upgrade": "pnpm upgrade --interactive",
     "upgrade:latest": "pnpm upgrade --interactive --latest"
   },
