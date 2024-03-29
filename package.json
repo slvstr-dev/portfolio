@@ -1,7 +1,10 @@
 {
   "name": "portfolio",
   "description": "Portfolio site created with Next.js, TypeScript & Tailwind.",
-  "author": "Sylvester Hofstra <hello@slvstr.dev>",
+  "author": {
+    "name": "Sylvester Hofstra",
+    "email": "hello@slvstr.dev"
+  },
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -16,12 +19,15 @@
     "types:watch": "tsc --noEmit --watch",
     "codegen": "source .env.local && npx genql --endpoint https://api.github.com/graphql --output ./src/graphql/generated -H \"Authorization: Bearer $GRAPHQL_API_TOKEN\" && pnpm format:fix",
     "check": "pnpm types && pnpm lint && pnpm format",
-    "storybook": "storybook dev -p 6006 --no-open",
-    "storybook:build": "storybook build",
+    "storybook": "sb dev -p 6006 --no-open",
+    "storybook:build": "sb build",
+    "chromatic": "npx chromatic --build-script-name=storybook:build",
     "upgrade": "pnpm upgrade --interactive",
     "upgrade:latest": "pnpm upgrade --interactive --latest"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
     "@genql/cli": "^6.3.2",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -40,6 +46,7 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.2.25",
     "@storybook/addon-essentials": "^8.0.5",
     "@storybook/addon-interactions": "^8.0.5",
     "@storybook/addon-links": "^8.0.5",
@@ -51,6 +58,7 @@
     "@types/react": "18.2.73",
     "@types/react-dom": "18.2.23",
     "autoprefixer": "10.4.19",
+    "chromatic": "^11.2.0",
     "clsx": "^2.1.0",
     "eslint": "8.57.0",
     "eslint-config-next": "14.1.4",
@@ -65,5 +73,5 @@
     "tailwindcss": "3.4.3",
     "typescript": "5.4.3"
   },
-  "packageManager": "pnpm@8.15.1"
+  "packageManager": "pnpm@8.15.5"
 }
